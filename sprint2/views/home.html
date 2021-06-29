@@ -12,7 +12,7 @@
     <title>Hadou Tech</title>
 </head>
 
-<body>
+<body class="home">
     <header>
         <div class="allheader">
             <div class="logo-NombreLogo">
@@ -30,6 +30,8 @@
                 </nav>
                 <form action=""><input class="buscador" type="text" placeholder="Buscar..."></form>
 
+                <a href=""><i class="fas fa-shopping-cart"></i></a>
+
             </div>
 
             <div class="nav2">
@@ -43,46 +45,48 @@
         </div>
 
     </header>
-    <main class="main">
-        <div class="banner-carrousel">
-            <!-- imagen de carrousel -->
-        </div>
 
+    <img src="/images/banner-ht" alt="" width="100%">
+    
+
+    <main class="main">
+
+        
         <div class="titulo-productos">
             <h1>ofertas</h1>
-            <h4>ver todos</h4>
+            <a href=""><h4>ver todos</h4></a>
         </div>
 
         <!-- Comienza carrousel de productos -->
 
 
-        <div class="banner-productos">
+        <section class="banner-productos">
             <article>
 
-                <img src="" alt="mouse">
+                <img src="/images/mouse-producto.jpg" alt="mouse" width="300px">
+
+                <div class="descripcion-de-producto">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <span>$999.999</span>
+                </div>
+
+            </article>
+            <article>
+
+                <img src="/images/auris-producto.jpg" alt="teclado" width="300px">
+
                 <h3>Lorem ipsum dolor sit amet.</h3>
                 <span>$999.999</span>
 
             </article>
             <article>
 
-                <img src="" alt="teclado">
-
+                <img src="/images/teclado-producto.jpg" alt="auriculares" width="300px">
                 <h3>Lorem ipsum dolor sit amet.</h3>
                 <span>$999.999</span>
 
             </article>
-            <article>
-
-                <img src="" alt="auriculares">
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <span>$999.999</span>
-
-            </article>
-
-
-
-        </div>
+        </section>
 
 
         <!-- termina la seccion de productos -->
@@ -97,11 +101,11 @@
         </div>
         </div>
 
-
-
-
-
+        |
     </main>
+    <section>
+        <!-- carrousel de marcas -->
+    </section>
     <footer>
         <div class="all-footer">
             <div class="caja-footer">
@@ -120,12 +124,12 @@
             </div>
 
             <div class="caja-footer">
-                Seguinos en
-                <div>
-                    <a href=""><img src="" alt="">Facebook</a>
-                    <a href=""><img src="" alt="">Twitter</a>
-                    <a href=""><img src="" alt="">Instagram</a>
-
+               <p class="seguinos"> Seguinos en </p>
+                <div class="red-social">
+                    <a href=""><i class="fab fa-facebook-square"></i></a>
+                    <a href=""><i class="fab fa-twitter-square"></i></a>
+                    <a href=""><i class="fab fa-instagram-square"></i></a>
+                   
                 </div>
             </div>
         </div>

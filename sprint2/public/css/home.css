@@ -1,46 +1,50 @@
 .main{
-    background-color: #6a8085;/* poner variable */
+    background-color: grey;/* poner variable */
+    width: 100%;
     
 }
 
-.banner-carrousel{
-    background-image: url("/img/banner-ht");
-    height:45rem;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
 
 .titulo-productos{
     display: flex;
     align-items: center;
-    padding-left: 1rem;
-    padding-top: 0.5rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
     font-size: 1.5rem;
     
 }
 
 .titulo-productos h4{
-    padding-top: 10px;
+    padding-top: 18px;
     padding-left: 5px;
 }
 
 .banner-productos{
     display: flex;
     align-items: center; 
-    justify-content: space-between;
-    max-width: 1140px;
-    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
 
+      
 }
+
 
 .banner-productos article{
     border: 2px solid black;
-    padding:5rem;
+    padding: 3rem;
     border-radius: 5%;
     background-color: white;
-      
-    
+    text-align: center;
+    display: block;
+    margin-right: 10px;
+
 }
+.home .descripcion-de-producto{
+     border-top: 2px solid black;
+    flex-direction: column;
+}
+
+
 .desc-dispositivos{
     padding-left: 5px;
 }
@@ -48,9 +52,9 @@
 .dispositivos{
     display: flex;
     font-size: 10rem;
-    max-width: 1140px;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 0 auto
 }
+
 
