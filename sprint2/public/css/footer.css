@@ -1,0 +1,12 @@
+.all-footer{
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.caja-footer{
+    border-right: 2px solid black;
+    padding-right: 10rem;
+    height: 8rem;
+}
