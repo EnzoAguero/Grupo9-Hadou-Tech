@@ -49,6 +49,10 @@ border-color: black;
     border-radius: .5em 0.5em 0.5e .5em;
     padding-left: .5em
   }
+.fa-shopping-cart{
+    margin-left: 8rem;
+    font-size: 2.5rem;
+}
 
 .nav2{
     text-align: right;
