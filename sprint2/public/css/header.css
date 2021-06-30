@@ -1,25 +1,75 @@
+@media (min-width:480px){
 header{
     background-color:#6a8085; 
+    width: 100%;
+    
 }
+.allheader{
+    height: 6rem;
+}
+.logo{
+    display: none;
+}
+
+.buscador2{
+    display: none;
+}
+
+.NameLogo{
+    padding: 13px 13px 13px 13px;
+    display: flex;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 3rem;
+}
+.logo-NombreLogo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-bars{
+    font-size: 3.5rem;
+    padding-right: 13px;
+}
+
+.nav1, .nav2{
+    display: none;
+} 
+
+}
+
+
+
+@media (min-width:1920px){
+
 
 .logo-NombreLogo{
     display: flex;
     align-items: center;
     font-size: 2rem;
-    
-
+}
+.buscador1{
+    display: none;
 }
 
+.fa-bars:before {
+    display: none
+}
+.logo{
+    display: flex;
+}
+.buscador2{
+    display: flex;
+}
 
 .NameLogo{
-     width: 1rem; /* preguntar el porque pasa que se pone uno abajo del otro */   
+     width: 1rem;   
     padding-left: 1rem;
     font-family: 'Big Shoulders Stencil Display', cursive;
     font-size: 3rem;
    
 }
 .allheader{
-    display: flex;
+     display: flex; 
     align-items: center; 
     justify-content: space-between;
     width: 100%;
@@ -56,6 +106,7 @@ border-color: black;
 
 .nav2{
     text-align: right;
+    display: flex;
 
 }
 .nav2 li{
@@ -70,4 +121,5 @@ border-color: black;
     border-radius: 40px;
     background-color: lightblue; 
     padding: 0.3rem 0.9rem 0.3rem 0.9rem;
+}
 }

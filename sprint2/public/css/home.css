@@ -1,5 +1,25 @@
-.main{
-    background-color: grey;/* poner variable */
+@media (min-width:480px){
+.banner-productos{
+    
+}
+.banner-productos article:last-child{
+    display: none;
+}
+
+.desc-dispositivos{
+    display: none;
+}
+
+.dispositivos{
+    display: none;
+}
+
+}
+
+
+@media (min-width:1920px){
+ .main{
+    background-color: grey;
     width: 100%;
     
 }
@@ -39,6 +59,15 @@
     margin-right: 10px;
 
 }
+.banner-productos article:last-child{
+    border: 2px solid black;
+    padding: 3rem;
+    border-radius: 5%;
+    background-color: white;
+    text-align: center;
+    display: block;
+    margin-right: 10px;
+}
 .home .descripcion-de-producto{
      border-top: 2px solid black;
     flex-direction: column;
@@ -65,4 +94,5 @@
 
 .contenedor-dispositivos p{
     font-size: 2rem;
+}
 }
