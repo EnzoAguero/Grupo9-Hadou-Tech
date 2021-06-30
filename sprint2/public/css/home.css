@@ -57,4 +57,12 @@
     align-items: center;
 }
 
+.contenedor-dispositivos{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
 
+.contenedor-dispositivos p{
+    font-size: 2rem;
+}
