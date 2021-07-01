@@ -13,4 +13,5 @@ app.get('/login', (req,res) => res.sendFile(path.join(__dirname, 'views', 'login
 app.get('/register', (req,res) => res.sendFile(path.join(__dirname, 'views', 'register.html')))
 app.get('/detalledeproducto', (req,res) => res.sendFile(path.join(__dirname, 'views', 'detalledeproducto.html')))
 
+/* luego cambiamos bien con cada archivo segun como los nombraron */
 

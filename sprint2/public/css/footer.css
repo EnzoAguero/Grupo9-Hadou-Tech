@@ -7,6 +7,7 @@
     .all-footer{
         display: flex;
         justify-content: space-between;
+        
     }
 
 
@@ -27,6 +28,7 @@
 .all-footer{
     display: flex;
     justify-content: space-around;
+    color: white;
 }
 
 .caja-footer{
@@ -44,6 +46,7 @@
 }
 
 .seguinos{
+    margin-top:15px;
     margin-bottom: 2px;
     font-size: 1.2rem;
 }
