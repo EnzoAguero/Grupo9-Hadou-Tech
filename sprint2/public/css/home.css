@@ -101,7 +101,7 @@
     border: 2px solid black;
     padding: 3rem;
     border-radius: 5%;
-    background-color: white;
+
     text-align: center;
     display: block;
     margin-right: 10px;
@@ -150,5 +150,6 @@
 
 .contenedor-dispositivos p{
     font-size: 2rem;
+    color: #bfc037
 }
 }

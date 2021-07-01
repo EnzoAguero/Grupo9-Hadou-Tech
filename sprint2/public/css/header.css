@@ -20,7 +20,8 @@ header{
     padding: 13px 13px 13px 13px;
     display: flex;
     font-family: 'Big Shoulders Stencil Display', cursive;
-    font-size: 3rem;
+    font-size: 3rem; 
+    color: #bfc037
 }
 .logo-NombreLogo{
     display: flex;
