@@ -49,6 +49,13 @@ header{
     align-items: center;
     font-size: 2rem;
 }
+
+.logo{
+    width: 100px;
+    padding: 0 0 10px 10px;
+    
+}
+
 .buscador1{
     display: none;
 }

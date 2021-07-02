@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 ul{
@@ -14,3 +14,4 @@ a{
     text-decoration: none;
     color: white;
 }
+
