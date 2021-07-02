@@ -1,12 +1,15 @@
 @media (min-width:480px){
     footer{
-        background-color:#090f28
-        ; 
+        background-image: url('/images/McLRE7y7i.jpg'); 
         width: 100%;
     }
     .all-footer{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        color: white;
+        color: #bfc037;
+        align-items: center;
+        justify-content: center;
         
     }
 
@@ -20,15 +23,16 @@
 
 @media (min-width:1720px){
  footer{
-    background-image: url(/images/McLRE7y7i.jpg)
-    ; 
+    background-image: url('/images/McLRE7y7i.jpg');
     border-top: 2px solid black;
 }
 
 .all-footer{
     display: flex;
+    color: white;
+    color: #bfc037;
     justify-content: space-around;
-    color: #bfc037
+    align-items: center;    
 }
 
 .caja-footer{
@@ -39,6 +43,7 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
+   
 }
 
 .caja-footer:last-child{
@@ -57,4 +62,9 @@
     padding-right: 5px;
     font-size: 4rem;
 } 
+.caja-footer .logo img{
+    width: 100px;
+    padding: 0 0 10px 10px;
+    
+}
 }
