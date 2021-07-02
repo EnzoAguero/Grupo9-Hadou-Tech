@@ -68,4 +68,15 @@ hr {
 
 .contenedor {
     margin-bottom: 30px;
+    
+   
+    
 }
+
+body {
+    background-image: url(/images/3874-gris-oscuro.jpg);
+    background-repeat: round;
+    background-size: contain;
+    
+}
+
