@@ -1,7 +1,7 @@
 @media (min-width:480px){
 
 .main{
-    background-image: url('/images/fondo.jpg');
+    background-image: url('/images/fondo.main.jpeg');
     background-size: 100%;
     width: 100%;
 
@@ -20,19 +20,23 @@
 .titulo-productos h4{
     padding-top: 18px;
     padding-left: 5px;
-    color: #bfc037;
+    color: white
 }
 
 .banner-productos{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    
 
 }
 .banner-productos article{
     border: 2px solid black;
     padding: 5px;
-    background-color: #090f28;
+    background-color: #24303c;
+}
+.banner-productos article img{
+    border: 2px solid #1f53c5
 }
 
 
@@ -49,7 +53,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid black;
+    border: 2px solid #1f53c5;
     padding: 5px;
 }
 .banner-productos span{
@@ -69,7 +73,7 @@
 
 @media (min-width:1720px){
  .main{
-    background-image: url('/images/fondo.jpg');
+    background-image: url('/images/fondo.main.jpeg');
     background-repeat: no-repeat;
     background-size: 100%;
     
@@ -89,7 +93,7 @@
 .titulo-productos h4{
     padding-top: 18px;
     padding-left: 5px;
-    color: #bfc037
+    color: white
     ;
 
 
@@ -126,10 +130,20 @@
 .banner-productos article img{
     width: 300px;
 }
+
+
 .home .descripcion-de-producto{
-     border-top: 2px solid black;
+     border-top: 2px solid #1f53c5;
     flex-direction: column;
     
+}
+
+.home .descripcion-de-producto p{
+    background-color: lightblue;
+    padding: 5px;
+    color: black;
+    border-radius: 2px;
+    font-weight: bolder;
 }
 
 
@@ -157,7 +171,11 @@
 
 .contenedor-dispositivos p{
     font-size: 2rem;
-    color: #bfc037
+    color: white;
+
+}
+.contenedor-dispositivos p:hover{
+ color: #bfc037;
 }
 .banner-marcas{
     background-image: url('/images/banner-marcasreal.jpeg');
