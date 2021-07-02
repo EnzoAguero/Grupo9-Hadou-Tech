@@ -1,0 +1,168 @@
+.carrito{
+   
+}
+
+
+.carrito main{
+    width:90%;
+    margin:10px auto;
+}
+.carrito__titulo{
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.carrito__producto{
+    color:white;
+    background-color: #24303c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border:solid 2px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.carrito__producto--contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 10px solid orangered;
+}
+.carrito__producto--contenedor > div{
+    margin: 5px auto;
+}
+.carrito__producto--descripcion{
+    text-align: center;
+    padding: 0 20px;
+}
+.carrito__producto--cantidad{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+.carrito__producto--footer{
+    text-align: center;
+}
+/*carrito__envio*/
+.carrito__envio{
+    color:white;
+    background-color: #24303c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border:solid 2px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.carrito__envio--contenedor{
+    display: flex;
+    flex-direction: column;
+    border-top: 10px solid green;
+}
+.carrito__envio--contenedor>div{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.carrito__envio--formas{
+    margin-bottom: 20px;
+}
+.carrito__envio--correo{
+    font-weight: bold;
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+.carrito__envio--codigoPostal{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    border: 2px solid black;
+    border-radius: 3px;
+    margin:0 auto;
+    background-color: white;
+
+}
+.fa-truck{
+    color:black;
+}
+
+
+/*carrito__promo*/
+.carrito__promo{
+    color:white;
+    background-color: #24303c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border:solid 2px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.carrito__promo--contenedor{
+    display: flex;
+    flex-direction: column;
+    border-top: 10px solid yellow;
+}
+.carrito__promo--contenedor>div{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.carrito__promo--codigo{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin:0 auto;
+    background-color: white;
+}
+.fa-ticket-alt{
+    color:black;
+}
+.carrito__promo--enviar{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    border: 2px solid black;
+    margin:0 auto;
+    background-color: white;
+    border-radius: 5px;
+
+}
+/*carrito__pago */
+.carrito__pago{
+    color:white;
+    background-color: #24303c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border:solid 2px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.carrito__pago--contenedor{
+    display: flex;
+    flex-direction: column;
+    border-top: 10px solid rgb(36, 1, 36);
+}
+.carrito__pago--contenedor>div{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.carrito__pago--formas{
+    font-weight: bold;
+    margin-left:20px;
+    margin-bottom: 20px;
+}
+.carrito__pago--forma{
+    margin-left: 18px;
+}
+.carrito__pago--footer{
+    text-align: center;
+}
+
+/*logo General*/
+.carrito__logo--general{
+    align-self: center;
+}
+.elemento__envio{
+    margin-left: 20px;
+}
