@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +8,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/style.css">
 
-    <title>Document</title>
+    <title>Carrito</title>
 </head>
 <body class="carrito">
     <header>
         <div class="allheader">
             <div class="logo-NombreLogo">
-               <a href="/index"><img src="/images/intentounmillon.png" alt="logo" class="logo"></a>
+               <a href="/"><img src="/images/intentounmillon.png" alt="logo" class="logo"></a>
                 <a href="/"><h3 class="NameLogo">Hadou Tech</h3></a>
                 <form action=""><input class="buscador1" type="text" placeholder="Buscar..."></form>
                 <i class="fas fa-bars"></i>
@@ -46,92 +46,141 @@
             <p>Carrito de compras</p>
             <i class="fas fa-arrow-left"></i>
         </div>
-        <section class="carrito__producto">
-            <div class="carrito__producto--contenedor">
-                <!-- border superior en formato mobile color orange-->
-                <div>
-                    <img src="/sprint2/public/images/auris-producto.jpg" alt="imagen del producto" width="200px">
+        <form action="">
+            <section class="carrito__producto">
+                <div class="carrito__producto--contenedor">
+                    <!-- border superior en formato mobile color orange-->
+                    <div>
+                        <img src="/images/auris-producto.jpg" alt="imagen del producto" width="200px">
+                    </div>
+                    <div>
+                        <p class="carrito__producto--descripcion">descripcion del producto mas Lorem ipsum dolor sit amet consectetu</p>
+                    </div>
+                    <div class="carrito__producto--cantidad">
+                        <p>-</p>
+                        <p>1</p>
+                        <p>+</p>
+                    </div>
+                    <div>
+                        <p class="carrito__producto--precio">$99.999</p>
+                    </div>
+
                 </div>
-                <div>
-                    <p class="carrito__producto--descripcion">descripcion del producto mas Lorem ipsum dolor sit amet consectetu</p>
+                <div class="carrito__producto--footer">
+                    <p><i class="fas fa-coins"></i> Sumás 99 HadoCoins</p>       
                 </div>
-                <div class="carrito__producto--cantidad">
-                    <p>-</p>
-                    <p>1</p>
-                    <p>+</p>
+            </section>
+            <section class="carrito__envio">
+                <div class="carrito__envio--contenedor">
+                    <!-- border superior en formato mobile color verde -->
+                    <div class="carrito__logo--general">
+                        <img src="/images/intentounmillon.png" width="50px" alt="imagen de logo modificado">
+                        <p>Envio</p>
+                    </div>
+                    <div class="carrito__envio--formulario">
+                            <div class="carrito__envio--formas">
+                                <p class="carrito__envio--correo">Correo Oca</p>
+                                <div class="elemento__envio">
+                                    <label for="ocaDomicilio">
+                                        <input type="radio" name="forma__envio" id="ocaDomicilio">
+                                        Domicilio:
+                                    </label>
+                                </div>
+                                <div class="elemento__envio">
+                                    <label for="ocaSucursal">
+                                        <input type="radio" name="forma__envio" id="ocaSucursal">
+                                        Sucursal:
+                                    </label>
+
+                                </div>
+                            </div>
+                            <div class="carrito__envio--formas">
+                                <p class="carrito__envio--correo">Correo Andreani</p>
+                                <div class="elemento__envio">
+                                    <label for="andreaniDomicilio">
+                                        <input type="radio" name="forma__envio" id="andreaniDomicilio">
+                                        Domicilio:
+                                    </label>
+                                </div>
+                                <div class="elemento__envio">
+                                    <label for="andreaniSucursal">
+                                        <input type="radio" name="forma__envio" id="andreaniSucursal">
+                                        Sucursal:
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="carrito__envio--formas">
+                                <p  class="carrito__envio--correo">Mensajeria</p>
+                                <div class="elemento__envio">
+                                    <label for="mensajeria">
+                                        <input type="radio" name="forma__envio" id="mensajeria">
+                                        Domicilio:
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="carrito__envio--formas carrito__envio--codigoPostal">
+                                <div class="elemento__envio">
+                                    <input type="text" name="carrito__envio--codigoPostal" id="carrito__envio--codigoPostal" placeholder="Código postal" class="input">
+                                    <i class="fas fa-truck" ></i>
+                                </div>
+                            </div>
+                    
+                    </div>
                 </div>
-                <div>
-                    <p class="carrito__producto--precio">$99.999</p>
+                
+            </section>
+            <section class="carrito__promo">
+                <div class="carrito__promo--contenedor">
+                    <div class="carrito__logo--general">
+                        <img src="/images/intentounmillon.png" width="50px" alt="imagen de logo modificado">
+                        <p>Promo</p>
+                    </div>
+                    <div class="carrito__promo--codigo" >
+                        <div class="elemento__envio">
+                            <input type="text" name="carrito__promo--codigo" id="carrito__envio--codigoPostal" placeholder="Ingresar código de descuento" class="input">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                    </div>
+                    <div class="carrito__promo--envio">
+                        <div class="carrito__promo--enviar">
+                            <input type="submit" value="Aceptar">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="carrito__pago">
+                <div class="carrito__pago--contenedor">
+                    <div class="carrito__logo--general">
+                        <img src="/images/intentounmillon.png" width="50px" alt="imagen de logo modificado">
+                        <p>Pago</p>
+                    </div>
+                    <div class="carrito__pago--formas">
+                        <div class="elemento__pago">
+                            <label for="forma__pago">
+                                <input type="radio" name="forma__pago" id="forma__pago--contado">
+                                Pago contado
+                            </label>
+                            <p class="carrito__pago--forma">Deposito</p>
+                            <p class="carrito__pago--forma">Transferencias</p>
+                        </div>
+                    </div>
+                    <div class="carrito__pago--formas">
+                        <div class="elemento__pago">
+                            <label for="forma__pago">
+                                <input type="radio" name="forma__pago" id="forma__pago--cuotas">
+                                Pago en cuotas
+                            </label>
+                            <p class="carrito__pago--forma">Tarjetas</p>
+                            <p class="carrito__pago--forma">Mercado Pago</p>  
+                        </div>
+                    </div>
+                </div>
+                <div class="carrito__pago--footer">
+                    <p>Total : $<span>999.999</span></p>       
                 </div>
 
-            </div>
-            <div class="carrito__producto--footer">
-                <p><i class="fas fa-coins"></i> Sumás 99 HadoCoins</p>       
-            </div>
-        </section>
-        <section class="carrito__envio">
-            <div class="carrito__envio--contenedor">
-                <!-- border superior en formato mobile color verde -->
-                <div class="carrito__logo--general">
-                    <img src="/sprint2/public/images/mouse-producto.jpg" width="50px" alt="imagen de logo modificado">
-                </div>
-                <div class="carrito__envio--formulario">
-                    <form action="">
-                        <div class="carrito__envio--formas">
-                            <p class="carrito__envio--correo">Correo Oca</p>
-                            <div class="elemento__envio">
-                                <label for="ocaDomicilio">
-                                    <input type="radio" name="forma__envio" id="ocaDomicilio">
-                                    Domicilio:
-                                </label>
-                            </div>
-                            <div class="elemento__envio">
-                                <label for="ocaSucursal">
-                                    <input type="radio" name="forma__envio" id="ocaSucursal">
-                                    Sucursal:
-                                </label>
-
-                            </div>
-                        </div>
-                        <div class="carrito__envio--formas">
-                            <p class="carrito__envio--correo">Correo Andreani</p>
-                            <div class="elemento__envio">
-                                <label for="andreaniDomicilio">
-                                    <input type="radio" name="forma__envio" id="andreaniDomicilio">
-                                    Domicilio:
-                                </label>
-                            </div>
-                            <div class="elemento__envio">
-                                <label for="andreaniSucursal">
-                                    <input type="radio" name="forma__envio" id="andreaniSucursal">
-                                    Sucursal:
-                                </label>
-                            </div>
-                        </div>
-                        <div class="carrito__envio--formas">
-                            <p  class="carrito__envio--correo">Mensajeria</p>
-                            <div class="elemento__envio">
-                                <label for="mensajeria">
-                                    <input type="radio" name="forma__envio" id="mensajeria">
-                                    Domicilio:
-                                </label>
-                            </div>
-                        </div>
-                        <div class="carrito__envio--formas carrito__envio--codigoPostal">
-                            <div class="elemento__envio">
-                                <input type="text" name="carrito__envio--codigoPostal" id="carrito__envio--codigoPostal" placeholder="Código postal">
-                                <i class="fas fa-truck" ></i>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            
-        </section>
-        <section class="carrito__promo">
-
-
-        </section>
+            </section>
+        </form>
 
     </main>
     <footer>

@@ -1,5 +1,5 @@
 .carrito{
-    background-color: rgba(49, 51, 61, 0.74);
+   
 }
 
 
@@ -8,11 +8,14 @@
     margin:10px auto;
 }
 .carrito__titulo{
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
 }
 .carrito__producto{
+    color:white;
+    background-color: #24303c;
     margin-top: 10px;
     margin-bottom: 10px;
     border:solid 2px black;
@@ -44,6 +47,8 @@
 }
 /*carrito__envio*/
 .carrito__envio{
+    color:white;
+    background-color: #24303c;
     margin-top: 10px;
     margin-bottom: 10px;
     border:solid 2px black;
@@ -63,6 +68,7 @@
     margin-bottom: 20px;
 }
 .carrito__envio--correo{
+    font-weight: bold;
     margin-left: 40px;
     margin-bottom: 15px;
 }
@@ -70,10 +76,87 @@
     display: flex;
     justify-content: space-evenly;
     width: 90%;
-    border: 1px solid grey;
+    border: 2px solid black;
     border-radius: 3px;
     margin:0 auto;
+    background-color: white;
 
+}
+.fa-truck{
+    color:black;
+}
+
+
+/*carrito__promo*/
+.carrito__promo{
+    color:white;
+    background-color: #24303c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border:solid 2px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.carrito__promo--contenedor{
+    display: flex;
+    flex-direction: column;
+    border-top: 10px solid yellow;
+}
+.carrito__promo--contenedor>div{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.carrito__promo--codigo{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin:0 auto;
+    background-color: white;
+}
+.fa-ticket-alt{
+    color:black;
+}
+.carrito__promo--enviar{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    border: 2px solid black;
+    margin:0 auto;
+    background-color: white;
+    border-radius: 5px;
+
+}
+/*carrito__pago */
+.carrito__pago{
+    color:white;
+    background-color: #24303c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border:solid 2px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.carrito__pago--contenedor{
+    display: flex;
+    flex-direction: column;
+    border-top: 10px solid rgb(36, 1, 36);
+}
+.carrito__pago--contenedor>div{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.carrito__pago--formas{
+    font-weight: bold;
+    margin-left:20px;
+    margin-bottom: 20px;
+}
+.carrito__pago--forma{
+    margin-left: 18px;
+}
+.carrito__pago--footer{
+    text-align: center;
 }
 
 /*logo General*/
