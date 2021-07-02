@@ -6,7 +6,6 @@
     .all-footer{
         display: flex;
         justify-content: space-around;
-        color: white;
         color: #bfc037;
         align-items: center;
         justify-content: center;
@@ -25,11 +24,11 @@
  footer{
     background-image: url('/images/McLRE7y7i.jpg');
     border-top: 2px solid black;
+
 }
 
 .all-footer{
     display: flex;
-    color: white;
     color: #bfc037;
     justify-content: space-around;
     align-items: center;    
