@@ -1,7 +1,8 @@
 @media (min-width:480px){
 
 .main{
-    background-image: url('/images/fondo.main.jpeg');
+    background-color:rgba(0, 0, 0, 0.938);
+     /* background-image: url('/images/fondoposta.jpg');  */
     background-size: 100%;
     width: 100%;
 
@@ -73,7 +74,8 @@
 
 @media (min-width:1720px){
  .main{
-    background-image: url('/images/fondo.main.jpeg');
+    
+    /* background-image: url('/images/fondo.main.jpeg'); */
     background-repeat: no-repeat;
     background-size: 100%;
     
@@ -103,7 +105,7 @@
     display: flex;
     align-items: center; 
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
 
       
 }
