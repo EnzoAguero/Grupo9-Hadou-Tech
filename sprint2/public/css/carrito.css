@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
+    box-shadow: 7px 13px 37px #000;
 }
 .carrito__producto{
     color:white;
@@ -21,6 +22,7 @@
     border:solid 2px black;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    box-shadow: 7px 13px 37px #000;
 }
 .carrito__producto--contenedor{
     display: flex;
@@ -54,6 +56,7 @@
     border:solid 2px black;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    box-shadow: 7px 13px 37px #000;
 }
 .carrito__envio--contenedor{
     display: flex;
@@ -96,6 +99,7 @@
     border:solid 2px black;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    box-shadow: 7px 13px 37px #000;
 }
 .carrito__promo--contenedor{
     display: flex;
@@ -137,6 +141,7 @@
     border:solid 2px black;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    box-shadow: 7px 13px 37px #000;
 }
 .carrito__pago--contenedor{
     display: flex;
@@ -165,4 +170,15 @@
 }
 .elemento__envio{
     margin-left: 20px;
+}
+
+@media (min-width: 750px){
+    .carrito__producto--contenedor{
+       /*  display: flex; */
+        flex-direction: row;
+        justify-content: space-between;
+        
+      /*   align-items: center; */
+        border-top: 10px solid orangered;
+    }
 }
