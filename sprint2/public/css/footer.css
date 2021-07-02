@@ -67,4 +67,16 @@
     padding: 0 0 10px 10px;
     
 }
+.fa-facebook-square:hover{
+    color: rgba(0, 0, 255, 0.972);
+}
+
+.fa-twitter-square:hover{
+    color: lightblue;
+}
+
+.fa-instagram-square:hover{
+    color: rgb(190, 8, 69);
+}
+
 }
