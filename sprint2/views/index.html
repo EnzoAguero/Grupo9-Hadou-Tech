@@ -1,81 +1,169 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
- <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200&display=swap" rel="stylesheet">
+
+    <title>Hadou Tech</title>
 </head>
-<body>
-  
-  <header>
-    <div class="allheader">
-        <div class="logo-NombreLogo">
-            <img src="" alt="logo">
-            <h3 class="NameLogo">Hadou Tech</h3>
+
+<body class="home">
+    <header>
+        <div class="allheader">
+            <div class="logo-NombreLogo">
+               <a href="/index"><img src="/images/intentounmillon.png" alt="logo" class="logo"></a>
+                <a href=""><h3 class="NameLogo">Hadou Tech</h3></a>
+                <form action=""><input class="buscador1" type="text" placeholder="Buscar..."></form>
+                <i class="fas fa-bars"></i>
+            </div>
+
+
+
+            <div class="nav1">
+                <nav>
+                    <ul>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Ofertas</a></li>
+                        <li><a href="">Historial</a></li>
+                        <li><a href="">Marcas</a></li>
+                    </ul>
+                </nav>
+                <form action=""><input class="buscador2" type="text" placeholder="Buscar..."></form>
+
+                <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+
+            </div>
+
+            <div class="nav2">
+                <nav>
+                    <ul>
+                        <li><a href="/login">Ingresar</a></li>
+                        <li><a href="/register" class="button-registro">Registro</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <div class="nav1">
-            <nav>
-                <ul>
-                    <li><a href="">Productos</a></li>
-                    <li><a href="">Ofertas</a></li>
-                    <li><a href="">Historial</a></li>
-                    <li><a href="">Marcas</a></li>
-                </ul>
-            </nav>
-            <form action=""><input class="buscador" type="text" placeholder="Buscar..."></form>
 
+    </header>
+
+    <img src="/images/banner-ht" alt="" width="100%">
+
+
+    <main class="main">
+
+
+        <div class="titulo-productos">
+            <h1>ofertas</h1>
+            <a href="">
+                <h4>ver todos</h4>
+            </a>
         </div>
 
-        <div class="nav2">
-            <nav>
-                <ul>
-                    <li><a href="">Ingresar</a></li>
-                    <li><a href="" class="button-registro">Registro</a></li>
-                </ul>
-            </nav>
+        <!-- Comienza carrousel de productos -->
+
+
+        <section class="banner-productos">
+            <article>
+
+                <img src="/images/mouse-producto2.jpg.png" alt="mouse" width="215px">
+
+                <div class="descripcion-de-producto">
+                    <h3>Mouse Logitech</h3>
+                    <span>$999.999</span>
+                    <h5>En 12 cuotas de $555,00 </h6>
+                </div>
+
+            </article>
+            <article>
+
+                <img src="/images/mouse-producto2.jpg.png" alt="teclado" width="215px">
+                <div class="descripcion-de-producto">
+                <h3>Mouse Logitech</h3>
+                <span>$999.999</span>
+                <h5>En 12 cuotas de $555,00 </h6>
+                </div>
+
+            </article>
+            <article>
+
+                <img src="/images/mouse-producto2.jpg.png" alt="auriculares" width="300px">
+                <div class="descripcion-de-producto">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <span>$999.999</span>
+                </div>
+
+            </article>
+        </section>
+
+
+        <!-- termina la seccion de productos -->
+
+        <!-- Comienza iconos de productos -->
+        <h1 class="desc-dispositivos">todos tus dispositivos favoritos</h1>
+        <div class="dispositivos">
+            <div class="contenedor-dispositivos">
+                <a href=""><i class="fas fa-headphones"></i></a>
+                <p>auriculares</p>
+            </div>
+            <div class="contenedor-dispositivos">
+                <a href=""><i class="fas fa-keyboard"></i></a>
+                <p>Teclados</p>
+            </div>
+            <div class="contenedor-dispositivos">
+                <a href=""><i class="fas fa-desktop"></i></a>
+                <p>Monitores</p>
+            </div>
+            <div class="contenedor-dispositivos">
+                <a href=""><i class="fas fa-mouse"></i></a>
+                <p>Mouse</p>
+            </div>
         </div>
-    </div>
+        </div>
 
-</header>
+        |
+    </main>
+    <section>
+        <img src="/images/banner-marcas.jpg" alt="">
+    </section>
+    <footer>
+        <div class="all-footer">
+            <div class="caja-footer">
+                <h3>Hadou Tech</h3>
+                <img src="" alt="Qr o logo">
+            </div>
 
-<footer>
-  <div class="all-footer">
-      <div class="caja-footer">
-          <h3>Hadou Tech</h3>
-          <img src="" alt="Qr o logo">
-      </div>
+            <div class="caja-footer">
+                <p>
+                    Ayuda
+                </p>
+                <p>
+                    Si tenes sugerencias o comentarios. No dudes en contactarnos
+                </p>
+                <button>Ayuda</button>
+            </div>
 
-      <div class="caja-footer">
-          <p>
-              Ayuda
-          </p>
-          <p>
-              Si tenes sugerencias o comentarios. No dudes en contactarnos
-          </p>
-          <button>Ayuda</button>
-      </div>
+            <div class="caja-footer">
+                <p class="seguinos"> Seguinos en </p>
+                <div class="red-social">
+                    <a href=""><i class="fab fa-facebook-square"></i></a>
+                    <a href=""><i class="fab fa-twitter-square"></i></a>
+                    <a href=""><i class="fab fa-instagram-square"></i></a>
 
-      <div class="caja-footer">
-          Seguinos en
-          <div>
-              <a href=""><img src="" alt="">Facebook</a>
-              <a href=""><img src="" alt="">Twitter</a>
-              <a href=""><img src="" alt="">Instagram</a>
-
-          </div>
-      </div>
-  </div>
+                </div>
+            </div>
+        </div>
 
 
-</footer>
-
-
-
- 
-
-  
-
+    </footer>
 
 </body>
+
 </html>

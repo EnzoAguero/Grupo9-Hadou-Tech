@@ -15,9 +15,14 @@
     <header>
         <div class="allheader">
             <div class="logo-NombreLogo">
-                <img src="" alt="logo">
-                <h3 class="NameLogo">Hadou Tech</h3>
+                <a href="/"><img src="/images/intentounmillon.png" alt="logo" class="logo"></a>
+                <a href="">
+                    <h3 class="NameLogo">Hadou Tech</h3>
+                </a>
+                <form action=""><input class="buscador1" type="text" placeholder="Buscar..."></form>
+                <i class="fas fa-bars"></i>
             </div>
+
             <div class="nav1">
                 <nav>
                     <ul>
@@ -27,45 +32,54 @@
                         <li><a href="">Marcas</a></li>
                     </ul>
                 </nav>
-                <form action=""><input class="buscador" type="text" placeholder="Buscar..."></form>
+                <form action=""><input class="buscador2" type="text" placeholder="Buscar..."></form>
 
-                <a href=""><i class="fas fa-shopping-cart"></i></a>
+                <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
 
             </div>
 
             <div class="nav2">
                 <nav>
                     <ul>
-                        <li><a href="">Ingresar</a></li>
-                        <li><a href="" class="button-registro">Registro</a></li>
+                        <li><a href="/login">Ingresar</a></li>
+                        <li><a href="/register" class="button-registro">Registro</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
+
     </header>
 
+
     <main>
-        <form class="form-register" action="">
-            <h2 class="titulo">Formulario de Registro</h2>
-            <div class="sub-text-aline">
-                <b">Completa los siguientes campos para registrarte en nuestro sitio</b>
-            </div>
-            <input class="control-form" type="email" name="correo" placeholder="Ingresá tu mail">
-            <input class="control-form" type="password" name="contraseña" placeholder="Ingresá tu contraseña">
-            <input class="control-form" type="password" name="contraseña" placeholder="Confirma tu contraseña">
-            <hr>
-            <input class="control-form" type="text" name="nombre" placeholder="Nombre">
-            <input class="control-form" type="text" name="apellido" placeholder="Apellido">
-            <select class="control-form" name="pais" id="pais"> <option value="argentina">Argentina</option></select>
-            <select class="control-form" name="provincias" id="provincias"> <option value="Provincias">Seleccione una provincia</option></select>
-            <input class="control-form" type="text" name="ciudad" placeholder="Ciudad">
-            <input class="control-form" type="number" name="postal" placeholder="Codigo Postal">
-            <input class="control-form" type="text" name="direccion" placeholder="Direccion">
-            <input class="control-form" type="number" name="telefono" placeholder="Telefono">
-            <p>Estoy de acuerdo con los<a href="#"> Terminos y Condiciones</a></p>
-            <input class="botons" type="submit" value="Registrar">
-            <p><a href="#">¿Ya tengo cuenta?</a></p>
-        </form>
+        <div class="contenedor">
+            <form class="form-register" action="">
+                <h2 class="titulo">Formulario de Registro</h2>
+                <div class="sub-text-aline">
+                    <b">Completa los siguientes campos para registrarte en nuestro sitio</b>
+                </div>
+                <input class="control-form" type="email" name="correo" placeholder="Ingresá tu mail">
+                <input class="control-form" type="password" name="contraseña" placeholder="Ingresá tu contraseña">
+                <input class="control-form" type="password" name="contraseña" placeholder="Confirma tu contraseña">
+                <hr>
+                <input class="control-form" type="text" name="nombre" placeholder="Nombre">
+                <input class="control-form" type="text" name="apellido" placeholder="Apellido">
+                <select class="control-form" name="pais" id="pais">
+                    <option value="argentina">Argentina</option>
+                </select>
+                <select class="control-form" name="provincias" id="provincias">
+                    <option value="Provincias">Seleccione una provincia</option>
+                </select>
+                <input class="control-form" type="text" name="ciudad" placeholder="Ciudad">
+                <input class="control-form" type="number" name="postal" placeholder="Codigo Postal">
+                <input class="control-form" type="text" name="direccion" placeholder="Direccion">
+                <input class="control-form" type="number" name="telefono" placeholder="Telefono">
+                <p>Estoy de acuerdo con los<a href="#"> Terminos y Condiciones</a></p>
+                <input class="botons" type="submit" value="Registrar">
+                <p><a href="#">¿Ya tengo cuenta?</a></p>
+            </form>
+        </div>
+
     </main>
 
     <footer>
