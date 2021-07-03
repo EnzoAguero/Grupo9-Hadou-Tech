@@ -11,6 +11,12 @@
         justify-content: center;
         
     }
+    .logo-footer{
+        width: 80px;
+    }
+    .caja-footer h3{
+        padding-left: 13px;
+    }
 
 
 
