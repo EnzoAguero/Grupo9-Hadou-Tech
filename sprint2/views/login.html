@@ -47,30 +47,36 @@
         </div>
     </header>
     <main>
-        <section class="login">
+        <section class="login__principal">
             <div class="login__bienvenido">
                 <h1>Bienvenido</h1>
             </div>
             <div class="login__usuario">
                 <form action="" >
-                    <div>
-                        <label for="nombre">
-                            Nombre: <input type="text" name="nombre" id="nombre" minlength="2" maxlength="15">
+                    <div class="login__usuario--usuario">
+                        <label for="usuario">
+                            Usuario: <p><input type="text" name="usurio" id="usuario" minlength="2" maxlength="15" placeholder="usuario"></p>
                         </label>
+                    </div>
+                    <div class="login__usuario--contrasena">
                         <label for="contrasena">
-                            Contraseña: <input type="password" name="contrasena" id="contrasena">
+                            Contraseña: <p><input type="password" name="contrasena" id="contrasena" placeholder="contraseña"></p>
                         </label>
+                    </div>
+                    <div class="login__usuario--login">
                         <input type="submit" value="Login">
                     </div>
                 </form>
             </div>
             <div class="login__registrate">
+                <h1 class="login__bienvenido2">Bienvenido</h1>
                 <p>¿Perdiste tu contraseña</p>
                 <p>¿No tienes Cuenta? Registrate</p>
+                <p class="login__registrate--volver"><a href="/"><i class="fas fa-arrow-left"></i> Volver</a></p>
             </div>
-        </section>
+            </section>
     </main>
-    <footer>
+    <footer class="footer__login">
         <div class="all-footer">
             <div class="caja-footer">
                 <h3>Hadou Tech</h3>
