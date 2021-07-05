@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require('express');
 const app = express();
 app.use(express.static('public'));
 const path = require('path')
@@ -14,4 +14,5 @@ app.get('/register', (req,res) => res.sendFile(path.join(__dirname, 'views', 're
 app.get('/detalledeproducto', (req,res) => res.sendFile(path.join(__dirname, 'views', 'detalledeproducto.html')))
 
 /* luego cambiamos bien con cada archivo segun como los nombraron */
+
 
