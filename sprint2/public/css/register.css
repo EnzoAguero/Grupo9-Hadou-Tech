@@ -1,3 +1,26 @@
+@media (min-width:480px){
+    header{
+        background-image: url('/images/McLRE7y7i.jpg'); 
+        width: 100%;
+    }
+
+    .form-register {
+        width: 480px;
+        background: #24303c;
+        padding: 30px;
+        margin: auto;
+        margin-top: 100px;
+        border-radius: 4px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: white;
+        box-shadow: 7px 13px 37px #000;
+    }
+
+
+}
+
+@media (min-width:1720px){
+
 .form-register {
     width: 900px;
     background: #24303c;
@@ -50,16 +73,19 @@
 .form-register a:hover {
     color: white;
     text-decoration: underline;
+    
 }
 
 .form-register .botons {
     width: 100%;
     background: #1f53c5;
-    border: none;
     padding: 12px;
     color: white;
     margin: 16px 0;
     font-size: 16px;
+   
+}
+
 }
 
 hr {
@@ -79,4 +105,3 @@ body {
     background-size: contain;
     
 }
-
