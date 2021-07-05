@@ -48,23 +48,23 @@
     </header>
     <main>
         <div class="carrito__titulo">
-            <p>Carrito de compras</p>
+            <h1>Carrito de compras</h1>
             <i class="fas fa-arrow-left"></i>
         </div>
         <form action="">
             <section class="carrito__producto">
                 <div class="carrito__producto--contenedor">
                     <!-- border superior en formato mobile color orange-->
-                    <div>
+                    <div class="carrito__producto--imagen">
                         <img src="/images/auris-producto.jpg" alt="imagen del producto" width="200px">
                     </div>
                     <div>
                         <p class="carrito__producto--descripcion">descripcion del producto mas Lorem ipsum dolor sit amet consectetu</p>
                     </div>
                     <div class="carrito__producto--cantidad">
-                        <p>-</p>
+                        <input type="submit" value="-">
                         <p>1</p>
-                        <p>+</p>
+                        <input type="submit" value="+">
                     </div>
                     <div>
                         <p class="carrito__producto--precio">$99.999</p>
@@ -123,14 +123,14 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="carrito__envio--formas carrito__envio--codigoPostal">
-                                <div class="elemento__envio">
-                                    <input type="text" name="carrito__envio--codigoPostal" id="carrito__envio--codigoPostal" placeholder="Código postal" class="input">
-                                    <i class="fas fa-truck" ></i>
-                                </div>
+                            
+                        </div>
+                        <div class="carrito__envio--formas carrito__envio--codigoPostal">
+                            <div class="elemento__envio">
+                                <input type="text" name="carrito__envio--codigoPostal" id="carrito__envio--codigoPostal" placeholder="Código postal" class="input">
+                                <i class="fas fa-truck" ></i>
                             </div>
-                    
-                    </div>
+                        </div>
                 </div>
                 
             </section>
@@ -188,7 +188,7 @@
         </form>
 
     </main>
-    <footer>
+    <footer class="footer">
         <div class="all-footer">
             <div class="caja-footer">
                 <h3>Hadou Tech</h3>

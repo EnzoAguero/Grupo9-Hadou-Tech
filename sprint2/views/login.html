@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body class="login">
+    <header>
+        <div class="allheader">
+            <div class="logo-NombreLogo">
+               <a href="/"><img src="/images/intentounmillon.png" alt="logo" class="logo"></a>
+                <a href="/"><h3 class="NameLogo">Hadou Tech</h3></a>
+                <form action=""><input class="buscador1" type="text" placeholder="Buscar..."></form>
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav1">
+                <nav>
+                    <ul>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Ofertas</a></li>
+                        <li><a href="">Historial</a></li>
+                        <li><a href="">Marcas</a></li>
+                    </ul>
+                </nav>
+                <form action=""><input class="buscador2" type="text" placeholder="Buscar..."></form>
+
+            
+
+            </div>
+            <div class="nav2">
+                <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                <nav>
+                    <ul>
+                        <li><a href="/login">Ingresar</a></li>
+                        <li><a href="/register" class="button-registro">Registro</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="login__principal">
+            <div class="login__bienvenido">
+                <h1>Bienvenido</h1>
+            </div>
+            <div class="login__usuario">
+                <form action="" >
+                    <div class="login__usuario--usuario">
+                        <label for="usuario">
+                            Usuario: <p><input type="text" name="usurio" id="usuario" minlength="2" maxlength="15" placeholder="usuario"></p>
+                        </label>
+                    </div>
+                    <div class="login__usuario--contrasena">
+                        <label for="contrasena">
+                            Contraseña: <p><input type="password" name="contrasena" id="contrasena" placeholder="contraseña"></p>
+                        </label>
+                    </div>
+                    <div class="login__usuario--login">
+                        <input type="submit" value="Login">
+                    </div>
+                </form>
+            </div>
+            <div class="login__registrate">
+                <h1 class="login__bienvenido2">Bienvenido</h1>
+                <p>¿Perdiste tu contraseña</p>
+                <p>¿No tienes Cuenta? Registrate</p>
+                <p class="login__registrate--volver"><a href="/"><i class="fas fa-arrow-left"></i> Volver</a></p>
+            </div>
+            </section>
+    </main>
+    <footer class="footer__login">
+        <div class="all-footer">
+            <div class="caja-footer">
+                <h3>Hadou Tech</h3>
+                <img src="/images/intentounmillon.png" alt="Qr o logo" class="logo-footer">
+            </div>
+
+            <div class="caja-footer">
+                <p>
+                    Ayuda
+                </p>
+                <p>
+                    Si tenes sugerencias o comentarios. No dudes en contactarnos
+                </p>
+                <button>Ayuda</button>
+            </div>
+
+            <div class="caja-footer">
+                <p class="seguinos"> Seguinos en </p>
+                <div class="red-social">
+                    <a href=""><i class="fab fa-facebook-square"></i></a>
+                    <a href=""><i class="fab fa-twitter-square"></i></a>
+                    <a href=""><i class="fab fa-instagram-square"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </footer>  
+</body>
+</html>

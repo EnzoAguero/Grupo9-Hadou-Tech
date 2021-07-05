@@ -6,11 +6,16 @@
     .all-footer{
         display: flex;
         justify-content: space-around;
-        color: white;
         color: #bfc037;
         align-items: center;
         justify-content: center;
         
+    }
+    .logo-footer{
+        width: 80px;
+    }
+    .caja-footer h3{
+        padding-left: 13px;
     }
 
 
@@ -25,11 +30,11 @@
  footer{
     background-image: url('/images/McLRE7y7i.jpg');
     border-top: 2px solid black;
+
 }
 
 .all-footer{
     display: flex;
-    color: white;
     color: #bfc037;
     justify-content: space-around;
     align-items: center;    
@@ -57,14 +62,28 @@
     font-size: 1.2rem;
 }
 
+
+
 .red-social{
-    padding-top: 5px;
-    padding-right: 5px;
-    font-size: 4rem;
-} 
-.caja-footer .logo img{
-    width: 100px;
-    padding: 0 0 10px 10px;
     
+    font-size: 3rem;
+
+} 
+
+.caja-footer img{
+    width: 6rem;
+    height: 6rem;
 }
+.fa-facebook-square:hover{
+    color: rgba(0, 0, 255, 0.972);
+}
+
+.fa-twitter-square:hover{
+    color: lightblue;
+}
+
+.fa-instagram-square:hover{
+    color: rgb(190, 8, 69);
+}
+
 }
