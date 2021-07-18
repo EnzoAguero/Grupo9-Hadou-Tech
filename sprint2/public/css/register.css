@@ -1,9 +1,74 @@
-@media (min-width:480px){
-    header{
-        background-image: url('/images/McLRE7y7i.jpg'); 
-        width: 100%;
+@media (min-width:320px) {
+    .form-register {
+        width: 280px;
+        background: #24303c;
+        padding: 15px;
+        margin: auto;
+        margin-top: 100px;
+        border-radius: 4px;
+        color: white;
+        box-shadow: 7px 13px 37px #000;
+        display: flex;
+        flex-direction: column;  
     }
 
+    .form-register .titulo {
+        font-size: 29px;
+        text-align: center;    
+        
+    }
+       .control-form {
+        width: 90%;
+        background: #24303c;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: 1px solid #1f53c5;
+        font-size: 14px;
+        color: white;
+        display: flex;
+    } 
+    .sub-text-aline {
+        text-align: center;
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .form-register p {
+        height: 40px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 30px;
+        
+        
+    }
+    
+    .form-register a {
+        color: white;
+        text-decoration: none;
+        
+    }
+    
+    .form-register a:hover {
+        color: white;
+        text-decoration: underline;
+        
+    }
+    
+    .form-register .botons {
+        width: 100%;
+        background: #1f53c5;
+        padding: 12px;
+        color: white;
+        margin: 14px 0;
+        font-size: 14px;  
+}
+
+}
+
+
+
+@media (min-width:769px) {
     .form-register {
         width: 480px;
         background: #24303c;
@@ -11,15 +76,70 @@
         margin: auto;
         margin-top: 100px;
         border-radius: 4px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         color: white;
         box-shadow: 7px 13px 37px #000;
+        display: flex;
+        flex-direction: column;  
     }
 
+    .form-register .titulo {
+        font-size: 29px;
+        text-align: center;    
+        
+    }
+       .control-form {
+        width: 100%;
+        background: #24303c;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: 1px solid #1f53c5;
+        font-size: 18px;
+        color: white;
+        display: flex;
+    } 
+    .sub-text-aline {
+        text-align: center;
+        font-size: 19px;
+        padding: 15px;
+    }
 
+    .form-register p {
+        height: 40px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
+        
+        
+    }
+    
+    .form-register a {
+        color: white;
+        text-decoration: none;
+        
+    }
+    
+    .form-register a:hover {
+        color: white;
+        text-decoration: underline;
+        
+    }
+    
+    .form-register .botons {
+        width: 100%;
+        background: #1f53c5;
+        padding: 12px;
+        color: white;
+        margin: 16px 0;
+        font-size: 16px;
+        
+       
+    }
+
+ 
 }
-
-@media (min-width:1720px){
+    
+@media (min-width:1024px){
 
 .form-register {
     width: 900px;
@@ -28,14 +148,18 @@
     margin: auto;
     margin-top: 100px;
     border-radius: 4px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
     box-shadow: 7px 13px 37px #000;
+    display: flex;
+    flex-direction: column;
+    
+    
 }
 
 .form-register .titulo {
     font-size: 29px;
-    text-align: center;    
+    text-align: center;
+    
     
 }
 
@@ -52,9 +176,9 @@
     border-radius: 4px;
     margin-bottom: 16px;
     border: 1px solid #1f53c5;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 18px;
     color: white;
+    display: flex;
 }
 
 .form-register p {
@@ -63,11 +187,13 @@
     font-size: 18px;
     line-height: 40px;
     
+    
 }
 
 .form-register a {
     color: white;
     text-decoration: none;
+    
 }
 
 .form-register a:hover {
@@ -83,6 +209,7 @@
     color: white;
     margin: 16px 0;
     font-size: 16px;
+    
    
 }
 
@@ -94,8 +221,9 @@ hr {
 
 .contenedor {
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
     
-   
     
 }
 
@@ -103,5 +231,5 @@ body {
     background-image: url(/images/3874-gris-oscuro.jpg);
     background-repeat: round;
     background-size: contain;
-    
 }
+
