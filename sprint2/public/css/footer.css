@@ -1,4 +1,32 @@
-@media (min-width:480px){
+footer{
+    background-image: url('/images/McLRE7y7i.jpg'); 
+    width: 100%;
+}
+.all-footer{
+    display: flex;
+    justify-content: space-around;
+    color: #bfc037;
+    align-items: center;
+    
+}
+
+.logo-footer{
+    width: 80px;
+}
+.caja-footer h3{
+    padding-left: 13px;
+}
+
+.caja-footer{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+ @media (min-width:769px){
     footer{
         background-image: url('/images/McLRE7y7i.jpg'); 
         width: 100%;
@@ -8,7 +36,7 @@
         justify-content: space-around;
         color: #bfc037;
         align-items: center;
-        justify-content: center;
+
         
     }
     .logo-footer{
@@ -16,17 +44,24 @@
     }
     .caja-footer h3{
         padding-left: 13px;
+        
+    }
+    .caja-footer{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
 
 
 
 }
+ 
 
 
 
 
-
-@media (min-width:1720px){
+@media (min-width:1520px){
  footer{
     background-image: url('/images/McLRE7y7i.jpg');
     border-top: 2px solid black;
