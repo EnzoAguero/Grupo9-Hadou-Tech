@@ -161,7 +161,7 @@ article:first-child{
 }
  
 
-@media (min-width:1024px){
+@media (min-width:1520px){
  .main{
     
     /* background-image: url('/images/fondo.main.jpeg'); */
@@ -222,7 +222,7 @@ article:first-child{
 
 
 .banner-productos article img{
-    width: 150px;
+    width: 200px;
 }
 
 
