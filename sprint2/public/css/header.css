@@ -64,6 +64,7 @@ header{
       display: flex;
       align-items: center;
       justify-content: center;
+      
   }
 
 
@@ -93,23 +94,33 @@ header{
 }
 
 
+
  .name-input{
     display: flex;
     align-items: center;
-    justify-content: space-around;
     margin-left: 13px;
-    width: 100%;
+    width: 90%;
     
     
 } 
 
-.NameLogo{
+.NameLogo2{
     padding: 13px 13px 13px 13px;
     display: flex;
     font-family: 'Big Shoulders Stencil Display', cursive;
     font-size: 2rem; 
     color: #bfc037
 }
+
+.NameLogo1{
+display: none;
+}
+
+.logo-nombre{
+    display: none;
+}
+
+
 
 input{
     width: 45%;
@@ -126,6 +137,9 @@ article:last-child{
 .logo{
     display: none;
 }
+.NameLogo1{
+    display: none;
+    }
 .respmenu a { 
     color: inherit;
     text-decoration: none;
@@ -195,10 +209,148 @@ article:last-child{
 
 
 }
+@media (min-width:1024px){
+    .allheader{
+        display: flex; 
+       align-items: center; 
+       justify-content: space-around;
+       width: 100%;
+       height: 7rem;
+   }
+
+
+    .logo-NombreLogo{
+        display: flex;
+        align-items: center;
+         font-size: 1rem; 
+    }
+
+   
+    .NameLogo1{
+        display: flex;
+        padding: 13px 13px 13px 13px;
+        display: flex;
+        font-family: 'Big Shoulders Stencil Display', cursive;
+        font-size: 2.5rem; 
+        color: #bfc037
+        
+        
+    }
+
+    .logo-nombre{
+        display: flex;
+        width: 15%;
+
+    }
+    .burger{
+        display: none;
+    }
+
+    .name-input{
+    display: none;
+    }
+
+        
+    
+    
+    .logo{
+        width: 100px;
+        padding: 0 0 10px 10px;
+        display: flex;
+    }
+    
+    .buscador1{
+        display: none;
+    }
+    
+    .fa-bars:before {
+        display: none
+    }
+     
+    .buscador2{
+        display: flex;
+    }
+    
+    
+    .NameLogo{
+        display: flex;
+          /* width: 1rem;  */  
+        font-family: 'Big Shoulders Stencil Display', cursive;
+        font-size: 2.5rem;
+        font-weight: bold;
+       
+    }
+    .allheader{
+         display: flex; 
+        align-items: center; 
+        justify-content: space-between;
+        width: 100%;
+        height: 7rem;
+    }
+    
+    .nav1{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding-right: 4rem; 
+        padding-left: 4rem;
+        font-weight: bold;
+        flex-direction: column;
+        
+    }
+  
+    .nav1 li{
+        display: inline-block;
+        margin-right: 2rem;
+        font-size: 1rem;
+    }
+    .nav1 li:hover{
+    border-bottom: 2px solid ;
+    border-color: white;
+    }
+    
+    
+    .buscador{
+        width: 23em;
+        height: auto;
+        border-radius: .5em 0.5em 0.5e .5em;
+        padding-left: .5em;
+      }
+    
+    .fa-shopping-cart{
+        margin-left: 2rem;
+        margin-right: 3rem;
+        font-size: 2.5rem;
+    }
+    
+    .nav2{
+        text-align: right;
+        display: flex;
+        font-weight: bold;
+        align-items: center;
+        width: 35%;
+    
+    }
+    .nav2 li{
+        display: inline-block;
+        text-align: right;
+        padding-right: 1rem;
+        font-size: 1rem;
+        
+    }
+   
+    
+    .nav2 li .button-registro{
+        border-radius: 40px;
+        background-color: lightblue; 
+        padding: 0.3rem 0.9rem 0.3rem 0.9rem;
+    }
+    }
+    
 
  
 
-@media (min-width:1520px){
+ @media (min-width:1520px){
 
 
 .logo-NombreLogo{
@@ -217,14 +369,17 @@ article:last-child{
 .burger{
     display: none;
 }
+.name-input{
+    display: none;
+    }
     
 
 
-.logo{
+ .logo{
     width: 100px;
     padding: 0 0 10px 10px;
     
-}
+} 
 
 .buscador1{
     display: none;
@@ -243,7 +398,7 @@ article:last-child{
 
 .NameLogo{
     display: flex;
-      /* width: 1rem;  */  
+      width: 1rem; 
     font-family: 'Big Shoulders Stencil Display', cursive;
     font-size: 2.5rem;
     font-weight: bold;
@@ -263,6 +418,8 @@ article:last-child{
     align-items: center;
     padding-right: 5rem; 
     font-weight: bold;
+    flex-direction: row;
+    width: 75%;
     
 }
 .nav1 li{
@@ -320,11 +477,11 @@ border-color: white;
         font-size: 2rem;
     }
     
-    .logo{
+     .logo{
         width: 100px;
         padding: 0 0 10px 10px;
     
-    }
+    } 
     
     .buscador1{
         display: none;
@@ -362,7 +519,11 @@ border-color: white;
         align-items: center;
         padding-right: 5rem;
         font-weight: bold;
+        
     
+    }
+    .nav1 ul{
+        width: 110%;
     }
     .nav1 li{
         display: inline-block;
@@ -407,4 +568,4 @@ border-color: white;
         background-color: lightblue; 
         padding: 0.3rem 0.9rem 0.3rem 0.9rem;
     }
-    }
+    } 
