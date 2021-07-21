@@ -1,4 +1,42 @@
-@media (min-width:480px){
+footer{
+    background-image: url('/images/McLRE7y7i.jpg'); 
+    width: 100%;
+}
+.all-footer{
+    display: flex;
+    justify-content: space-around;
+    color: #bfc037;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.logo-footer{
+    width: 60px;
+}
+.caja-footer h3{
+    padding-left: 13px;
+}
+.caja-footer p{
+    font-size: 15px;
+}
+
+.caja-footer{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 2px solid black;
+margin-bottom: 10px;
+   
+}
+.caja-footer:last-child{
+    border-bottom: none;
+}
+
+
+ @media (min-width:769px){
     footer{
         background-image: url('/images/McLRE7y7i.jpg'); 
         width: 100%;
@@ -8,7 +46,9 @@
         justify-content: space-around;
         color: #bfc037;
         align-items: center;
-        justify-content: center;
+        flex-direction: row;
+        
+
         
     }
     .logo-footer{
@@ -16,17 +56,25 @@
     }
     .caja-footer h3{
         padding-left: 13px;
+        
+    }
+    .caja-footer{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        border:none
     }
 
 
 
 }
+ 
 
 
 
 
-
-@media (min-width:1720px){
+@media (min-width:1520px){
  footer{
     background-image: url('/images/McLRE7y7i.jpg');
     border-top: 2px solid black;

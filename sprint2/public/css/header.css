@@ -1,60 +1,385 @@
-@media (min-width:480px){
 header{
     background-image: url('/images/McLRE7y7i.jpg')
     ; 
     width: 100%;
+  
     
 }
-.allheader{
-    height: 6rem;
+ .respmenu a { 
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 2px solid #456789;
+    max-width: 200px;
+    /* background: #234567; */
+    font-variant: small-caps;
+    text-shadow: 1px 1px black;
+  }
+  .respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+     position: absolute;  
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;  
+    
+  }
+   
+  .respmenu .fa-bars, .respmenu .fa-times {
+    font-size: 48px;
+    pointer-events: none;
+
+  }
+   
+  .respmenu input[type="checkbox"] {
+    opacity: 0; 
+  }
+   
+  .respmenu {
+    color: white;
+   position: relative; 
+    min-height: 48px;
+       
+  }
+   
+  .respmenu nav {
+    display: none;
+  }
+   
+  .respmenu input:checked ~ nav {
+    display: block;
+  }
+   
+  .respmenu input:checked ~ .fa-bars {
+    display: none;
+  }
+   
+  .respmenu input:not(:checked) ~ .fa-times {
+    display: none;
+  }
+
+  .burger{      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+  }
+
+
+.nav1{
+    display: none;
 }
+.nav2{
+   display: none;
+
+}
+
+.allheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.buscador1{
+    display: flex;
+    width: 90%;
+}
+
+
 .logo{
     display: none;
 }
 
-.buscador2{
-    display: none;
-}
 
-.NameLogo{
+
+ .name-input{
+    display: flex;
+    align-items: center;
+    margin-left: 13px;
+    width: 90%;
+    
+    
+} 
+
+.NameLogo2{
     padding: 13px 13px 13px 13px;
     display: flex;
     font-family: 'Big Shoulders Stencil Display', cursive;
-    font-size: 3rem; 
+    font-size: 2rem; 
     color: #bfc037
 }
-.logo-NombreLogo{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+.NameLogo1{
+display: none;
 }
-.fa-bars{
-    font-size: 3.5rem;
-    padding-right: 13px;
+
+.logo-nombre{
+    display: none;
 }
+
+
+
+input{
+    width: 45%;
+}
+
+
+article:last-child{
+    display: none
+}
+
+
+@media (min-width:768px){
+
+.logo{
+    display: none;
+}
+.NameLogo1{
+    display: none;
+    }
+.respmenu a { 
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 2px solid #456789;
+    max-width: 200px;
+    /* background: #234567; */
+    font-variant: small-caps;
+    text-shadow: 1px 1px black;
+  }
+  .respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+     position: absolute;  
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;  
+    
+  }
+   
+  .respmenu .fa-bars, .respmenu .fa-times {
+    font-size: 48px;
+    pointer-events: none;
+
+  }
+   
+  .respmenu input[type="checkbox"] {
+    opacity: 0; 
+  }
+   
+  .respmenu {
+    color: white;
+   position: relative; 
+    min-height: 48px;
+       
+  }
+   
+  .respmenu nav {
+    display: none;
+  }
+   
+  .respmenu input:checked ~ nav {
+    display: block;
+  }
+   
+  .respmenu input:checked ~ .fa-bars {
+    display: none;
+  }
+   
+  .respmenu input:not(:checked) ~ .fa-times {
+    display: none;
+  }
+
+  .burger{      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
 
 .nav1, .nav2{
     display: none;
 } 
 
+
+
+
 }
+@media (min-width:1024px){
+    .allheader{
+        display: flex; 
+       align-items: center; 
+       justify-content: space-around;
+       width: 100%;
+       height: 7rem;
+   }
 
 
+    .logo-NombreLogo{
+        display: flex;
+        align-items: center;
+         font-size: 1rem; 
+    }
 
-@media (min-width:1720px){
+   
+    .NameLogo1{
+        display: flex;
+        padding: 13px 13px 13px 13px;
+        display: flex;
+        font-family: 'Big Shoulders Stencil Display', cursive;
+        font-size: 2.5rem; 
+        color: #bfc037
+        
+        
+    }
+
+    .logo-nombre{
+        display: flex;
+        width: 15%;
+
+    }
+    .burger{
+        display: none;
+    }
+
+    .name-input{
+    display: none;
+    }
+
+        
+    
+    
+    .logo{
+        width: 100px;
+        padding: 0 0 10px 10px;
+        display: flex;
+    }
+    
+    .buscador1{
+        display: none;
+    }
+    
+    .fa-bars:before {
+        display: none
+    }
+     
+    .buscador2{
+        display: flex;
+    }
+    
+    
+    .NameLogo{
+        display: flex;
+          /* width: 1rem;  */  
+        font-family: 'Big Shoulders Stencil Display', cursive;
+        font-size: 2.5rem;
+        font-weight: bold;
+       
+    }
+    .allheader{
+         display: flex; 
+        align-items: center; 
+        justify-content: space-between;
+        width: 100%;
+        height: 7rem;
+    }
+    
+    .nav1{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding-right: 4rem; 
+        padding-left: 4rem;
+        font-weight: bold;
+        flex-direction: column;
+        
+    }
+  
+    .nav1 li{
+        display: inline-block;
+        margin-right: 2rem;
+        font-size: 1rem;
+    }
+    .nav1 li:hover{
+    border-bottom: 2px solid ;
+    border-color: white;
+    }
+    
+    
+    .buscador{
+        width: 23em;
+        height: auto;
+        border-radius: .5em 0.5em 0.5e .5em;
+        padding-left: .5em;
+      }
+    
+    .fa-shopping-cart{
+        margin-left: 2rem;
+        margin-right: 3rem;
+        font-size: 2.5rem;
+    }
+    
+    .nav2{
+        text-align: right;
+        display: flex;
+        font-weight: bold;
+        align-items: center;
+        width: 35%;
+    
+    }
+    .nav2 li{
+        display: inline-block;
+        text-align: right;
+        padding-right: 1rem;
+        font-size: 1rem;
+        
+    }
+   
+    
+    .nav2 li .button-registro{
+        border-radius: 40px;
+        background-color: lightblue; 
+        padding: 0.3rem 0.9rem 0.3rem 0.9rem;
+    }
+    }
+    
+
+ 
+
+ @media (min-width:1520px){
 
 
 .logo-NombreLogo{
     display: flex;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1rem;
 }
+.name-input{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 5px;
+    width: 7%;
+    
+}  
+.burger{
+    display: none;
+}
+.name-input{
+    display: none;
+    }
+    
 
-.logo{
+
+ .logo{
     width: 100px;
     padding: 0 0 10px 10px;
     
-}
+} 
 
 .buscador1{
     display: none;
@@ -70,11 +395,12 @@ header{
     display: flex;
 }
 
+
 .NameLogo{
-     width: 1rem;   
-    padding-left: 1rem;
+    display: flex;
+      width: 1rem; 
     font-family: 'Big Shoulders Stencil Display', cursive;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
    
 }
@@ -90,13 +416,15 @@ header{
     text-align: center;
     display: flex;
     align-items: center;
-    padding-right: 5rem;
+    padding-right: 5rem; 
     font-weight: bold;
+    flex-direction: row;
+    width: 75%;
     
 }
 .nav1 li{
     display: inline-block;
-    margin-right: 5rem;
+    margin-right: 2rem;
     font-size: 1.3rem;
 }
 .nav1 li:hover{
@@ -113,7 +441,7 @@ border-color: white;
   }
 
 .fa-shopping-cart{
-    margin-left: 8rem;
+    margin-left: 2rem;
     margin-right: 3rem;
     font-size: 2.5rem;
 }
@@ -122,6 +450,7 @@ border-color: white;
     text-align: right;
     display: flex;
     font-weight: bold;
+    align-items: center;
 
 }
 .nav2 li{
@@ -138,3 +467,105 @@ border-color: white;
     padding: 0.3rem 0.9rem 0.3rem 0.9rem;
 }
 }
+
+@media (min-width:1720px){
+
+
+    .logo-NombreLogo{
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+    }
+    
+     .logo{
+        width: 100px;
+        padding: 0 0 10px 10px;
+    
+    } 
+    
+    .buscador1{
+        display: none;
+    }
+    
+    .fa-bars:before {
+        display: none
+    }
+    .logo{
+        display: flex;
+    } 
+    .buscador2{
+        display: flex;
+    }
+    
+    .NameLogo{
+         width: 1rem;
+        padding-left: 1rem;
+        font-family: 'Big Shoulders Stencil Display', cursive;
+        font-size: 3rem;
+        font-weight: bold;
+    
+    }
+    .allheader{
+         display: flex; 
+        align-items: center; 
+        justify-content: space-between;
+        width: 100%;
+        height: 7rem;
+    }
+    
+    .nav1{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        padding-right: 5rem;
+        font-weight: bold;
+        
+    
+    }
+    .nav1 ul{
+        width: 110%;
+    }
+    .nav1 li{
+        display: inline-block;
+        margin-right: 5rem;
+        font-size: 1.3rem;
+    }
+    .nav1 li:hover{
+    border-bottom: 2px solid ;
+    border-color: white;
+    }
+    
+    
+    .buscador{
+        width: 23em;
+        height: auto;
+        border-radius: .5em 0.5em 0.5e .5em;
+        padding-left: .5em;
+      }
+    
+    .fa-shopping-cart{
+        margin-left: 8rem;
+        margin-right: 3rem;
+        font-size: 2.5rem;
+    }
+    
+    .nav2{
+        text-align: right;
+        display: flex;
+        font-weight: bold;
+    
+    }
+    .nav2 li{
+        display: inline-block;
+        text-align: right;
+        padding-right: 1rem;
+        font-size: 1.3rem;
+    
+    }
+    
+    .nav2 li .button-registro{
+        border-radius: 40px;
+        background-color: lightblue; 
+        padding: 0.3rem 0.9rem 0.3rem 0.9rem;
+    }
+    } 
