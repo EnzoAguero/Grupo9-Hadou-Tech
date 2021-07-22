@@ -32,7 +32,9 @@
     flex-direction: column;
     align-items: center;
     border-top: 10px solid orangered;
+  /*   background-color: #24303c; */
 }
+
 .carrito__producto--contenedor > div{
     margin: 5px auto;
 }
@@ -40,12 +42,18 @@
     text-align: center;
     padding: 0 20px;
 }
+.carrito__producto--numero{
+    width: 100px;
+    text-align: center;
+}
 .carrito__producto--cantidad{
     display: flex;
     justify-content: space-around;
     width: 90%;
-    border: 1px solid grey;
-    border-radius: 3px;
+ 
+    border-radius: 5px;
+    background-color: #24303c;
+
 }
 .carrito__producto--footer{
     text-align: center;
@@ -73,6 +81,9 @@
 .carrito__envio--formas{
     margin-bottom: 20px;
 }
+.elemento__envio{
+    background-color:  #24303c;
+}
 .carrito__envio--correo{
     font-weight: bold;
     margin-left: 40px;
@@ -82,14 +93,14 @@
     display: flex;
     justify-content: space-evenly;
     width: 90%;
-    border: 2px solid black;
-    border-radius: 3px;
+    border-radius: 5px;
     margin:0 auto;
-    background-color: white;
+   
 
 }
 .fa-truck{
     color:black;
+    padding-left: 30px;
 }
 
 
@@ -117,24 +128,31 @@
     display: flex;
     justify-content: space-evenly;
     width: 80%;
-    border: 2px solid black;
+   
     border-radius: 5px;
     margin:0 auto;
-    background-color: white;
+   
+}
+.carrito__promo--codi{
+    width: 400px;
+
 }
 .fa-ticket-alt{
     color:black;
+    padding-left: 30px;
 }
 .carrito__promo--enviar{
     display: flex;
     justify-content: space-evenly;
     width: 90%;
-    border: 2px solid black;
     margin:0 auto;
-    background-color: white;
+    width: 200px;
     border-radius: 5px;
+   
 
 }
+
+
 /*carrito__pago */
 .carrito__pago{
     color:white;
@@ -171,9 +189,7 @@
 .carrito__logo--general{
     align-self: center;
 }
-.elemento__envio{
-    margin-left: 20px;
-}
+
 @media (min-width: 750px){
     
     .carrito__titulo{
@@ -192,9 +208,13 @@
         display: flex;
         justify-content: space-around;
         width: 15%;
-        border: 1px solid grey;
-        border-radius: 3px;
+        border-radius: 5px;
     }
+    .carrito__producto--numero{
+        width: 100px;
+        text-align: center;
+    }
+
     .carrito__producto--precio{
         padding: 0 20px;
     }
@@ -215,6 +235,7 @@
         width:auto;
         margin: 0;
     }
+    
     /* carrito__envio */
     .carrito__envio{
         margin-bottom: 25px;
@@ -235,6 +256,7 @@
     }
     .carrito__envio--codigoPostal{
         margin: 0;
+      
     }
     /* carrito__pago */
     .carrito__pago{
@@ -246,10 +268,9 @@
         justify-content: space-between;
         align-items: center;
     }
-    .footer{
-        bottom: 0;
-        position: fixed;  
+    .elemento__pago{
+        width: 200px;
     }
-
+ 
 }
 
