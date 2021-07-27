@@ -4,8 +4,8 @@
     <%- include ('./partials/head')%>
 
 <body class="carrito">
-
-     <%- include ('./partials/header')%>
+    
+    <%- include ('./partials/header')%>
 
     <main>
         <div class="carrito__titulo">
@@ -23,9 +23,9 @@
                         <p class="carrito__producto--descripcion">descripcion del producto mas Lorem ipsum dolor sit amet consectetu</p>
                     </div>
                     <div class="carrito__producto--cantidad">
-                        <input type="submit" value="-">
-                        <p>1</p>
-                        <input type="submit" value="+">
+                        <input type="submit" value="-" class="carrito__producto--menos">
+                        <p class="carrito__producto--numero">1</p>
+                        <input type="submit" value="+" class="carrito__producto--mas">
                     </div>
                     <div>
                         <p class="carrito__producto--precio">$99.999</p>
@@ -87,7 +87,7 @@
                             
                         </div>
                         <div class="carrito__envio--formas carrito__envio--codigoPostal">
-                            <div class="elemento__envio">
+                            <div class="elemento__envio ">
                                 <input type="text" name="carrito__envio--codigoPostal" id="carrito__envio--codigoPostal" placeholder="Código postal" class="input">
                                 <i class="fas fa-truck" ></i>
                             </div>
@@ -102,7 +102,7 @@
                         <p>Promo</p>
                     </div>
                     <div class="carrito__promo--codigo" >
-                        <div class="elemento__envio">
+                        <div class="elemento__envio carrito__promo--codi">
                             <input type="text" name="carrito__promo--codigo" id="carrito__envio--codigoPostal" placeholder="Ingresar código de descuento" class="input">
                             <i class="fas fa-ticket-alt"></i>
                         </div>
@@ -151,5 +151,5 @@
     </main>
 
     <%- include ('./partials/footer') %>
-    
+
 </html>
