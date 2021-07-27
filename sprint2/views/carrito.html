@@ -18,12 +18,23 @@
 <body class="carrito">
     <header>
         <div class="allheader">
-            <div class="logo-NombreLogo">
-               <a href="/"><img src="/images/intentounmillon.png" alt="logo" class="logo"></a>
-                <a href="/"><h3 class="NameLogo">Hadou Tech</h3></a>
+            <div class="logo-nombre">
+                <a href="/"><img src="/images/intentounmillon.png" alt="logo" class="logo"></a>
+                <a href="/">
+                    <h3 class="NameLogo1">Hadou Tech</h3>
+                </a>
+                
+                </div>
+                <div class="name-input">
+                    <a href="/">
+                        <h3 class="NameLogo2">Hadou Tech</h3>
+                    </a>
+                </div>
                 <form action=""><input class="buscador1" type="text" placeholder="Buscar..."></form>
-                <i class="fas fa-bars"></i>
-            </div>
+
+
+            
+
             <div class="nav1">
                 <nav>
                     <ul>
@@ -33,8 +44,20 @@
                         <li><a href="">Marcas</a></li>
                     </ul>
                 </nav>
-                <form action=""><input class="buscador2" type="text" placeholder="Buscar..."></form>
+               
+                <!-- <form action=""><input class="buscador2" type="text" placeholder="Buscar..."></form> -->
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Buscar">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+
+
             </div>
+
             <div class="nav2">
                 <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
                 <nav>
@@ -44,7 +67,50 @@
                     </ul>
                 </nav>
             </div>
+            </div>
+        
+<!-- 
+        <div class="burger">
+            <div class="respmenu">
+                <input type="checkbox">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+                <nav>
+                    <ul>
+                        <li><a href="/login">Ingresar</a></li>
+                        <li><a href="/register">Registro</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                        <li><a href="#">Historial</a></li>
+                        <li><a href="#">Marcas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> -->
+       
+       
+        <div class="burger">
+            <div class="respmenu">
+                <input type="checkbox">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+                <nav>
+                    <ul>
+                        <li><a href="/login">Ingresar</a></li>
+                        <li><a href="/register">Registro</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                        <li><a href="#">Historial</a></li>
+                        <li><a href="#">Marcas</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
+       
+
+
+
+
     </header>
     <main>
         <div class="carrito__titulo">
@@ -62,9 +128,9 @@
                         <p class="carrito__producto--descripcion">descripcion del producto mas Lorem ipsum dolor sit amet consectetu</p>
                     </div>
                     <div class="carrito__producto--cantidad">
-                        <input type="submit" value="-">
-                        <p>1</p>
-                        <input type="submit" value="+">
+                        <input type="submit" value="-" class="carrito__producto--menos">
+                        <p class="carrito__producto--numero">1</p>
+                        <input type="submit" value="+" class="carrito__producto--mas">
                     </div>
                     <div>
                         <p class="carrito__producto--precio">$99.999</p>
@@ -126,7 +192,7 @@
                             
                         </div>
                         <div class="carrito__envio--formas carrito__envio--codigoPostal">
-                            <div class="elemento__envio">
+                            <div class="elemento__envio ">
                                 <input type="text" name="carrito__envio--codigoPostal" id="carrito__envio--codigoPostal" placeholder="Código postal" class="input">
                                 <i class="fas fa-truck" ></i>
                             </div>
@@ -141,7 +207,7 @@
                         <p>Promo</p>
                     </div>
                     <div class="carrito__promo--codigo" >
-                        <div class="elemento__envio">
+                        <div class="elemento__envio carrito__promo--codi">
                             <input type="text" name="carrito__promo--codigo" id="carrito__envio--codigoPostal" placeholder="Ingresar código de descuento" class="input">
                             <i class="fas fa-ticket-alt"></i>
                         </div>
