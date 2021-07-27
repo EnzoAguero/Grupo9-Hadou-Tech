@@ -1,0 +1,137 @@
+footer{
+    background-image: url('/images/McLRE7y7i.jpg'); 
+    width: 100%;
+}
+.all-footer{
+    display: flex;
+    justify-content: space-around;
+    color: #bfc037;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.logo-footer{
+    width: 60px;
+}
+.caja-footer h3{
+    padding-left: 13px;
+}
+.caja-footer p{
+    font-size: 15px;
+}
+
+.caja-footer{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 2px solid black;
+margin-bottom: 10px;
+   
+}
+.caja-footer:last-child{
+    border-bottom: none;
+}
+
+
+ @media (min-width:769px){
+    footer{
+        background-image: url('/images/McLRE7y7i.jpg'); 
+        width: 100%;
+    }
+    .all-footer{
+        display: flex;
+        justify-content: space-around;
+        color: #bfc037;
+        align-items: center;
+        flex-direction: row;
+        
+
+        
+    }
+    .logo-footer{
+        width: 80px;
+    }
+    .caja-footer h3{
+        padding-left: 13px;
+        
+    }
+    .caja-footer{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        border:none
+    }
+
+
+
+}
+ 
+
+
+
+
+@media (min-width:1520px){
+ footer{
+    background-image: url('/images/McLRE7y7i.jpg');
+    border-top: 2px solid black;
+
+}
+
+.all-footer{
+    display: flex;
+    color: #bfc037;
+    justify-content: space-around;
+    align-items: center;    
+}
+
+.caja-footer{
+    border-right: 2px solid black;
+    padding-right: 10rem;
+    height: 8rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.caja-footer:last-child{
+    border-right: none;
+}
+
+
+.seguinos{
+    margin-top:15px;
+    margin-bottom: 2px;
+    font-size: 1.2rem;
+}
+
+
+
+.red-social{
+    
+    font-size: 3rem;
+
+} 
+
+.caja-footer img{
+    width: 6rem;
+    height: 6rem;
+}
+.fa-facebook-square:hover{
+    color: rgba(0, 0, 255, 0.972);
+}
+
+.fa-twitter-square:hover{
+    color: lightblue;
+}
+
+.fa-instagram-square:hover{
+    color: rgb(190, 8, 69);
+}
+
+}

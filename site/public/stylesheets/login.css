@@ -1,0 +1,80 @@
+.login{
+    background-image: url('/images/fondo.main.jpeg');
+}
+.login main{
+    width:50%;
+    margin:10% auto;
+   
+}
+.login__principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.login__bienvenido{
+    box-shadow: 7px 13px 37px #000;
+    background-color: #24303c;
+    color: white;
+    font-weight: bold;
+    padding: 30px 75px;
+    border:2px solid black;
+    border-radius: 10px;
+    margin: 2px 0;
+}
+.login__usuario{
+    box-shadow: 7px 13px 37px #000;
+    background-color: #24303c;
+    color:white;
+    padding: 30px;
+    border:2px black solid;
+    border-radius: 10px;
+}
+.login__usuario--login{
+    text-align: center;
+}
+.login__usuario--usuario{
+    padding: 10px 0;
+}
+.login__registrate{
+    box-shadow: 7px 13px 37px #000;
+    background-color: #24303c;
+    color: white;
+    font-weight: bold;
+    padding: 30px;
+    border:2px solid black;
+    border-radius: 10px;
+    margin: 2px 0;
+    order: 1;
+}
+.login__registrate--volver{
+    text-align: center;
+}
+.login__bienvenido2{
+    display: none;
+}
+
+.footer__login{
+    bottom: 0;
+    position: fixed;
+}
+@media (min-width:750px){
+    .login__principal{
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-evenly;
+    }
+    .login__bienvenido{
+        display: none;
+    }
+    .login__bienvenido2{
+        display: inherit;
+    }
+    .login__registrate{
+        margin:0;
+    }
+    .footer__login{
+        bottom: 0;
+        position: fixed;
+    }
+}
