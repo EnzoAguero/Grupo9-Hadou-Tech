@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include ('./partials/head') %>
+<%- include ('./partials/head')%>
 
 <body class="home">
  
-  <%- include ('./partials/header') %>
+  <%- include ('./partials/header')%>
     
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -45,22 +45,27 @@
 
         <!-- Comienza carrousel de productos -->
 
-
+       
         <section class="banner-productos">
+
+            <% productos.forEach(producto => { %>
             <article>
-                <img src="/images/mouse-producto2.jpg.png" alt="mouse">
+                <img src="/images/<%= producto.imagen %>" alt="mouse">
 
                 <div class="descripcion-de-producto">
-                    <h3>Mouse Logitech</h3>
-                    <span>$999.999</span>
-                    <h5>En 12 cuotas de $555,00 </h6>
+                    <h3><%= producto.nombre %></h3>
+
+                    <span><%= producto.precio %></span>
+                    
+                    <h5>En <%= producto.cuotas %> cuotas de $555,00 </h6>
                         <a href="">
                             <p>Comprar</p>
                         </a>
                 </div>
 
             </article>
-            <article>
+            <% }) %>
+           <!--  <article>
                 <img src="/images/mouse-producto2.jpg.png" alt="mouse">
 
                 <div class="descripcion-de-producto">
@@ -98,7 +103,7 @@
                         </a>
                 </div>
 
-            </article>
+            </article> -->
         </section>
 
 
@@ -126,7 +131,7 @@
         </div>
         </div>
 
-        
+        |
     </main>
     <section class="banner-marcas">
 

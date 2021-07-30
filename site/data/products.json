@@ -3,7 +3,7 @@
         "id" : 1,
         "nombre" : "Mouse Logitech",
         "precio" : "$999.999",
-        "imagen" : "/images/mouse-producto2.jpg.png",
+        "imagen" : "mouse-producto2.jpg.png",
         "cuotas" : 12
 
     
@@ -12,7 +12,7 @@
         "id" : 2,
         "nombre" : "Mouse Steelseries",
         "precio" : "$999.999",
-        "imagen" : "/images/mouse-producto2.jpg.png",
+        "imagen" : "mouse-producto2.jpg.png",
         "cuotas" : 12
 
     
@@ -21,7 +21,7 @@
         "id" : 3,
         "nombre" : "Mouse Sony",
         "precio" : "$999.999",
-        "imagen" : "/images/mouse-producto2.jpg.png",
+        "imagen" : "mouse-producto2.jpg.png",
         "cuotas" : 12
 
     
@@ -29,7 +29,7 @@
         "id" : 4,
         "nombre" : "Mouse Noga",
         "precio" : "$999.999",
-        "imagen" : "/images/mouse-producto2.jpg.png",
+        "imagen" : "mouse-producto2.jpg.png",
         "cuotas" : 12
 
     
