@@ -1,4 +1,4 @@
-const productos = require('../data/products')
+
 
 module.exports = {
     register : (req,res) => {
