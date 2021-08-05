@@ -164,6 +164,9 @@
     border-bottom-right-radius: 10px;
     box-shadow: 7px 13px 37px #000;
 }
+.carrito__pago label{
+    display:block;
+}
 .carrito__pago--contenedor{
     display: flex;
     flex-direction: column;

@@ -9,10 +9,6 @@ module.exports = {
           
             })
     },
-    save : (req,res) => {
-
-
-    },
     detail : (req,res) => {
         let producto = productos.find(producto => producto.id === +req.params.id); /* el parametro tiene que matchear con el parametro requerido por el usuario */
 
@@ -20,6 +16,15 @@ module.exports = {
             producto,
             productos
         })
+    },
+    edit : (req,res) => {
+
+    },
+    update : (req, res)=>{
+        
+    },
+    remove : (req,res)=>{
+
     }
 
 }
