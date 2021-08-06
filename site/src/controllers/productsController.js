@@ -6,6 +6,7 @@ module.exports = {
     add : (req,res) => {
         return res.render('productAdd',{
             productos,
+            title : "Hadou Tech",
           
             })
     },
@@ -18,6 +19,13 @@ module.exports = {
         })
     },
     edit : (req,res) => {
+        let producto = productos.find(producto => producto.id === +req.params.id);
+
+        return res.render('productEdit',{
+            title : "Hadou Tech",
+            productos,
+            producto
+        })
 
     },
     update : (req, res)=>{

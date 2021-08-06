@@ -1,0 +1,13 @@
+
+.productAdd .formulario{
+    width: 400px;
+    margin: 60px auto;
+}
+.productAdd label{
+    color :white;
+    font-size: 20px;
+}
+.productAdd h2{
+    color: white;
+    font-size: 30px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head')  %> 
+<body class="productAdd">
+    <%- include('./partials/header')  %> 
+    <div class="container">
+        <div class="formulario mt-5">
+          <h2>Agregar Producto</h2>
+            <form action="" method="POST">
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre">
+                </div>
+                <div class="mb-3">
+                  <label for="precio" class="form-label">Precio</label>
+                  <input type="number" class="form-control" id="precio" name="precio">
+                </div>
+                <div class="mb-3">
+                  <label for="imagen" class="form-label">Imagen</label>
+                  <input type="file" class="form-control" name="" id="imagen" value="">
+                </div>
+                <div class="mb-3">
+                  <label for="cuotas" class="form-label">Cuotas</label>
+                  <input type="number" class="form-control" name="cuotas" id="cuotas" value="">
+                </div>
+                <button class="btn btn-primary" type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+  
+    <%- include('./partials/footer')  %> 
+</body>
+</html>
