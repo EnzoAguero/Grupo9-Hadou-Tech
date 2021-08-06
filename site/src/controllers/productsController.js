@@ -11,12 +11,9 @@ module.exports = {
     add : (req,res) => {
         return res.render('productAdd',{
             productos,
+            title : "Hadou Tech",
           
-            })
-    },
-    save : (req,res) => {  
-
-
+            })     /* aca trabajo yo, enzo */
     },
     detail : (req,res) => {
         
@@ -29,8 +26,10 @@ module.exports = {
         })
     },
     edit : (req,res) => {
+       
 
     },
+
     remove : (req,res) => {
 
     },
@@ -38,6 +37,10 @@ module.exports = {
         return res.render('carrito',{
             title : "Hadou Tech",
         })
+
+    },
+    update : (req,res) => {
+        /* aca trabajo yo, enzo */
 
     }
 
