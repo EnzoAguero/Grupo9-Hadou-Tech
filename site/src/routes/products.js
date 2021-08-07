@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const {add,detail,edit,update,remove,carrito} = require('../controllers/productsController');
+const {add,detail,edit,update,remove,save,mouse} = require('../controllers/productsController');
 
 /* GET home page. */
 router.get('/add', add) /* formulario */
@@ -14,6 +14,6 @@ router.put('/edit/:id',update); /* formulario */
 
 router.delete('/remove/:id',remove); /*  */
 
-router.get('/carrito',carrito)
+router.get('/mouse',mouse)
 
 module.exports = router;

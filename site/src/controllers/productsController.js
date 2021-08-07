@@ -42,12 +42,17 @@ module.exports = {
     remove : (req,res) => {
 
     },
-    carrito : (req,res) => {
-        return res.render('carrito',{
-            title : "Hadou Tech",
+    mouse : (req,res) => {
+        res.render('productList', {
+            title : "Listado de Mouse",
+
         })
 
-    },
+    
+    }
+    
+
+    
    
 
     
