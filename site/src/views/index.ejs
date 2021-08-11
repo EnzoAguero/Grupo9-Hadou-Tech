@@ -53,12 +53,12 @@
                 <img src="/images/<%= producto.imagen %>" alt="mouse">
 
                 <div class="descripcion-de-producto">
-                    <h3><%= producto.nombre %> <%= producto.marca %></h3>
+                    <a href="/products/detalle/<%= producto.id %> "><h3><%= producto.nombre %> <%= producto.marca %></h3></a>
 
                   
                     <span><%= producto.precio %></span>
                         
-                    <h5>En <%= producto.cuotas %> cuotas de $555,00 </h6>
+                    <h5>En $ <%= producto.cuotas %> cuotas de $555,00 </h6>
                         <a href="">
                             <p>Comprar</p>
                         </a>
