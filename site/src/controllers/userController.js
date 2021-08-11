@@ -12,5 +12,10 @@ module.exports = {
             title : "Hadou Tech",
             
         })
+    },
+    detalle : (req,res) => {
+        return res.render('login', {
+            tittle : "Hadou Tech"
+        })
     }
 }

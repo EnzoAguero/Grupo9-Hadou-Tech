@@ -17,8 +17,5 @@ module.exports = {
     }
 }
 
-const array = [2,3,4,4];
-array.forEach(elemento =>{
-    return console.log(elemento)
-})
+
 

@@ -16,3 +16,4 @@ app.get('/detalle', (req,res) => res.sendFile(path.join(__dirname, 'views', 'det
 
 
 
+

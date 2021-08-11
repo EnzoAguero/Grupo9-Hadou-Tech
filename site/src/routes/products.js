@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const {add,detail,edit,update,remove,carrito} = require('../controllers/productsController');
+const {add,detail,edit,update,remove,carrito,save} = require('../controllers/productsController');
 
 /* GET home page. */
 router.get('/add', add) /* formulario */
