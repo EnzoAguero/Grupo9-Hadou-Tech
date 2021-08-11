@@ -1,11 +1,27 @@
 var express = require('express');
 var router = express.Router();
+const multer = require('multer');
 
 const {add,detail,edit,update,remove,save,mouse} = require('../controllers/productsController');
 
+
+const storage = multer.diskStorage({ 
+    destination: function (req, file, cb) { 
+       cb(null, './public/images'); 
+    },
+    filename: function (req,file,cb){
+        cb(null, file.fieldname + '-' + Date.now())
+    }
+})
+    
+
+  const upload = multer({
+    storage,
+})
+
 /* GET home page. */
 router.get('/add', add) /* formulario */
-router.post('/add', save); 
+router.post('/add', upload.single('imagen'), save); 
 
 router.get('/detalle/:id',detail); /*   */
 

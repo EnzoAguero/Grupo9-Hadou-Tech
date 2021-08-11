@@ -1,4 +1,4 @@
-const productos = require('../data/products');
+const {productos,guardar} = require('../data/products');
 const fs = require('fs')
 const path = require('path')
 
@@ -13,11 +13,25 @@ module.exports = {
             productos,
             title : "Hadou Tech",
           
-            })     /* aca trabajo yo, enzo */
+            })     
     },
     save : (req,res) =>{
+        
 
-/* aca trabajo yo, enzo */
+            const {nombre,marca,precio,cuotas} = req.body;     /* Esto me viene ingresado por el usuario */
+            let producto = {                                   /* Este es el producto que se me crea */
+                id : productos[productos.length - 1].id + 1,   /* me lo agrega en el array de productos */
+                nombre,
+                marca,
+                precio : +precio,
+                imagen : req.file ? req.file.filename : 'default-image.png',
+                cuotas,
+            }
+            
+           productos.push(producto);                         /* aca pushea en el json */
+           guardar(productos)                                /* y lo guarda */
+        
+           return res.redirect('/')
 
     },
     detail : (req,res) => {
