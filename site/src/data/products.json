@@ -1,45 +1,39 @@
 [
-    {
-        "id" : 1,
-        "nombre" : "Mouse",
-        "marca" : "Logitech",
-        "precio" : "$999.999",
-        "imagen" : "mouse-producto2.jpg.png",
-        "oferta" : true,
-        "cuotas" : 12
-
-    
-    },
-    {
-        "id" : 2,
-        "nombre" : "Mouse",
-        "marca" : "Steelseries",
-        "precio" : "$999.999",
-        "imagen" : "mouse-producto2.jpg.png",
-        "oferta" : true,
-        "cuotas" : 12
-
-    
-    },
-    {
-        "id" : 3,
-        "nombre" : "Mouse",
-        "marca" : "Sony",
-        "precio" : "$999.999",
-        "imagen" : "mouse-producto2.jpg.png",
-        "oferta" : true,
-        "cuotas" : 12
-
-    
-    },  {
-        "id" : 4,
-        "nombre" : "Mouse",
-        "marca" : "Noga",
-        "precio" : "$999.999",
-        "imagen" : "mouse-producto2.jpg.png",
-        "oferta" : true,
-        "cuotas" : 12
-
-    
-    }
+  {
+    "id": 1,
+    "nombre": "Mouse",
+    "marca": "Logitech",
+    "precio": "$999.999",
+    "imagen": "mouse-producto2.jpg.png",
+    "oferta": true,
+    "cuotas": 12
+  },
+  {
+    "id": 2,
+    "nombre": "Mouse",
+    "marca": "Steelseries",
+    "precio": "$999.999",
+    "imagen": "mouse-producto2.jpg.png",
+    "oferta": true,
+    "cuotas": 12
+  },
+  {
+    "id": 3,
+    "nombre": "Mouse",
+    "marca": "Sony",
+    "precio": "$999.999",
+    "imagen": "mouse-producto2.jpg.png",
+    "oferta": true,
+    "cuotas": 12
+  },
+  {
+    "id": 4,
+    "nombre": "Mouse",
+    "marca": "Noga",
+    "precio": "$999.999",
+    "imagen": "mouse-producto2.jpg.png",
+    "oferta": true,
+    "cuotas": 12
+  }
+  
 ]
