@@ -45,11 +45,32 @@ module.exports = {
         })
     },
     edit : (req,res) => {
-       
+            let producto = productos.find(producto => producto.id === +req.params.id);
+    
+            return res.render('productEdit',{
+                title : "Hadou Tech",
+                productos,
+                producto
+            }) 
 
     },
     update : (req,res) => {
-        
+        const {nombre,marca,precio,cuotas} = req.body;
+
+        let producto = productos.find(producto => producto.id === +req.params.id)
+        let productoEditado = {
+            id : +req.params.id,
+            nombre : nombre,
+            marca: marca,
+            precio : +precio,
+            imagen : req.file ? req.file.filename : producto.imagen,
+            cuotas,
+        }
+
+        let productosModificados = productos.map(producto => producto.id === +req.params.id ? productoEditado : producto)
+
+        guardar(productosModificados)
+        res.redirect('/')
 
     },
 
