@@ -10,12 +10,9 @@
   },
   {
     "id": 2,
-    "nombre": "Mouse",
-    "marca": "Steelseries",
-    "precio": "$999.999",
+    "precio": 2,
     "imagen": "mouse-producto2.jpg.png",
-    "oferta": true,
-    "cuotas": 12
+    "cuotas": "12"
   },
   {
     "id": 3,
@@ -35,5 +32,4 @@
     "oferta": true,
     "cuotas": 12
   }
-  
 ]

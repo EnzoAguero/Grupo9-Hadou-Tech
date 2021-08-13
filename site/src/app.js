@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride = require('method-override')
-const multer = require('multer')  /* pendiente su configuracion */
+/* const multer = require('multer')  */ 
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');

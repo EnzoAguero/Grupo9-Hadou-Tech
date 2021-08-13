@@ -29,7 +29,7 @@ footer{
     flex-direction: column;
     width: 100%;
     border-bottom: 2px solid black;
-margin-bottom: 10px;
+    padding-bottom: 10px;
    
 }
 .caja-footer:last-child{
@@ -64,7 +64,8 @@ margin-bottom: 10px;
         justify-content: center;
         display: flex;
         flex-direction: column;
-        border:none
+        border:none;
+
     }
 
 
