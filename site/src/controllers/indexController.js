@@ -1,9 +1,9 @@
-const productos = require('../data/products');
+const {productos} = require('../data/products');
 
 module.exports = {
     index : (req,res) => {
         return res.render('index',{
-            title : "Hadou Tech",
+            title : "Inicio",
             productos,
           
             
@@ -11,11 +11,8 @@ module.exports = {
     },
     carrito : (req,res)=>{
         return res.render('carrito',{
-            title : "Hadou Tech",
+            title : "Carrito",
             productos,
         })
     }
 }
-
-
-

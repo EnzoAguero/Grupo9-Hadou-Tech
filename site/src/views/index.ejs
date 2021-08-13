@@ -48,15 +48,16 @@
        
         <section class="banner-productos">
 
-            <% productos.forEach(producto => { %>
+         <% productos.forEach(producto => { %>
             <article>
                 <img src="/images/<%= producto.imagen %>" alt="mouse">
 
                 <div class="descripcion-de-producto">
-                    <h3><%= producto.nombre %></h3>
+                    <h3><%= producto.nombre %> <%= producto.marca %></h3>
 
+                  
                     <span><%= producto.precio %></span>
-                    
+                        
                     <h5>En <%= producto.cuotas %> cuotas de $555,00 </h6>
                         <a href="">
                             <p>Comprar</p>
@@ -64,7 +65,28 @@
                 </div>
 
             </article>
-            <% }) %>
+            <% }) %> 
+
+            <!-- Ejemplo para mostrar 4 productos -->
+            <!-- <%# for( let i = 0; i <= 3; i++ ) { %>
+                <article>
+                    <img src="/images/<%#= productos[i].imagen %>" alt="mouse">
+    
+                    <div class="descripcion-de-producto">
+                        <h3><%#= productos[i].nombre %> <%#= productos[i].marca %></h3>
+    
+                        <span><%#= productos[i].precio %></span>
+                        
+                        <h5>En <%#= productos[i].cuotas %> cuotas de $555,00 </h6>
+                            <a href="">
+                                <p>Comprar</p>
+                            </a>
+                    </div>
+    
+                </article>
+            
+            <%# } %>
+ -->
         </section>
 
 

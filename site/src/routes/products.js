@@ -1,11 +1,27 @@
 var express = require('express');
 var router = express.Router();
+const multer = require('multer');
 
-const {add,detail,edit,update,remove,carrito,save} = require('../controllers/productsController');
+const {add,detail,edit,update,remove,save,mouse} = require('../controllers/productsController');
+
+
+const storage = multer.diskStorage({ 
+    destination: function (req, file, cb) { 
+       cb(null, './public/images'); 
+    },
+    filename: function (req,file,cb){
+        cb(null, file.fieldname + '-' + Date.now())
+    }
+})
+    
+
+  const upload = multer({
+    storage,
+})
 
 /* GET home page. */
 router.get('/add', add) /* formulario */
-router.post('/add', save); 
+router.post('/add', upload.single('imagen'), save); 
 
 router.get('/detalle/:id',detail); /*   */
 
@@ -14,6 +30,6 @@ router.put('/edit/:id',update); /* formulario */
 
 router.delete('/remove/:id',remove); /*  */
 
-router.get('/carrito',carrito)
+router.get('/mouse',mouse)
 
 module.exports = router;

@@ -6,10 +6,14 @@
     <div class="container">
         <div class="formulario mt-5">
           <h2>Agregar Producto</h2>
-            <form action="/products/create"method="POST">
+          <form action="/products/add" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
                   <label for="nombre" class="form-label">Nombre</label>
                   <input type="text" class="form-control" id="nombre" name="nombre">
+                </div>
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Marca</label>
+                  <input type="text" class="form-control" id="marca" name="marca">
                 </div>
                 <div class="mb-3">
                   <label for="precio" class="form-label">Precio</label>
@@ -17,7 +21,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="imagen" class="form-label">Imagen</label>
-                  <input type="file" class="form-control" name="" id="imagen" value="">
+                  <input type="file" class="form-control" name="imagen" id="imagen">
                 </div>
                 <div class="mb-3">
                   <label for="cuotas" class="form-label">Cuotas</label>
