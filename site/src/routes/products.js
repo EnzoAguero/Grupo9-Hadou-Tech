@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const multer = require('multer');
 
-const {add,detail,edit,update,remove,save,mouse} = require('../controllers/productsController');
+const {add,detail,edit,update,remove,save,mouse,search} = require('../controllers/productsController');
 
 
 const storage = multer.diskStorage({ 
@@ -27,6 +27,8 @@ router.get('/detalle/:id',detail); /*   */
 
 router.get('/edit/:id',edit); /* formulario  */
 router.put('/edit/:id',update); /* formulario */
+
+router.get('/search',search);
 
 router.delete('/remove/:id',remove); /*  */
 

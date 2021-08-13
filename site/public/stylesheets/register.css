@@ -1,3 +1,16 @@
+.terminos {
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+}  
+
+.chec {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 8px;
+}
+
 @media (min-width:320px) {
     .form-register {
         width: 280px;

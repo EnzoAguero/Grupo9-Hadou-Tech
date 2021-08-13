@@ -14,9 +14,7 @@
             </div>
             <form action=""><input class="buscador1" type="text" placeholder="Buscar..."></form>
 
-
         
-
         <div class="nav1">
             <nav>
                 <ul>
@@ -27,12 +25,11 @@
                 </ul>
             </nav>
            
-            <!-- <form action=""><input class="buscador2" type="text" placeholder="Buscar..."></form> -->
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Buscar">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    <form action="/products/search" class="d-flex" method="GET">
+                        <input name="search" class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Buscar">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
                 </div>
             </nav>

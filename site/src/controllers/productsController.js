@@ -4,7 +4,14 @@ const path = require('path')
 
 module.exports = {
 
-    list : (req,res) => {
+    search : (req,res) => {
+        let result = productos.filter(producto => producto.nombre.toLowerCase().includes(req.query.search.toLowerCase()));
+        return res.render('resultSearch',{
+            title: 'Hadou Tech',
+            result,
+            productos,
+            busqueda : req.query.search
+        })
 
     },
 
