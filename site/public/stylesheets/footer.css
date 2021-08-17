@@ -29,9 +29,19 @@ footer{
     flex-direction: column;
     width: 100%;
     border-bottom: 2px solid black;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
    
 }
+.contenido-caja-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+}
+.contenido-caja-footer h3{
+   font-size: 30px;
+}
+
 .caja-footer:last-child{
     border-bottom: none;
 }
@@ -100,6 +110,12 @@ footer{
     flex-direction: column;
    
 }
+
+.contenido-caja-footer h3{
+    font-size: 25px;
+    
+}
+
 
 .caja-footer:last-child{
     border-right: none;

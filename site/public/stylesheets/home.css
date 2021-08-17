@@ -23,14 +23,15 @@
     color: white
 }
 
-article:first-child{
+/* article:first-child{
     display: none;
-}
+} */
 .banner-productos{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 
 .banner-productos article{
     margin-top: 10px;
@@ -38,17 +39,19 @@ article:first-child{
     background-color: #24303c;
     box-shadow: 7px 13px 37px #000;
 }
+.banner-productos article:last-child{
+   display: block;
+    
+   
 
-/* .banner-productos article img{
-    border: 2px solid #1f53c5
 }
- */
+
+
 .descripcion-de-producto{
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-   /*  border: 2px solid #1f53c5; */
     padding: 5px;
 }
 .banner-productos span{
@@ -104,18 +107,22 @@ article:first-child{
 }
 
 .banner-productos{
-    display: flex;
+     display: flex; 
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: row;
+   flex-direction: row;
+    flex-wrap: wrap;  
+   
     }
 .banner-productos article{
     padding: 5px;
     background-color: #24303c;
     box-shadow: 7px 13px 37px #000;
     width: 40%;
+    margin-bottom: 15px;
     
 }
+
 /* .banner-productos article img{
      border: 2px solid #1f53c5 
 } 
@@ -124,13 +131,12 @@ article:first-child{
 /* .banner-productos article img:first-child{
     margin-left: 5px;
 } */
-.banner-productos article:first-child{
+/* .banner-productos article:first-child{
     display: none;
 }
 
-.banner-productos article:last-child{
-    display: none;
-}
+ */
+
 .descripcion-de-producto{
     color: white;
     display: flex;
@@ -157,8 +163,125 @@ article:first-child{
     height: 8rem;
     background-repeat: repeat-x;
 }
-
 }
+
+@media (min-width:1024px){
+    .main{
+       
+       /* background-image: url('/images/fondo.main.jpeg'); */
+       background-repeat: no-repeat;
+       background-size: 100%;
+       
+   }
+   
+   .titulo-productos{
+       display: flex;
+       align-items: center;
+       padding-left: 2rem;
+       padding-top: 1rem;
+       font-size: 1.5rem;
+       color: #bfc037
+   
+       
+   }
+   
+   .titulo-productos h4{
+       padding-top: 18px;
+       padding-left: 5px;
+       color: white
+       
+   
+   
+   }
+   
+  .banner-productos{
+        display: flex; 
+       align-items: center; 
+       justify-content: center;
+      
+       
+   }
+   
+   .banner-productos article{
+       border: 2px solid black;
+       
+       border-radius: 5%;
+       text-align: center;
+       display: block;
+       margin-right: 10px;
+       width: 23%;
+       height: 400px;
+       
+   
+   } 
+   
+    .banner-productos article img{
+       width: 200px;
+      
+   }
+   
+   
+   .home .descripcion-de-producto{
+       /*  border-top: 2px solid #1f53c5; */
+       flex-direction: column;
+       width: 80%;
+       /* height: 550px; */
+       display: flex;
+       justify-content: center;
+       align-items: stretch;
+       margin: 0 auto;
+      
+   }
+   
+   .home .descripcion-de-producto p{
+       background-color: lightblue;
+       padding: 5px;
+       color: black;
+       border-radius: 2px;
+       font-weight: bolder;
+   }
+   
+   
+   .home .desc-dispositivos{
+       padding: 1.5rem 0 1.5rem 1.5rem;
+       display: flex;
+       color: #bfc037
+   
+   
+   }
+   
+   .dispositivos{
+       display: flex;
+       font-size: 10rem;
+       width: 100%;
+       justify-content: space-evenly;
+       align-items: center;
+   }
+   
+   
+   
+   .contenedor-dispositivos{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   
+   .contenedor-dispositivos p{
+       font-size: 2rem;
+       color: white;
+   
+   }
+   .contenedor-dispositivos p:hover{
+    color: #bfc037;
+   }
+   .banner-marcas{
+       background-image: url('/images/banner-marcasreal.jpeg');
+       display: flex;
+       width: 100%;
+       height: 8rem;
+       background-repeat: repeat-x;
+   }
+   }
  
 
 @media (min-width:1520px){
@@ -209,17 +332,16 @@ article:first-child{
 
 }
 
-.banner-productos article:first-child{
+/* .banner-productos article:first-child{
     display: block;
 }
  .banner-productos article:last-child{
     border: 2px solid black;
-    /* padding: 3rem; */
     border-radius: 5%;
     text-align: center;
      display: block; 
-    /* margin-right: 10px; */
-} 
+    
+}  */
 
 
 .banner-productos article img{

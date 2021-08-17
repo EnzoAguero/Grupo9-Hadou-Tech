@@ -2,16 +2,24 @@ const {productos,guardar} = require('../data/products');
 const fs = require('fs')
 const path = require('path')
 
+
+
 module.exports = {
 
     search : (req,res) => {
+<<<<<<< HEAD
         let result = productos.filter(producto => producto.nombre == req.query.search);
         return res.render('resultSearch',{
+=======
+        let result = productos.filter(producto => producto.nombre.toLowerCase() == req.query.search.toLowerCase());
+        
+    return res.render('resultSearch',{
+>>>>>>> 114b71e7e56fbf0783fb6fa0052d70cf795bc8c4
             title: 'Hadou Tech',
             result,
             productos,
             busqueda : req.query.search
-        })
+        }) 
 
     },
 
@@ -69,7 +77,7 @@ module.exports = {
             id : +req.params.id,
             nombre : nombre,
             marca: marca,
-            precio : +precio,
+            precio : precio,
             imagen : req.file ? req.file.filename : producto.imagen,
             cuotas,
         }
@@ -89,7 +97,7 @@ module.exports = {
             title : "Listado de Mouse",
 
         })
-
+  /* queda pendiente */
     
     }
     

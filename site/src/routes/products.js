@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const multer = require('multer');
 
+
 const {add,detail,edit,update,remove,save,mouse,search} = require('../controllers/productsController');
 
 
