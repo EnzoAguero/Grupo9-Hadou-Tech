@@ -8,7 +8,7 @@
     <%- include ('./partials/header')%>
 
     <div class="register">
-        <main class="container mt-5">
+        <main class="container mt-5" >
             <% if (result.length > 0) { %>
                 <h3>Resultados de la búsqueda: <%= busqueda %> </h3>
                 <table class="table">
@@ -34,7 +34,7 @@
                     </tbody>
                   </table>
             <% } else{ %>
-                <h3>No hay resultado para la búsqueda: <%= busqueda %> </h3>
+                <h3>No hay resultado para la búsqueda: <%= busqueda %></h3>
 
                 <% } %>
 
