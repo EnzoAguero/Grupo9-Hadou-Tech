@@ -3,22 +3,25 @@
     "id": 1,
     "nombre": "Mouse",
     "marca": "Logitech",
-    "precio": "$999.999",
+    "precio": "10500",
     "imagen": "mouse-producto2.jpg.png",
     "oferta": true,
     "cuotas": 12
   },
   {
     "id": 2,
-    "precio": 2,
+    "nombre": "Mouse",
+    "marca": "Sony",
+    "precio": "8700",
     "imagen": "mouse-producto2.jpg.png",
-    "cuotas": "12"
+    "oferta": true,
+    "cuotas": 12
   },
   {
     "id": 3,
     "nombre": "Mouse",
     "marca": "Sony",
-    "precio": "$999.999",
+    "precio": "12450",
     "imagen": "mouse-producto2.jpg.png",
     "oferta": true,
     "cuotas": 12
@@ -27,9 +30,41 @@
     "id": 4,
     "nombre": "Mouse",
     "marca": "Noga",
-    "precio": "$999.999",
+    "precio": "80000",
     "imagen": "mouse-producto2.jpg.png",
     "oferta": true,
     "cuotas": 12
+  },
+  {
+    "id": 5,
+    "nombre": "Mouse",
+    "marca": "qweqwe",
+    "precio": "123",
+    "imagen": "imagen-1628885259814",
+    "cuotas": "12"
+  },
+  {
+    "id": 6,
+    "nombre": "teclado",
+    "marca": "Noga",
+    "precio": "12312",
+    "imagen": "imagen-1628885481121",
+    "cuotas": "12"
+  },
+  {
+    "id": 7,
+    "nombre": "Mouse",
+    "marca": "",
+    "precio": 5450,
+    "imagen": "imagen-1629238413167",
+    "cuotas": "12"
+  },
+  {
+    "id": 8,
+    "nombre": "Mouse",
+    "marca": "aguero",
+    "precio": 6000,
+    "imagen": "imagen-1629238631984",
+    "cuotas": "6"
   }
 ]

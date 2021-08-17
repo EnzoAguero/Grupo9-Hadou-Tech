@@ -127,13 +127,13 @@
     
 }
 
-.boton {
+.boton input{
     font-size: 16px;
-    color: white;
+    
     font-weight: bold;
-    background: #1f53c5;
     padding: 8px 8px 8px 8px;
     margin: 10px;
+    width: 100%;
 }
 
 
@@ -281,7 +281,7 @@
         
     }
     
-    .boton {
+ /*    .boton {
         font-size: 16px;
         color: white;
         font-weight: bold;
@@ -289,7 +289,7 @@
         padding: 8px 8px 8px 8px;
         margin: 10px;
     }
-    
+     */
     
     .detalle-producto-redes {
         display: flex;
