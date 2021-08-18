@@ -10,6 +10,10 @@ module.exports = {
             title : "Hadou Tech",
             
         })
+    },
+    processRegister : (req,res) => {
+        console.log(req.body)
+        res.redirect('/users/login')
     }
 }
    

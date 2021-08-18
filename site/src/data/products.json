@@ -1,12 +1,10 @@
 [
   {
     "id": 1,
-    "nombre": "Mouse",
-    "marca": "Logitech",
-    "precio": "10500",
+    "marca": "Ejemplo",
+    "precio": "500",
     "imagen": "mouse-producto2.jpg.png",
-    "oferta": true,
-    "cuotas": 12
+    "cuotas": "6"
   },
   {
     "id": 2,
@@ -67,4 +65,5 @@
     "imagen": "imagen-1629238631984",
     "cuotas": "6"
   }
+   
 ]

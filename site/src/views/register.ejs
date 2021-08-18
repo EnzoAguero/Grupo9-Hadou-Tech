@@ -9,7 +9,7 @@
 
     <main>
         <div class="contenedor">
-            <form class="form-register" action="">
+            <form class="form-register" action="/users/register" method="POST">
                 <h2 class="titulo">Formulario de Registro</h2>
                 <div class="sub-text-aline">
                     <b">Completa los siguientes campos para registrarte en nuestro sitio</b>
@@ -18,7 +18,7 @@
                     <input class="control-form" type="email" name="correo" placeholder="Ingresá tu mail">
                 </div>
                 <div>
-                    <input class="control-form" type="password" name="contraseña" placeholder="Ingresá tu contraseña">
+                    <input class="control-form" type="password" name="contrasenia" placeholder="Ingresá tu contraseña">
                 </div>
                 <div>
                     <input class="control-form" type="password" name="confirmar" placeholder="Confirma tu contraseña">
@@ -37,7 +37,12 @@
                 </div>
                 <div>
                     <select class="control-form" name="provincias" id="provincias">
-                        <option value="Provincias">Seleccione una provincia</option>
+                        <option>Seleccione una provincia</option>
+                        <option value="BA">Buenos Aires</option>
+                        <option value="SF">Santa Fe</option>
+                        <option value="TU">Tucuman</option>
+                        <option value="CB">Cordoba</option>
+                        <option value="SJ">San Juan</option>
                     </select>
                 </div>
                 <div>
@@ -62,7 +67,7 @@
                     <input class="botons" type="submit" value="Registrar">
                 </div>
                 <div>
-                    <p><a href="#">Ya tengo cuenta</a></p>
+                    <p><a href="/users/login">Ya tengo cuenta</a></p>
                 </div>
 
             </form>

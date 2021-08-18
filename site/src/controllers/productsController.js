@@ -7,14 +7,9 @@ const path = require('path')
 module.exports = {
 
     search : (req,res) => {
-<<<<<<< HEAD
-        let result = productos.filter(producto => producto.nombre == req.query.search);
-        return res.render('resultSearch',{
-=======
-        let result = productos.filter(producto => producto.nombre.toLowerCase() == req.query.search.toLowerCase());
+        let result = productos.filter(producto => producto.nombre.toLowerCase().includes (req.query.search.toLowerCase()));
         
     return res.render('resultSearch',{
->>>>>>> 114b71e7e56fbf0783fb6fa0052d70cf795bc8c4
             title: 'Hadou Tech',
             result,
             productos,
@@ -36,11 +31,12 @@ module.exports = {
             const {nombre,marca,precio,cuotas} = req.body;     /* Esto me viene ingresado por el usuario */
             let producto = {                                   /* Este es el producto que se me crea */
                 id : productos[productos.length - 1].id + 1,   /* me lo agrega en el array de productos */
-                nombre,
+                nombre : req.body.nombre,
                 marca,
                 precio : +precio,
                 imagen : req.file ? req.file.filename : 'default-image.png',
                 cuotas,
+                oferta : true
             }
             
            productos.push(producto);                         /* aca pushea en el json */
@@ -75,11 +71,13 @@ module.exports = {
         let producto = productos.find(producto => producto.id === +req.params.id)
         let productoEditado = {
             id : +req.params.id,
-            nombre : nombre,
+            nombre : req.body.nombre,
             marca: marca,
             precio : precio,
             imagen : req.file ? req.file.filename : producto.imagen,
             cuotas,
+            oferta : true
+            
         }
 
         let productosModificados = productos.map(producto => producto.id === +req.params.id ? productoEditado : producto)
