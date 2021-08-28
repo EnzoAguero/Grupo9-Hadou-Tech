@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const multer = require('multer');
-
+const validaciones = require('../middlewares/addProductValidation');
 
 const {add,detail,edit,update,remove,save,mouse,search} = require('../controllers/productsController');
 
@@ -22,7 +22,7 @@ const storage = multer.diskStorage({
 
 /* GET home page. */
 router.get('/add', add) /* formulario */
-router.post('/add', upload.single('imagen'), save); 
+router.post('/add', upload.single('imagen'),validaciones, save); 
 
 router.get('/detalle/:id',detail); /*   */
 

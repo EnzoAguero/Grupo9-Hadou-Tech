@@ -1,20 +1,15 @@
 const {productos,guardar} = require('../data/products');
 const fs = require('fs')
 const path = require('path')
-
+const {validationResult} = require('express-validator')
 
 
 module.exports = {
 
     search : (req,res) => {
-<<<<<<< HEAD
-        let result = productos.filter(producto => producto.nombre == req.query.search);
-        return res.render('resultSearch',{
-=======
         let result = productos.filter(producto => producto.nombre.toLowerCase() == req.query.search.toLowerCase());
         
     return res.render('resultSearch',{
->>>>>>> 114b71e7e56fbf0783fb6fa0052d70cf795bc8c4
             title: 'Hadou Tech',
             result,
             productos,
@@ -31,9 +26,10 @@ module.exports = {
             })     
     },
     save : (req,res) =>{
-        
+            let errors = validationResult(req);
 
             const {nombre,marca,precio,cuotas} = req.body;     /* Esto me viene ingresado por el usuario */
+            if(errors.isEmpty()){
             let producto = {                                   /* Este es el producto que se me crea */
                 id : productos[productos.length - 1].id + 1,   /* me lo agrega en el array de productos */
                 nombre,
@@ -42,12 +38,17 @@ module.exports = {
                 imagen : req.file ? req.file.filename : 'default-image.png',
                 cuotas,
             }
-            
-           productos.push(producto);                         /* aca pushea en el json */
+            productos.push(producto);                         /* aca pushea en el json */
            guardar(productos)                                /* y lo guarda */
         
            return res.redirect('/')
-
+        }
+            else{
+            return res.render('productAdd',{
+                errores : errors.mapped(),
+                old : req.body
+            })
+        }
     },
     detail : (req,res) => {
         
