@@ -7,23 +7,25 @@
 
     <%- include ('./partials/header')%>
 
-    <main>
     <main class="login">
+        <form action="/login" method="POST">
             <section class="login__principal">
                 <div class="login__bienvenida">
                     <h1>Bienvenido</h1>
                 </div>
                 <div class="login__usuario">
-                    <p><input type="text" name="usurio" id="usuario" minlength="2" maxlength="15" placeholder="usuario"></p>
-                    <p><input type="password" name="contrasena" id="contrasena" placeholder="contraseña"></p>
+                    <p><input type="email" name="email" id="usuario" minlength="2" maxlength="15" placeholder="Ingrese su mail"></p>
+                    <p><input type="password" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña"></p>
                     <p><input type="submit" value="Login"></p>
                 </div>
                 <div class="login__registrate">
                     <p>¿Perdiste tu contraseña</p>
-                    <p>¿No tienes Cuenta? Registrate</p>
+                    <p>¿No tienes Cuenta? <a href="/register">Registrate</a> </p>
                     <p class="login__registrate--volver"><a href="/"><i class="fas fa-arrow-left"></i> Volver</a></p>
                 </div>
             </section>
+        </form>
+            
     </main>
      
     <%- include ('./partials/footer') %>

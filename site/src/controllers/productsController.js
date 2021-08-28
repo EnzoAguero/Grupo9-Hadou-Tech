@@ -7,7 +7,7 @@ const {validationResult} = require('express-validator')
 module.exports = {
 
     search : (req,res) => {
-        let result = productos.filter(producto => producto.nombre.toLowerCase() == req.query.search.toLowerCase());
+        let result = productos.filter(producto => producto.nombre.toLowerCase().includes (req.query.search.toLowerCase()));
         
     return res.render('resultSearch',{
             title: 'Hadou Tech',
@@ -32,11 +32,12 @@ module.exports = {
             if(errors.isEmpty()){
             let producto = {                                   /* Este es el producto que se me crea */
                 id : productos[productos.length - 1].id + 1,   /* me lo agrega en el array de productos */
-                nombre,
+                nombre : req.body.nombre,
                 marca,
                 precio : +precio,
                 imagen : req.file ? req.file.filename : 'default-image.png',
                 cuotas,
+                oferta : true
             }
             productos.push(producto);                         /* aca pushea en el json */
            guardar(productos)                                /* y lo guarda */
@@ -76,11 +77,13 @@ module.exports = {
         let producto = productos.find(producto => producto.id === +req.params.id)
         let productoEditado = {
             id : +req.params.id,
-            nombre : nombre,
+            nombre : req.body.nombre,
             marca: marca,
             precio : precio,
             imagen : req.file ? req.file.filename : producto.imagen,
             cuotas,
+            oferta : true
+            
         }
 
         let productosModificados = productos.map(producto => producto.id === +req.params.id ? productoEditado : producto)
