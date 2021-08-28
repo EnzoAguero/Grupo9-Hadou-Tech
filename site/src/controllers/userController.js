@@ -44,7 +44,7 @@ module.exports = {
             
             return res.redirect('/')
         }else{
-            
+            console.log(errors);
             return res.render('register',{
                 old : req.body,
                 errores : errors.mapped()

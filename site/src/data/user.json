@@ -1,5 +1,16 @@
 [
-    {
-
-    }
+  {
+    "id": 1,
+    "correo": "messi100@gmail.com",
+    "nombre": "enzo",
+    "apellido": "aguero",
+    "provincias": "Provincias",
+    "ciudad": "san miguel",
+    "postal": "1663",
+    "direccion": "las malvinas",
+    "telefono": "12341234",
+    "acepta": "on",
+    "contrasenia": "$2a$10$fW/dy0.SZt6gFZWIAYCFF.S.UOqBqLs0a.5g606kJQty.rcnoYXEq",
+    "pais": "argentina"
+  }
 ]

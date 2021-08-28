@@ -1,24 +1,11 @@
 var express = require('express');
 var router = express.Router();
-const multer = require('multer');
 const validaciones = require('../middlewares/addProductValidation');
+const upload = require('../middlewares/multer')
 
 const {add,detail,edit,update,remove,save,mouse,search} = require('../controllers/productsController');
 
 
-const storage = multer.diskStorage({ 
-    destination: function (req, file, cb) { 
-       cb(null, './public/images'); 
-    },
-    filename: function (req,file,cb){
-        cb(null, file.fieldname + '-' + Date.now())
-    }
-})
-    
-
-  const upload = multer({
-    storage,
-})
 
 /* GET home page. */
 router.get('/add', add) /* formulario */

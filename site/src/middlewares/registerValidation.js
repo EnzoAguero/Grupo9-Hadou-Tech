@@ -2,7 +2,7 @@ const {check, body} = require('express-validator');
 
 module.exports = [
 
-    check('email').notEmpty().withMessage('Debes ingresar un email válido').bail()
+    check('correo').notEmpty().withMessage('Debes ingresar un email válido').bail()
     .isEmail().withMessage('Debes ingresar un mail válido'),
 
     check('contrasenia')
@@ -36,7 +36,7 @@ module.exports = [
 
     check('pais').notEmpty().withMessage('Debe seleccionar al menos un país'),
 
-    check('provincia').notEmpty().withMessage('Debe seleccionar al menos una provincia'),
+    check('provincias').notEmpty().withMessage('Debe seleccionar al menos una provincia'),
 
     check('ciudad').notEmpty().withMessage('Debe poner su ciudad'),
 
@@ -49,6 +49,6 @@ module.exports = [
     check('acepta')
     .isString('on').withMessage('Debes aceptar los términos y condiciones'),
 
-    /* check('imagen').notEmpty().withMessage('Ingrese su foto de perfil') */
+    check('imagen').notEmpty().withMessage('Ingrese su foto de perfil')
 
 ]
