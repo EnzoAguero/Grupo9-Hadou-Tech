@@ -13,8 +13,8 @@ router.post('/add', upload.single('imagen'),validaciones, save);
 
 router.get('/detalle/:id',detail); /*   */
 
-router.get('/edit/:id',edit); /* formulario  */
-router.put('/edit/:id',update); /* formulario */
+router.get('/edit/:id',edit); 
+router.put('/edit/:id',update); 
 
 router.get('/search',search);
 

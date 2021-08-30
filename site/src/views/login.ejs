@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include ('./partials/head')%>
-    
-<body class="home">
+   <%- include ('./partials/head')%>
 
-    <%- include ('./partials/header')%>
+   <body class="home">
 
-    <main class="login">
-        <form action="/login" method="POST">
+      <%- include ('./partials/header')%>
+
+      <main class="login">
+         <form action="./login" method="POST">
             <section class="login__principal">
-                <div class="login__bienvenida">
-                    <h1>Bienvenido</h1>
-                </div>
-                <div class="login__usuario">
-                    <p><input type="email" name="email" id="usuario" minlength="2" maxlength="15" placeholder="Ingrese su mail"></p>
-                    <p><input type="password" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña"></p>
-                    <p><input type="submit" value="Login"></p>
-                </div>
-                <div class="login__registrate">
-                    <p>¿Perdiste tu contraseña</p>
-                    <p>¿No tienes Cuenta? <a href="/register">Registrate</a> </p>
-                    <p class="login__registrate--volver"><a href="/"><i class="fas fa-arrow-left"></i> Volver</a></p>
-                </div>
-            </section>
-        </form>
-            
-    </main>
-     
-    <%- include ('./partials/footer') %>
+               <div class="login__bienvenida">
+                  <h1>Bienvenido</h1>
+               </div>
+               <div class="login__usuario">
+                  <p><input type="email" name="email" id="email" minlength="2" maxlength="15" placeholder="Ingrese su mail"></p>
+                  <p><input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese su contraseña"></p>
+                  <p>Recordarme</p>
+                  <p>
+                  <input type="checkbox"  id="check" name="recordar">
+                  </p>
+                  <p><input type="submit" value="Login"></p>
 
-</body>
+               </div>
+               <div class="login__registrate">
+                  <p>¿Perdiste tu contraseña</p>
+                  <p>¿No tienes Cuenta? <a href="./register">Registrate</a> </p>
+                  <p class="login__registrate--volver"><a href="/"><i class="fas fa-arrow-left"></i> Volver</a></p>
+               </div>
+            </section>
+         </form>
+
+      </main>
+
+      <%- include ('./partials/footer') %>
+
+   </body>
 </html>

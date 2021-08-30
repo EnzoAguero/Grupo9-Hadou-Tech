@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head')  %> 
-<body class="productAdd">
-    <%- include('./partials/header')  %> 
-    <div class="container">
-        <div class="formulario mt-5">
+   <%- include('./partials/head')  %> 
+   <body class="productAdd">
+      <%- include('./partials/header')  %> 
+      <div class="container">
+         <div class="formulario mt-5">
             <h2>Editar Producto</h2>
             <form action="/products/edit/<%= producto.id %>?_method=PUT" method="POST">
-                <div class="mb-3">
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" value="<%= producto.nombre %>">
-                  </div>
-                  <div class="mb-3">
-                    <label for="marca" class="form-label">Marca</label>
-                    <input type="text" class="form-control" id="marca" name="marca">
-                  </div>
-                  <div class="mb-3">
-                    <label for="precio">Precio</label>
-                    <input type="number" class="form-control" id="precio" name="precio" value="<%= producto.precio %>">
-                  </div>
-                  <div class="mb-3">
-                    <label for="imagen" class="form-label">Imagen</label>
-                    <input type="file" class="form-control" name="imagen" id="imagen" value="<%= producto.imagen%>" multiple>
-                  </div>
-                  <div class="mb-3">
-                    <label for="cuotas" class="form-label">Cuotas</label>
-                    <input type="number" class="form-control" name="cuotas" id="cuotas" value="<%= producto.cuotas%>">
-                  </div>
-                  <button class="btn btn-primary" type="submit">Guardar</button>
+               <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" value="<%= producto.nombre %>">
+               </div>
+               <div class="mb-3">
+                  <label for="marca" class="form-label">Marca</label>
+                  <input type="text" class="form-control" id="marca" name="marca" value="<%= producto.marca %>">
+               </div>
+               <div class="mb-3">
+                  <label for="precio">Precio</label>
+                  <input type="number" class="form-control" id="precio" name="precio" value="<%= producto.precio %>">
+               </div>
+               <div class="mb-3">
+                  <label for="imagen" class="form-label">Imagen</label>
+                  <input type="file" class="form-control" name="imagen" id="imagen" value="<%= producto.imagen%>" multiple>
+               </div>
+               <div class="mb-3">
+                  <select name="oferta" id="oferta" class="form-input">
+                     <option value="true" <%= producto.oferta  === "true" ? 'selected' : null %>>En Oferta</option>
+                     <option value="false" <%= producto.oferta  === "false" ? 'selected' : null %>>Sin Oferta</option>
+                  </select>
+               </div>
+               <div class="mb-3">
+                  <label for="cuotas" class="form-label">Cuotas</label>
+                  <input type="number" class="form-control" name="cuotas" id="cuotas" value="<%= producto.cuotas%>">
+               </div>
+               <button class="btn btn-primary" type="submit">Guardar</button>
             </form>
-        </div>
-    </div>
-    
-    <%- include('./partials/footer')  %> 
-</body>
+         </div>
+      </div>
+
+      <%- include('./partials/footer')  %> 
+   </body>
 </html>

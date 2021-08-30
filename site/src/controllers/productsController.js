@@ -6,108 +6,104 @@ const {validationResult} = require('express-validator')
 
 module.exports = {
 
-    search : (req,res) => {
-        let result = productos.filter(producto => producto.nombre.toLowerCase().includes (req.query.search.toLowerCase()));
-        
+  search : (req,res) => {
+    let result = productos.filter(producto => producto.nombre.toLowerCase().includes (req.query.search.toLowerCase()));
+
     return res.render('resultSearch',{
-            title: 'Hadou Tech',
-            result,
-            productos,
-            busqueda : req.query.search
-        }) 
+      title: 'Hadou Tech',
+      result,
+      productos,
+      busqueda : req.query.search
+    }) 
 
-    },
+  },
 
-    add : (req,res) => {
-        return res.render('productAdd',{
-            productos,
-            title : "Hadou Tech",
-          
-            })     
-    },
-    save : (req,res) =>{
-            let errors = validationResult(req);
+  add : (req,res) => {
+    return res.render('productAdd',{
+      productos,
+      title : "Hadou Tech",
 
-            const {nombre,marca,precio,cuotas} = req.body;     /* Esto me viene ingresado por el usuario */
-            if(errors.isEmpty()){
-            let producto = {                                   /* Este es el producto que se me crea */
-                id : productos[productos.length - 1].id + 1,   /* me lo agrega en el array de productos */
-                nombre : req.body.nombre,
-                marca,
-                precio : +precio,
-                imagen : req.file ? req.file.filename : 'default-image.png',
-                cuotas,
-                oferta : true
-            }
-            productos.push(producto);                         /* aca pushea en el json */
-           guardar(productos)                                /* y lo guarda */
-        
-           return res.redirect('/')
-        }
-            else{
-            return res.render('productAdd',{
-                errores : errors.mapped(),
-                old : req.body
-            })
-        }
-    },
-    detail : (req,res) => {
-        
-        let producto = productos.find(producto => producto.id === +req.params.id); /* el parametro tiene que matchear con el parametro requerido por el usuario */
+    })     
+  },
+  save : (req,res) =>{
+    let errors = validationResult(req);
 
-        return res.render('detalle',{   
-            title : "Hadou Tech",
-            producto,
-            productos
-        })
-    },
-    edit : (req,res) => {
-            let producto = productos.find(producto => producto.id === +req.params.id);
-    
-            return res.render('productEdit',{
-                title : "Hadou Tech",
-                productos,
-                producto
-            }) 
+    const {nombre,marca,precio,cuotas} = req.body;     /* Esto me viene ingresado por el usuario */
+    if(errors.isEmpty()){
+      let producto = {                                   /* Este es el producto que se me crea */
+        id : productos[productos.length - 1].id + 1,   /* me lo agrega en el array de productos */
+        nombre : req.body.nombre,
+        marca,
+        precio : +precio,
+        imagen : req.file ? req.file.filename : 'default-image.png',
+        cuotas,
+        oferta : true
+      }
+      productos.push(producto);                         /* aca pushea en el json */
+      guardar(productos)                                /* y lo guarda */
 
-    },
-    update : (req,res) => {
-        const {nombre,marca,precio,cuotas} = req.body;
-
-        let producto = productos.find(producto => producto.id === +req.params.id)
-        let productoEditado = {
-            id : +req.params.id,
-            nombre : req.body.nombre,
-            marca: marca,
-            precio : precio,
-            imagen : req.file ? req.file.filename : producto.imagen,
-            cuotas,
-            oferta : true
-            
-        }
-
-        let productosModificados = productos.map(producto => producto.id === +req.params.id ? productoEditado : producto)
-
-        guardar(productosModificados)
-        res.redirect('/')
-
-    },
-
-    remove : (req,res) => {
-
-    },
-    mouse : (req,res) => {
-        res.render('productList', {
-            title : "Listado de Mouse",
-
-        })
-  /* queda pendiente */
-    
+      return res.redirect('/')
     }
-    
+    else{
+      return res.render('productAdd',{
+        errores : errors.mapped(),
+        old : req.body
+      })
+    }
+  },
+  detail : (req,res) => {
 
-    
-   
+    let producto = productos.find(producto => producto.id === +req.params.id); /* el parametro tiene que matchear con el parametro requerido por el usuario */
+
+    return res.render('detalle',{   
+      title : "Hadou Tech",
+      producto,
+      productos
+    })
+  },
+  edit : (req,res) => {
+    let producto = productos.find(producto => producto.id === +req.params.id);
+
+    return res.render('productEdit',{
+      title : "Hadou Tech",
+      productos,
+      producto
+    }) 
+
+  },
+  update: (req, res) => {
+    const {nombre,marca,precio,oferta, cuotas} = req.body;
+    productos.forEach(producto => {
+      if(producto.id === +req.params.id){
+        producto.id = +req.params.id;
+        producto.nombre = nombre;
+        producto.marca = marca;
+        producto.precio = precio;
+        producto.imagen = req.file ? req.file.filename : producto.imagen;
+        producto.oferta = !!oferta;
+        producto.cuotas = parseInt(cuotas, 10);
+      }
+    });
+
+    guardar(productos);
+    return res.redirect('/products/detalle/' + req.params.id)
+  },
+
+  remove : (req,res) => {
+
+  },
+  mouse : (req,res) => {
+    res.render('productList', {
+      title : "Listado de Mouse",
+
+    })
+    /* queda pendiente */
+
+  }
+
+
+
+
 
 
 

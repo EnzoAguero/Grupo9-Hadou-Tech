@@ -2,9 +2,11 @@
   {
     "id": 1,
     "marca": "Ejemplo",
+    "nombre": "Mouse",
     "precio": "500",
     "imagen": "mouse-producto2.jpg.png",
-    "cuotas": "6"
+    "oferta": true,
+    "cuotas": 6
   },
   {
     "id": 2,
@@ -17,12 +19,12 @@
   },
   {
     "id": 3,
-    "nombre": "Mouse",
-    "marca": "Sony",
-    "precio": "12450",
+    "nombre": "Raton",
+    "marca": "akita",
+    "precio": "10",
     "imagen": "mouse-producto2.jpg.png",
     "oferta": true,
-    "cuotas": 12
+    "cuotas": 5
   },
   {
     "id": 4,
@@ -39,7 +41,8 @@
     "marca": "qweqwe",
     "precio": "123",
     "imagen": "imagen-1628885259814",
-    "cuotas": "12"
+    "oferta": true,
+    "cuotas": 12
   },
   {
     "id": 6,
@@ -47,15 +50,17 @@
     "marca": "Noga",
     "precio": "12312",
     "imagen": "imagen-1628885481121",
-    "cuotas": "12"
+    "oferta": true,
+    "cuotas": 12
   },
   {
     "id": 7,
     "nombre": "Mouse",
-    "marca": "",
+    "marca": "intel",
     "precio": 5450,
     "imagen": "imagen-1629238413167",
-    "cuotas": "12"
+    "oferta": true,
+    "cuotas": 12
   },
   {
     "id": 8,
@@ -63,7 +68,7 @@
     "marca": "aguero",
     "precio": 6000,
     "imagen": "imagen-1629238631984",
-    "cuotas": "6"
+    "oferta": true,
+    "cuotas": 6
   }
-   
 ]
