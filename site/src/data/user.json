@@ -12,6 +12,19 @@
     "acepta": "on",
     "contrasenia": "$2a$10$fW/dy0.SZt6gFZWIAYCFF.S.UOqBqLs0a.5g606kJQty.rcnoYXEq",
     "pais": "argentina"
+  },
+  {
+    "id": 2,
+    "correo": "Matias@gmail.com",
+    "nombre": "Matias",
+    "apellido": "Asds",
+    "provincias": "Provincias",
+    "ciudad": "Mar del plata",
+    "postal": "123123",
+    "direccion": "Mi casa",
+    "telefono": "123123",
+    "acepta": "on",
+    "contrasenia": "$2a$10$ftHzVw54ILV1MV5fX1wCNOaGTdmTDWBh0Zyji6siUIvfv02p0OicK",
+    "pais": "argentina"
   }
- 
 ]
