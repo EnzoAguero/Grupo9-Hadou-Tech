@@ -1,5 +1,6 @@
 const bcrypt = require('bcryptjs');
 const {usuarios, guardar } = require('../data/user');
+const {validationResult} = require('express-validator')
 
 
 
@@ -66,7 +67,7 @@ module.exports = {
 
       usuarios.push(usuario);
       guardar(usuarios);
-
+      
       return res.redirect('/')
     }else{
       console.log(errors);

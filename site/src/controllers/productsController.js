@@ -41,7 +41,7 @@ module.exports = {
       }
       productos.push(producto);                         /* aca pushea en el json */
       guardar(productos)                                /* y lo guarda */
-
+      
       return res.redirect('/')
     }
     else{

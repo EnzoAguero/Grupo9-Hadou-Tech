@@ -190,17 +190,13 @@
        padding-left: 5px;
        color: white
        
-   
-   
-   }
+}
    
   .banner-productos{
         display: flex; 
        align-items: center; 
        justify-content: center;
-      
-       
-   }
+      }
    
    .banner-productos article{
        border: 2px solid black;

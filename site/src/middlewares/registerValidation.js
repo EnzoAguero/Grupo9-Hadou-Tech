@@ -49,6 +49,6 @@ module.exports = [
     check('acepta')
     .isString('on').withMessage('Debes aceptar los términos y condiciones'),
 
-    check('imagen').notEmpty().withMessage('Ingrese su foto de perfil')
+   /*  check('imagen').notEmpty().withMessage('Ingrese su foto de perfil') */
 
 ]
