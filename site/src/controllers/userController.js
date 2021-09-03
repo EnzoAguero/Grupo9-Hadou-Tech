@@ -26,17 +26,17 @@ module.exports = {
     if(errors.isEmpty()){
       let usuario = usuarios.find(usuario => usuario.email === email)
       req.session.userLogin = {
-        id: usuario.id,
-        nombre : usuario.nombre,
-        rol : usuario.rol
+        id: usuarios.id,
+        nombre : usuarios.nombre,
+       /*  rol : usuario.rol */
       }
       if(recordar){
         res.cookie('ver',req.session.userLogin,{maxAge: 1000 * 60})
       }
-      return res.render('/')
-    }else{
+      return res.redirect('/')
+    }
+    else{
       return res.render('login',{
-        productos,
         errores : errors.mapped()
       })
     }

@@ -14,7 +14,8 @@
                   <h1>Bienvenido</h1>
                </div>
                <div class="login__usuario">
-                  <p><input type="email" name="email" id="email" minlength="2" maxlength="15" placeholder="Ingrese su mail"></p>
+                  <p><input type="email" name="email" id="email" placeholder="Ingrese su mail"></p>
+                  <p><%= locals.errores && locals.errores.email ? errores.email.msg : null %></p>
                   <p><input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese su contraseña"></p>
                   <p>Recordarme</p>
                   <p>

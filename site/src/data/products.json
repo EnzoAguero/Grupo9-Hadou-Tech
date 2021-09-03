@@ -65,10 +65,19 @@
   {
     "id": 8,
     "nombre": "Mouse",
-    "marca": "aguero",
-    "precio": 6000,
+    "marca": "zacarias",
+    "precio": "6000",
     "imagen": "imagen-1629238631984",
     "oferta": true,
-    "cuotas": 6
+    "cuotas": 10
+  },
+  {
+    "id": 9,
+    "nombre": "tecladito",
+    "marca": "teclado",
+    "precio": 8000,
+    "imagen": "imagen-1630700248142.jpg",
+    "cuotas": "8",
+    "oferta": true
   }
 ]
