@@ -28,11 +28,12 @@ module.exports = {
       req.session.userLogin = {
         id: usuarios.id,
         nombre : usuarios.nombre,
-       /*  rol : usuario.rol */
+        /* rol : usuario.rol */
       }
       if(recordar){
         res.cookie('ver',req.session.userLogin,{maxAge: 1000 * 60})
       }
+      
       return res.redirect('/')
     }
     else{
@@ -78,5 +79,9 @@ module.exports = {
     }
 
   },
+  logout : (req,res) =>{
+    req.session.destroy()
+    return res.redirect('/')
+  }
 }
 

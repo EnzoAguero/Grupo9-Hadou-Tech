@@ -26,5 +26,33 @@
     "acepta": "on",
     "contrasenia": "$2a$10$ftHzVw54ILV1MV5fX1wCNOaGTdmTDWBh0Zyji6siUIvfv02p0OicK",
     "pais": "argentina"
+  },
+  {
+    "id": 3,
+    "correo": "Matias@gmail.com",
+    "nombre": "Matias",
+    "apellido": "Asds",
+    "provincias": "Provincias",
+    "ciudad": "Mar del plata",
+    "postal": "123123",
+    "direccion": "Mi casa",
+    "telefono": "123123",
+    "acepta": "on",
+    "contrasenia": "$2a$10$DzUMMQSNiXoWs90LUf/NT.hLyrcgCaVUfapZa2UNdbBpc17rHpw8C",
+    "pais": "argentina"
+  },
+  {
+    "id": 4,
+    "correo": "asd@asd.com",
+    "nombre": "Nicolas",
+    "apellido": "Gimenez",
+    "provincias": "Provincias",
+    "ciudad": "Mar del plata",
+    "postal": "123123",
+    "direccion": "Mi casa",
+    "telefono": "123123",
+    "acepta": "on",
+    "contrasenia": "$2a$10$PrTLN1UURV1GQpVlLhLeDe1Sz/1Ix4TdtAnn2Kq76CBbiF1yAuaUO",
+    "pais": "argentina"
   }
 ]
