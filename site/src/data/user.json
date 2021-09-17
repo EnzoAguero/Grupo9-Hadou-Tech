@@ -26,5 +26,19 @@
     "acepta": "on",
     "contrasenia": "$2a$10$ftHzVw54ILV1MV5fX1wCNOaGTdmTDWBh0Zyji6siUIvfv02p0OicK",
     "pais": "argentina"
+  },
+  {
+    "id": 3,
+    "correo": "cr7@gmail.com",
+    "nombre": "cristianito",
+    "apellido": "ronaldo",
+    "provincias": "Provincias",
+    "ciudad": "miami",
+    "postal": "1234",
+    "direccion": "calle falsa 123",
+    "telefono": "1231231223123",
+    "acepta": "on",
+    "contrasenia": "$2a$10$62OizbM0rprJDc0UdyQznOSMb6677grBgzQDkiaHG7//tvBCV5nYO",
+    "pais": "argentina"
   }
 ]
