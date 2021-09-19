@@ -60,11 +60,17 @@
 
 
                <!--Botones para editar un producto-->
-               <a href="/products/edit/<%= producto.id %>" class="action-button">EDITAR PRODUCTO</a>
+               <% if (locals.userLogin) { %>
+               <% if (locals.userLogin.rol === "admin") { %>
+                <a href="/products/edit/<%= producto.id %>" class="action-button">EDITAR PRODUCTO</a>
                <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                   <button type="submit" class="action-button">ELIMINAR</button>
                </form>
-               <a href="/products/add/" class="action-button">CREAR PRODUCTO</a>  <!-- cambio modificado en la ruta -->
+               <a href="/products/add/" class="action-button">CREAR PRODUCTO</a>
+               <% } %>
+               <% } %>
+               
+                 <!-- cambio modificado en la ruta -->
 
 
             </div>

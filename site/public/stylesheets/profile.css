@@ -1,0 +1,75 @@
+.datos-profile{
+    background-color: #24303c;
+    width: 75%;
+    height: auto;
+    margin: auto;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.campo{
+    background: white;
+    width: 200px;
+    height: 30px;
+} 
+
+.columna1, .columna2{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.columna1 h4, .columna2 h4 {
+    margin-bottom: 15px;
+    padding-top: 15px;
+    color: white;
+
+}
+
+
+/* .datos-profile{
+    background-color: #24303c;
+    width: 75%;
+    height: 600px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.columna1, .columna2{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.columna1, .columna2 {
+    margin-bottom: 5px;
+
+}
+
+.columna1{
+   background: black;
+   width: 32%;
+   
+}
+
+.columna2{
+   background: black;
+   width: 32%;
+   
+   
+}
+ .campo{
+    background: white;
+    width: 200px;
+    height: 30px;
+}     */

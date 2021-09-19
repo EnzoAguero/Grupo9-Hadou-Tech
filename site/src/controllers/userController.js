@@ -24,15 +24,16 @@ module.exports = {
     let errors = validationResult(req);
     const {email, recordar} = req.body;//volver a verlo 
     if(errors.isEmpty()){
-      let usuario = usuarios.find(usuario => usuario.email === email)
+      let usuario = usuarios.find(usuario => usuario.correo === email)
       req.session.userLogin = {
-        id: usuarios.id,
-        nombre : usuarios.nombre,
-       /*  rol : usuario.rol */
+        id: usuario.id,
+        nombre : usuario.nombre,
+        rol : usuario.rol 
       }
       if(recordar){
         res.cookie('ver',req.session.userLogin,{maxAge: 1000 * 60})
       }
+      
       return res.redirect('/')
     }
     else{
@@ -78,5 +79,18 @@ module.exports = {
     }
 
   },
+  logout : (req,res) =>{
+    req.session.destroy()
+    return res.redirect('/')
+  },
+  profile : (req,res) => {
+
+    let usuario = usuarios.find(usuario => usuario.id === +req.params.id)
+
+    return res.render('profile',{
+      usuario,
+      usuarios
+    })
+}
 }
 

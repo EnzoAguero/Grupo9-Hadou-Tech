@@ -11,7 +11,8 @@
     "telefono": "12341234",
     "acepta": "on",
     "contrasenia": "$2a$10$fW/dy0.SZt6gFZWIAYCFF.S.UOqBqLs0a.5g606kJQty.rcnoYXEq",
-    "pais": "argentina"
+    "pais": "argentina",
+    "rol" : "usuario"
   },
   {
     "id": 2,
@@ -25,20 +26,45 @@
     "telefono": "123123",
     "acepta": "on",
     "contrasenia": "$2a$10$ftHzVw54ILV1MV5fX1wCNOaGTdmTDWBh0Zyji6siUIvfv02p0OicK",
-    "pais": "argentina"
+    "pais": "argentina",
+    "rol" : "usuario"
   },
   {
     "id": 3,
+    "correo": "asd@asd.com",
+    "nombre": "Nicolas",
+    "apellido": "Gimenez",
+    "provincias": "Provincias",
+    "ciudad": "Mar del plata",
+    "postal": "123123",
+    "direccion": "Mi casa",
+    "telefono": "123123",
+    "acepta": "on",
+    "contrasenia": "$2a$10$PrTLN1UURV1GQpVlLhLeDe1Sz/1Ix4TdtAnn2Kq76CBbiF1yAuaUO",
+    "pais": "argentina",
+    "rol" : "usuario"
+  },
+  {
+    "id": 4,
     "correo": "cr7@gmail.com",
     "nombre": "cristianito",
-    "apellido": "ronaldo",
+    "apellido": "ronaldito",
     "provincias": "Provincias",
-    "ciudad": "miami",
-    "postal": "1234",
-    "direccion": "calle falsa 123",
-    "telefono": "1231231223123",
+    "ciudad": "dasdasd",
+    "postal": "123",
+    "direccion": "asdasdfasfas",
+    "telefono": "12312321",
     "acepta": "on",
-    "contrasenia": "$2a$10$62OizbM0rprJDc0UdyQznOSMb6677grBgzQDkiaHG7//tvBCV5nYO",
-    "pais": "argentina"
+    "contrasenia": "$2a$10$D2aFGpNq9ZsSZu/kO/yvw.P2acA49APhPTjUIbYi.LgY9jN1CrwGW",
+    "rol" : "admin"
+  },
+  {
+    "id": 5,
+    "correo": "robertito@gmail.com",
+    "nombre": "Robert",
+    "apellido": "Veintemilla",
+    "acepta": "on",
+    "contrasenia": "$2a$10$gxKwC3IQY1/jTtQ8vUENO.LsyvnIH.Lpx.SNRfa/3iT4i6o5PLlM6",
+    "rol" : "usuario"
   }
 ]

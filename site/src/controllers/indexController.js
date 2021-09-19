@@ -17,7 +17,9 @@ module.exports = {
             title : "Carrito",
             productos,
         })
-    }
+    },
+   
+    
 }
 
 

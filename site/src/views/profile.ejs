@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head') %>
+
+    <body>
+
+        <%- include('./partials/header') %>
+
+            <main>
+
+                <section class="datos-profile">
+
+                    
+                    <div class="columna1">
+                    <span style="color: white;">Foto de perfil</span>
+                    <img src="" alt="FotoPerfil">
+                        <h4>Nombre</h4>
+                        <div class="campo"><%= usuario.nombre %> </div>
+                        <h4>Apellido</h4>
+                        <div class="campo"><%= usuario.apellido %> </div>
+                        <h4>Email</h4>
+                        <div class="campo"><%= usuario.correo %> </div>
+                        <h4>Contraseña</h4>
+                        <div class="campo"></div>
+                    </div>
+
+                    <div class="columna2">
+                        <h4>Pais</h4>
+                        <div class="campo"><%= usuario.pais ? usuario.pais : '---' %> </div>
+                        <h4>Provincia</h4>
+                        <div class="campo"><%= usuario.provincia ? usuario.provincia : '---' %></div>
+                        <h4>Ciudad</h4>
+                        <div class="campo"><%= usuario.ciudad ? usuario.ciudad : '---' %></div>
+                        <h4>Codigo Postal</h4>
+                        <div class="campo"><%= usuario.postal ? usuario.postal : '---' %></div>
+                        <h4>Direccion</h4>
+                        <div class="campo"><%= usuario.direccion ? usuario.direccion : '---' %></div>
+                        <h4>telefono</h4>
+                        <div class="campo"><%= usuario.telfono ? usuario.telefono : '---' %></div>
+                    </div>
+
+                   
+                </section>
+
+
+
+            </main>
+
+            <%- include('./partials/footer') %>
+
+
+
+
+    </body>
+
+</html>

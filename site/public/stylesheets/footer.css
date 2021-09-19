@@ -2,6 +2,7 @@ footer{
     background-image: url('/images/McLRE7y7i.jpg'); 
     width: 100%;
     
+    
 }
 .all-footer{
     display: flex;
@@ -13,7 +14,7 @@ footer{
 }
 
 .logo-footer{
-    width: 60px;
+    width: 55px;
 }
 .caja-footer h3{
     padding-left: 13px;
@@ -51,6 +52,7 @@ footer{
     footer{
         background-image: url('/images/McLRE7y7i.jpg'); 
         width: 100%;
+       
     }
     .all-footer{
         display: flex;
@@ -90,6 +92,7 @@ footer{
  footer{
     background-image: url('/images/McLRE7y7i.jpg');
     border-top: 2px solid black;
+   
 
 }
 

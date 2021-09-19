@@ -5,11 +5,13 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride = require('method-override')
 const session = require('express-session')
+const localsUserCheck = require('./middlewares/localsUserCheck')
 /* const multer = require('multer') */
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var productsRouter = require('./routes/products')
+var productsRouter = require('./routes/products');
+
 
 var app = express();
 
@@ -27,6 +29,7 @@ app.use(session({
   secret: "la clave"
 }))
 
+app.use(localsUserCheck)
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products',productsRouter)

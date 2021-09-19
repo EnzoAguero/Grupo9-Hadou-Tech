@@ -34,18 +34,6 @@ module.exports = [
     }).withMessage('El apellido tiene que tener como mínimo 2 caracteres').bail()
     .isAlpha().withMessage('El apellido debe contener solo letras'),
 
-    check('pais').notEmpty().withMessage('Debe seleccionar al menos un país'),
-
-    check('provincias').notEmpty().withMessage('Debe seleccionar al menos una provincia'),
-
-    check('ciudad').notEmpty().withMessage('Debe poner su ciudad'),
-
-    check('postal').notEmpty().withMessage('Debe ingresar su codigo postal').isInt({min : 4}),
-
-    check('direccion').notEmpty().withMessage('Debe ingresar su direccion'),
-
-    check('telefono').notEmpty().withMessage('Debe ingresar su numero de telefono').isInt(),
-
     check('acepta')
     .isString('on').withMessage('Debes aceptar los términos y condiciones'),
 
