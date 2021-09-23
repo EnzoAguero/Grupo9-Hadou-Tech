@@ -92,19 +92,5 @@ module.exports = {
   remove : (req,res) => {
 
   },
-  mouse : (req,res) => {
-    res.render('productList', {
-      title : "Listado de Mouse",
-
-    })
-    /* queda pendiente */
-
-  }
-
-
-
-
-
-
 
 }
