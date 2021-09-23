@@ -17,8 +17,8 @@ module.exports = {
       cuotas: {
         type: Sequelize.INTEGER
       },
-      mark_id : {
-        type : Sequelize.INTEGER
+      mark : {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

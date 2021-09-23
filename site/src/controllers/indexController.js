@@ -7,16 +7,25 @@ const db = require('../../database/models')
 module.exports = {
     index : (req,res) => {
         let usuario = req.session.userLogin
-
-
-    
-        return res.render('index',{
+          
+        let allProductos = db.Product.findAll({
+            include : [
+                {
+                    association : 'Images',
+                    
+                }
+            ]
+        })
+        .then(productos => res.render('index',{
             title : "Inicio",
             productos,
+            allProductos,
             usuario
           
             
-        })
+        }))
+    
+        
     },
     carrito : (req,res)=>{
         return res.render('carrito',{
