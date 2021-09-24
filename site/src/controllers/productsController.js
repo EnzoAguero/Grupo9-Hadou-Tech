@@ -57,7 +57,7 @@ module.exports = {
     db.Product.findOne({
       where : {
           id : req.params.id
-      },
+      } 
   })
       .then(product => {
           return res.render("detalle", {

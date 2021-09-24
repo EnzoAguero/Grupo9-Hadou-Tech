@@ -8,7 +8,11 @@ module.exports = {
     index : (req,res) => {
         let usuario = req.session.userLogin
           
-        let allProductos = db.Product.findAll()
+        let allProductos = db.Product.findAll({
+            include : [
+                {association : 'images',}
+            ]
+        })
         .then(productos => res.render('index',{
             title : "Inicio",
             productos,

@@ -26,7 +26,7 @@ module.exports = {
       cp: {
         type: Sequelize.INTEGER
       },
-      user_id: {
+      userId: {
         type: Sequelize.INTEGER,
         references : {
           model : {

@@ -17,18 +17,9 @@ module.exports = {
       cuotas: {
         type: Sequelize.INTEGER
       },
-      mark : {
+      mark: {
         type: Sequelize.STRING
-      },
-     /*  image_id : {
-        type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : 'Images'
-          },
-          key : 'id'
-        }
-      }, */
+      }, 
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

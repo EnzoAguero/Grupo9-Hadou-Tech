@@ -8,14 +8,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      file: {
         type: Sequelize.STRING
       },
-      product_id: {
+      productId: {
         type: Sequelize.INTEGER,
         references : {
           model : {
-            tableName : 'Products'
+            tableName : 'products'
           },
           key : 'id'
         }
