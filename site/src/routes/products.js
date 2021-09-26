@@ -20,6 +20,6 @@ router.get('/search',search);
 
 router.delete('/remove/:id',remove); /*  */
 
-router.get('/mouse',mouse)
+
 
 module.exports = router;

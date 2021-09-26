@@ -2,6 +2,7 @@ const {productos,guardar} = require('../data/products');
 const fs = require('fs')
 const path = require('path')
 const {validationResult} = require('express-validator')
+const db = require('../../database/models')
 
 
 module.exports = {
@@ -53,13 +54,18 @@ module.exports = {
   },
   detail : (req,res) => {
 
-    let producto = productos.find(producto => producto.id === +req.params.id); /* el parametro tiene que matchear con el parametro requerido por el usuario */
+    db.Product.findOne({
+      where : {
+          id : req.params.id
+      } 
+  })
+      .then(product => {
+          return res.render("detalle", {
+              product
+          })
+      })
+      .catch((error) => console.log(error));
 
-    return res.render('detalle',{   
-      title : "Hadou Tech",
-      producto,
-      productos
-    })
   },
   edit : (req,res) => {
     let producto = productos.find(producto => producto.id === +req.params.id);
@@ -92,19 +98,5 @@ module.exports = {
   remove : (req,res) => {
 
   },
-  mouse : (req,res) => {
-    res.render('productList', {
-      title : "Listado de Mouse",
-
-    })
-    /* queda pendiente */
-
-  }
-
-
-
-
-
-
 
 }

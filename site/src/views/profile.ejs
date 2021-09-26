@@ -13,7 +13,7 @@
                     
                     <div class="columna1">
                     <span style="color: white;">Foto de perfil</span>
-                    <img src="" alt="FotoPerfil">
+                    <img class="img-fluid rounded-start" src="/images/default-image.png" alt="">
                         <h4>Nombre</h4>
                         <div class="campo"><%= usuario.nombre %> </div>
                         <h4>Apellido</h4>
@@ -38,7 +38,7 @@
                         <h4>telefono</h4>
                         <div class="campo"><%= usuario.telfono ? usuario.telefono : '---' %></div>
                     </div>
-
+                    <button type="button" class="btn btn-primary"><a href="/users/editProfile/<%= usuario.id %> ">Editar</a></button>
                    
                 </section>
 

@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {login,register,processRegister,processlogin, logout,profile} = require('../controllers/userController')
+const {login,register,processRegister,processlogin, logout,profile,profileEdit,profileUpdate} = require('../controllers/userController')
 
 const validaciones = require('../middlewares/registerValidation');
 
@@ -16,5 +16,9 @@ router.post('/register', validaciones, processRegister);
 router.get('/logout',logout);
 
 router.get('/profile/:id',profile)
+
+router.get('/profileEdit/:id',profileEdit)
+router.put('/profileEdit/:id',profileUpdate)
+
 
 module.exports = router;

@@ -1,16 +1,28 @@
 const {productos} = require('../data/products');
-
+const {usuarios} = require('../data/user')
+const db = require('../../database/models')
 
 
 
 module.exports = {
     index : (req,res) => {
-        return res.render('index',{
+        let usuario = req.session.userLogin
+          
+        let allProductos = db.Product.findAll({
+            include : [
+                {association : 'images',}
+            ]
+        })
+        .then(productos => res.render('index',{
             title : "Inicio",
             productos,
+            allProductos,
+            usuario
           
             
-        })
+        }))
+    
+        
     },
     carrito : (req,res)=>{
         return res.render('carrito',{

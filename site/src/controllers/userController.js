@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs');
-const {usuarios, guardar } = require('../data/user');
+const {usuarios, guardar} = require('../data/user');
 const {validationResult} = require('express-validator')
 
 
@@ -28,7 +28,9 @@ module.exports = {
       req.session.userLogin = {
         id: usuario.id,
         nombre : usuario.nombre,
-        rol : usuario.rol 
+        rol : usuario.rol,
+        apellido : usuario.apellido,
+        
       }
       if(recordar){
         res.cookie('ver',req.session.userLogin,{maxAge: 1000 * 60})
@@ -85,12 +87,27 @@ module.exports = {
   },
   profile : (req,res) => {
 
-    let usuario = usuarios.find(usuario => usuario.id === +req.params.id)
-
+    let usuario = req.session.userLogin
+    console.log(usuario);
     return res.render('profile',{
       usuario,
-      usuarios
+      usuarios,
+      
+     
     })
+},
+profileEdit : (req,res) => {
+  let usuario = req.session.userLogin
+
+  return res.render('editProfile',{
+    usuario,
+    
+   
+  })
+},
+profileUpdate : (req,res) => {
+
 }
+
 }
 

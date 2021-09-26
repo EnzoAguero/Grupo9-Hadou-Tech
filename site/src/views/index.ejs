@@ -54,19 +54,19 @@
 
                         
                         <article>
-                            <img src="/images/<%= producto.imagen %>" alt="mouse">
+                            <img src="/images/<%= producto.images[0].file %>" alt="mouse">
 
                             <div class="descripcion-de-producto">
                                 <a href="/products/detalle/<%= producto.id %> ">
                                     <h3>
-                                        <%= producto.nombre %>
-                                            <%= producto.marca %>
+                                        <%= producto.name %>
+                                            <%= producto.mark %>
                                     </h3>
                                 </a>
 
-                                <span>$<%= producto.precio %></span>
+                                <span>$<%= producto.price %></span>
 
-                                <h5>En $ <%= producto.cuotas %> cuotas de $<%=Math.round(producto.precio
+                                <h5>En $ <%= producto.cuotas %> cuotas de $<%=Math.round(producto.price
                                             /producto.cuotas) %>
                                 </h5>
                                 <a href="/carrito">

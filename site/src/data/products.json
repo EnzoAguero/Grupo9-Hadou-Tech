@@ -4,7 +4,7 @@
     "marca": "Ejemplo",
     "nombre": "Mouse",
     "precio": "500",
-    "imagen": "mouse-producto2.jpg.png",
+    "imagen": "mouse-producto2.jpg",
     "oferta": true,
     "cuotas": 6
   },

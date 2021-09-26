@@ -14,15 +14,15 @@
             <div class="detalle-producto-imagen">
                <div class="nombre-producto">
                   <h4>
-                     <%= producto.nombre %>
-                     <%= producto.marca %>
+                     <%= product.name %>
+                     <%= product.mark %>
                   </h4>
                </div>
                <div>
                   <hr>
                </div>
 
-               <img src="/images/<%= producto.imagen %>" alt="producto">
+               <img src="/images/<%= producto.images[0].file %>" alt="producto">
 
                <div class="accordion accordion-flush" id="accordionFlushExample">
                   <div class="accordion-item">
@@ -77,10 +77,10 @@
             <div class="detalle-producto-descripcion">
                <div class="detalle-producto-precio">
                   <div>
-                     <p class="valor">$<%= producto.precio %>
+                     <p class="valor">$<%= product.price %>
                      </p>
                   </div>
-                  <p class="lista">Precio al contado $<%= producto.precio*1.5 %>
+                  <p class="lista">Precio al contado $<%= product.price*1.5 %>
                   </p>
                </div>
                <hr>
@@ -90,7 +90,7 @@
                   </div>
                   <div>
                      <p>
-                     <%= producto.cuotas %> cuotas sin interes de $<%=Math.round(producto.precio /producto.cuotas) %> a
+                     <%= product.cuotas %> cuotas sin interes de $<%=Math.round(product.price /product.cuotas) %> a
                      precio de lista
                      </p>
                      <a style="color: blue;" href="#">Ver Cuotas</a>
