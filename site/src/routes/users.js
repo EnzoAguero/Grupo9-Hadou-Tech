@@ -17,8 +17,8 @@ router.get('/logout',logout);
 
 router.get('/profile/:id',profile)
 
-router.get('/profileEdit/:id',profileEdit)
-router.put('/profileEdit/:id',profileUpdate)
+router.get('/editProfile/:id',profileEdit)
+router.put('/editProfile/:id',profileUpdate)
 
 
 module.exports = router;

@@ -29,42 +29,46 @@ module.exports = {
   save : (req,res) =>{
     let errors = validationResult(req);
 
-    const {nombre,marca,precio,cuotas} = req.body;     /* Esto me viene ingresado por el usuario */
-    if(errors.isEmpty()){
-      let producto = {                                   /* Este es el producto que se me crea */
-        id : productos[productos.length - 1].id + 1,   /* me lo agrega en el array de productos */
-        nombre : req.body.nombre,
-        marca,
-        precio : +precio,
-        imagen : req.file ? req.file.filename : 'default-image.png',
-        cuotas,
-        oferta : true
-      }
-      productos.push(producto);                         /* aca pushea en el json */
-      guardar(productos)                                /* y lo guarda */
-      
-      return res.redirect('/')
-    }
-    else{
+    
+    if(errors.isEmpty()){  
+      db.Product.create({
+        name: req.body.name.trim(),
+        mark: req.body.mark.trim(),
+        price: req.body.price,
+        cuotas: req.body.cuotas,
+        
+      }).then(producto => {
+        db.Image.create({
+          file : req.file.filename,
+          productId : producto.id
+        }).then(result => res.redirect('/')
+        
+        )
+        
+      }).catch(error => console.log(error))
+    
+    }else{
       return res.render('productAdd',{
         errores : errors.mapped(),
         old : req.body
       })
-    }
+    } 
   },
   detail : (req,res) => {
 
     db.Product.findOne({
       where : {
           id : req.params.id
-      } 
-  })
-      .then(product => {
-          return res.render("detalle", {
-              product
+      },
+      include : [
+          {association : 'images'},
+      ]
+  }).then(producto =>{
+          return res.render('detalle',{
+              producto,
+
           })
-      })
-      .catch((error) => console.log(error));
+  }).catch(error => console.log(error))
 
   },
   edit : (req,res) => {

@@ -118,7 +118,7 @@
     padding: 5px;
     background-color: #24303c;
     box-shadow: 7px 13px 37px #000;
-    width: 40%;
+    max-width: 40%;
     margin-bottom: 15px;
     
 }
@@ -205,7 +205,7 @@
        text-align: center;
        display: block;
        margin-right: 10px;
-       width: 23%;
+       max-width: 23%;
        height: auto
        
    
@@ -323,7 +323,7 @@
     text-align: center;
     display: block;
     margin-right: 10px;
-    width: 23%;
+    max-width: 23%;
     height: auto
 
 }

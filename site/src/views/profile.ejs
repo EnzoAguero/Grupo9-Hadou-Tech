@@ -15,30 +15,30 @@
                     <span style="color: white;">Foto de perfil</span>
                     <img class="img-fluid rounded-start" src="/images/default-image.png" alt="">
                         <h4>Nombre</h4>
-                        <div class="campo"><%= usuario.nombre %> </div>
+                        <div class="campo"><%= user.name %> </div>
                         <h4>Apellido</h4>
-                        <div class="campo"><%= usuario.apellido %> </div>
+                        <div class="campo"><%= user.last_name %> </div>
                         <h4>Email</h4>
-                        <div class="campo"><%= usuario.correo %> </div>
+                        <div class="campo"><%= user.email %> </div>
                         <h4>Contraseña</h4>
                         <div class="campo"></div>
                     </div>
 
                     <div class="columna2">
                         <h4>Pais</h4>
-                        <div class="campo"><%= usuario.pais ? usuario.pais : '---' %> </div>
+                        <div class="campo"><%= user.pais ? user.pais : '---' %> </div>
                         <h4>Provincia</h4>
-                        <div class="campo"><%= usuario.provincia ? usuario.provincia : '---' %></div>
+                        <div class="campo"><%= user.provincia ? user.provincia : '---' %></div>
                         <h4>Ciudad</h4>
-                        <div class="campo"><%= usuario.ciudad ? usuario.ciudad : '---' %></div>
+                        <div class="campo"><%= user.ciudad ? user.ciudad : '---' %></div>
                         <h4>Codigo Postal</h4>
-                        <div class="campo"><%= usuario.postal ? usuario.postal : '---' %></div>
+                        <div class="campo"><%= user.postal ? user.postal : '---' %></div>
                         <h4>Direccion</h4>
-                        <div class="campo"><%= usuario.direccion ? usuario.direccion : '---' %></div>
+                        <div class="campo"><%= user.direccion ? user.direccion : '---' %></div>
                         <h4>telefono</h4>
-                        <div class="campo"><%= usuario.telfono ? usuario.telefono : '---' %></div>
+                        <div class="campo"><%= user.telfono ? user.telefono : '---' %></div>
                     </div>
-                    <button type="button" class="btn btn-primary"><a href="/users/editProfile/<%= usuario.id %> ">Editar</a></button>
+                    <button class="buttonEdit"><a href="/users/editProfile/<%= user.id %> ">Editar</a></button>
                    
                 </section>
 
