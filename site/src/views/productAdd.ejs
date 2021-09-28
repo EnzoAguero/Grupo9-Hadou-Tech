@@ -8,24 +8,24 @@
           <h2>Agregar Producto</h2>
           <form action="/products/add" method="POST" enctype="multipart/form-data">
                 <div class="mb-3">
-                  <label for="nombre" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" name="nombre" value="<%= locals.old && locals.old.nombre ? old.nombre : null%>">
-                  <span class="text-danger small"><%= locals.errores && locals.errores.nombre ? errores.nombre.msg : null %> </span>
+                  <label for="name" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="name" name="name" value="<%= locals.old && locals.old.name? old.name: null%>">
+                  <span class="text-danger small"><%= locals.errores && locals.errores.name? errores.name.msg : null %> </span>
                 </div>
                 <div class="mb-3">
-                  <label for="marca" class="form-label">Marca</label>
-                  <input type="text" class="form-control" id="marca" name="marca" value="<%= locals.old && locals.old.marca ? old.marca : null%>">
-                  <span class="text-danger small"><%= locals.errores && locals.errores.marca ? errores.marca.msg : null %> </span>
+                  <label for="mark" class="form-label">Marca</label>
+                  <input type="text" class="form-control" id="mark" name="mark" value="<%= locals.old && locals.old.mark ? old.mark : null%>">
+                  <span class="text-danger small"><%= locals.errores && locals.errores.mark ? errores.mark.msg : null %> </span>
                 </div>
                 <div class="mb-3">
-                  <label for="precio" class="form-label">Precio</label>
-                  <input type="number" class="form-control" id="precio" name="precio" value="<%= locals.old && locals.old.precio ? old.precio : null%>">
-                  <span class="text-danger small"><%= locals.errores && locals.errores.precio ? errores.precio.msg : null %> </span>
+                  <label for="price" class="form-label">Precio</label>
+                  <input type="number" class="form-control" id="price" name="price" value="<%= locals.old && locals.old.price ? old.price : null%>">
+                  <span class="text-danger small"><%= locals.errores && locals.errores.price ? errores.price.msg : null %> </span>
                 </div>
                 <div class="mb-3">
-                  <label for="imagen" class="form-label">Imagen</label>
-                  <input type="file" class="form-control" name="imagen" id="imagen" >
-                  <span class="text-danger small"><%= locals.errores && locals.errores.imagen ? errores.imagen.msg : null %> </span>
+                  <label for="image" class="form-label">Imagen</label>
+                  <input type="file" class="form-control" name="image" id="image" >
+                  <span class="text-danger small"><%= locals.errores && locals.errores.image ? errores.image.msg : null %> </span>
                 </div>
                 <div class="mb-3">
                   <label for="cuotas" class="form-label">Cuotas</label>

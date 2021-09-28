@@ -8,35 +8,35 @@
 
             <main>
 
-                <form class="datos-profile" action="/users/edit/<%= usuario.id %>?_method=PUT" method="POST">
+                <form class="datos-profile" action="/users/editProfile/<%= user.id %>?_method=PUT">
 
                     
                     <div class="columna1">
                     <span style="color: white;">Foto de perfil</span>
                     <img class="img-fluid rounded-start" src="/images/default-image.png" alt="">
                         <h4>Nombre</h4>
-                        <input class="campo" placeholder="<%= usuario.nombre %>" style="text-align: center;"> </input>
+                        <input class="campo" placeholder="<%= user.name %>" style="text-align: center;"> </input>
                         <h4>Apellido</h4>
-                        <input class="campo" placeholder="<%= usuario.apellido %>" style="text-align: center;"> </input>
+                        <input class="campo" placeholder="<%= user.last_name %>" style="text-align: center;"> </input>
                         <h4>Email</h4>
-                        <input class="campo" placeholder="<%= usuario.correo %>" style="text-align: center;"> </input>
+                        <input class="campo" placeholder="<%= user.email %>" style="text-align: center;"> </input>
                         <h4>Contraseña</h4>
                         <input class="campo"></input>
                     </div>
 
                     <div class="columna2">
                         <h4>Pais</h4>
-                        <input class="campo" placeholder="<%= usuario.pais ? usuario.pais : '---' %>" style="text-align: center;"> </input>
+                        <input class="campo" placeholder="<%= user.pais ? user.pais : '---' %>" style="text-align: center;"> </input>
                         <h4>Provincia</h4>
-                        <input class="campo" placeholder="<%= usuario.provincia ? usuario.provincia : '---' %>" style="text-align: center;"></input>
+                        <input class="campo" placeholder="<%= user.provincia ? user.provincia : '---' %>" style="text-align: center;"></input>
                         <h4>Ciudad</h4>
-                        <input class="campo" placeholder="<%= usuario.ciudad ? usuario.ciudad : '---' %>" style="text-align: center;"></input>
+                        <input class="campo" placeholder="<%= user.ciudad ? user.ciudad : '---' %>" style="text-align: center;"></input>
                         <h4>Codigo Postal</h4>
-                        <input class="campo" placeholder="<%= usuario.postal ? usuario.postal : '---' %>" style="text-align: center;"></input>
+                        <input class="campo" placeholder="<%= user.postal ? user.postal : '---' %>" style="text-align: center;"></input>
                         <h4>Direccion</h4>
-                        <input class="campo" placeholder="<%= usuario.direccion ? usuario.direccion : '---' %>" style="text-align: center;"></input>
+                        <input class="campo" placeholder="<%= user.direccion ? user.direccion : '---' %>" style="text-align: center;"></input>
                         <h4>telefono</h4>
-                        <input class="campo" placeholder="<%= usuario.telfono ? usuario.telefono : '---' %>" style="text-align: center;"></input>
+                        <input class="campo" placeholder="<%= user.telfono ? user.telefono : '---' %>" style="text-align: center;"></input>
                     </div>
 
                     <button ttype="submit" class="btn btn-success" style="margin-top:10px">Confirmar</button>

@@ -2,10 +2,10 @@ const {check, body} = require('express-validator');
 
 module.exports = [
 
-    check('correo').notEmpty().withMessage('Debes ingresar un email válido').bail()
+    check('email').notEmpty().withMessage('Debes ingresar un email válido').bail()
     .isEmail().withMessage('Debes ingresar un mail válido'),
 
-    check('contrasenia')
+    check('password')
     .isLength({
         min : 6,
         max : 15
@@ -13,13 +13,13 @@ module.exports = [
 
     body('confirmar')
     .custom((value,{req}) => {
-        if(value !== req.body.contrasenia){
+        if(value !== req.body.password){
             return false
         }
         return true
     }).withMessage('Las contraseñas no coinciden'),
     
-    check('nombre')
+    check('name')
     .notEmpty().withMessage('El nombre es obligatorio').bail()
     .isLength({
         min : 2,
@@ -27,7 +27,7 @@ module.exports = [
     }).withMessage('El nombre tiene que tener como mínimo 2 caracteres').bail()
     .isAlpha().withMessage('El nombre debe contener solo letras'),
 
-    check('apellido').notEmpty().withMessage('El apellido es obligatorio').bail()
+    check('last_name').notEmpty().withMessage('El apellido es obligatorio').bail()
     .isLength({
         min : 2,
         max : 50

@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs');
 const {usuarios, guardar} = require('../data/user');
-const {validationResult} = require('express-validator')
+const {validationResult} = require('express-validator');
+const db = require('../../database/models')
 
 
 
@@ -47,38 +48,27 @@ module.exports = {
 
   processRegister : (req,res) => {
     let errors = validationResult(req);
-    let {correo,nombre,apellido,email,contrasenia,pais,provincias,ciudad,postal,direccion,telefono,acepta} = req.body;
 
-    if(errors.isEmpty()){ /* si no hay errores  */
-      let usuario = {  /* me crea el usuario */
-        id : usuarios.length > 0 ? usuarios[usuarios.length - 1].id + 1 : 1,
-        correo,
-        nombre,
-        apellido,
-        email,
-        provincias,
-        ciudad,
-        postal,
-        direccion,
-        telefono,
-        acepta,
-        contrasenia : bcrypt.hashSync(contrasenia,10),/* encriptacion de contraseña */
-        pais,
+    if(errors.isEmpty()){
 
+       db.User.create({
+          name : req.body.name,
+          last_name : req.body.last_name,
+          email : req.body.email,
+          password : req.body.password,
+          rol : 'usuario'
 
-      }
-
-      usuarios.push(usuario);
-      guardar(usuarios);
+      }).then(user => res.redirect('/')
       
-      return res.redirect('/')
-    }else{
-      console.log(errors);
+        
+    )
+    .catch(error => console.log(error)) 
+  }else{
       return res.render('register',{
-        old : req.body,
-        errores : errors.mapped()
+          old : req.body,
+          errores : errors.mapped()
       })
-    }
+  }
 
   },
   logout : (req,res) =>{
@@ -86,18 +76,32 @@ module.exports = {
     return res.redirect('/')
   },
   profile : (req,res) => {
-
     let usuario = req.session.userLogin
-    console.log(usuario);
-    return res.render('profile',{
-      usuario,
-      usuarios,
-      
-     
-    })
+
+    db.User.findOne({
+      where : {
+          id : req.params.id
+      }
+  }).then(user =>{
+          return res.render('profile',{
+            user,
+            usuario
+          })
+  }).catch(error => console.log(error))
 },
 profileEdit : (req,res) => {
   let usuario = req.session.userLogin
+
+  db.User.findOne({
+    where : {
+        id : req.params.id
+    }
+}).then(user =>{
+        return res.render('editProfile',{
+          user,
+          usuario
+        })
+}).catch(error => console.log(error))
 
   return res.render('editProfile',{
     usuario,

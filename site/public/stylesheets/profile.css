@@ -32,6 +32,14 @@
 
 }
 
+.buttonEdit{
+    background-color: blue;
+    width: 20%;
+    margin: auto;
+    margin-top:10px
+}
+
+
 
 /* .datos-profile{
     background-color: #24303c;
