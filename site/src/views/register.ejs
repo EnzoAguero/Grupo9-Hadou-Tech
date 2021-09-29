@@ -15,13 +15,13 @@
                     <b">Completa los siguientes campos para registrarte en nuestro sitio</b>
                 </div>
                 <div>
-                    <input class="control-form" type="email" name="email" placeholder="Ingresá tu mail" value="<%= locals.old && locals.old.correo ? old.correo : null %> ">
-                    <span class="text-danger small"><%= locals.errores && locals.errores.correo ? errores.correo.msg : null %> </span>
+                    <input class="control-form" type="email" name="email" placeholder="Ingresá tu mail" value="<%= locals.old && locals.old.email ? old.email : null %> ">
+                    <span class="text-danger small"><%= locals.errores && locals.errores.email ? errores.email.msg : null %> </span>
                      <!-- si existe un error poneme el mensaje de error de lo contrario no hagas nada -->
                 </div>
                 <div>
                     <input class="control-form" type="password" name="password" placeholder="Ingresá tu contraseña">
-                    <span class="text-danger small"><%= locals.errores && locals.errores.contrasenia ? errores.contrasenia.msg : null %> </span>
+                    <span class="text-danger small"><%= locals.errores && locals.errores.password ? errores.password.msg : null %> </span>
                 </div>
                 <div>
                     <input class="control-form" type="password" name="confirmar" placeholder="Confirma tu contraseña">
@@ -29,12 +29,12 @@
                 </div>
                 <hr>
                 <div>
-                    <input class="control-form" type="text" name="name" placeholder="Nombre" value="<%= locals.old && locals.old.nombre ? old.nombre : null%>">
-                    <span class="text-danger small"><%= locals.errores && locals.errores.nombre ? errores.nombre.msg : null %> </span>
+                    <input class="control-form" type="text" name="name" placeholder="Nombre" value="<%= locals.old && locals.old.name ? old.name : null%>">
+                    <span class="text-danger small"><%= locals.errores && locals.errores.name ? errores.name.msg : null %> </span>
                 </div>
                 <div>
-                    <input class="control-form" type="text" name="last_name" placeholder="Apellido" value="<%= locals.old && locals.old.apellido ? old.apellido : null%>">
-                    <span class="text-danger small"><%= locals.errores && locals.errores.apellido ? errores.apellido.msg : null %> </span>
+                    <input class="control-form" type="text" name="last_name" placeholder="Apellido" value="<%= locals.old && locals.old.last_name ? old.last_name : null%>">
+                    <span class="text-danger small"><%= locals.errores && locals.errores.last_name ? errores.last_name.msg : null %> </span>
                 </div>
                 
                 

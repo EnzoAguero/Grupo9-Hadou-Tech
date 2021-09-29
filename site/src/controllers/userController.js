@@ -47,6 +47,7 @@ module.exports = {
   },
 
   processRegister : (req,res) => {
+    let usuario = req.session.userLogin
     let errors = validationResult(req);
 
     if(errors.isEmpty()){
@@ -58,7 +59,8 @@ module.exports = {
           password : req.body.password,
           rol : 'usuario'
 
-      }).then(user => res.redirect('/')
+      }).then(user => res.redirect('/',
+      usuario)
       
         
     )
@@ -98,8 +100,8 @@ profileEdit : (req,res) => {
     }
 }).then(user =>{
         return res.render('editProfile',{
-          user,
-          usuario
+          usuario,
+          user
         })
 }).catch(error => console.log(error))
 
