@@ -38,6 +38,7 @@
     padding: 5px;
     background-color: #24303c;
     box-shadow: 7px 13px 37px #000;
+    margin-bottom: 15px;
 }
 .banner-productos article:last-child{
    display: block;

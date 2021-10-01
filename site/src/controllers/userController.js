@@ -59,11 +59,16 @@ module.exports = {
           password : req.body.password,
           rol : 'usuario'
 
-      }).then(user => res.redirect('/',
-      usuario)
+      }).then(user => {
+        req.session.userLogin = {
+            id : user.id,
+            name : user.name,
+            rol : user.rol
+        }
+        res.redirect('/')
       
         
-    )
+      })
     .catch(error => console.log(error)) 
   }else{
       return res.render('register',{
@@ -105,11 +110,7 @@ profileEdit : (req,res) => {
         })
 }).catch(error => console.log(error))
 
-  return res.render('editProfile',{
-    usuario,
-    
-   
-  })
+  return res.render('editProfile')
 },
 profileUpdate : (req,res) => {
 
