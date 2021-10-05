@@ -1,7 +1,7 @@
-const bcrypt = require('bcryptjs');
 const {usuarios, guardar} = require('../data/user');
 const {validationResult} = require('express-validator');
 const db = require('../../database/models')
+const bcrypt = require('bcryptjs')
 
 
 
@@ -47,16 +47,17 @@ module.exports = {
   },
 
   processRegister : (req,res) => {
-    let usuario = req.session.userLogin
+    
+    const {name,last_name,email,password} = req.body
     let errors = validationResult(req);
 
     if(errors.isEmpty()){
 
        db.User.create({
-          name : req.body.name,
-          last_name : req.body.last_name,
-          email : req.body.email,
-          password : req.body.password,
+          name : name.trim(),
+          last_name : last_name.trim(),
+          email : email.trim(),
+          password : bcrypt.hashSync(password,10),
           rol : 'usuario'
 
       }).then(user => {
