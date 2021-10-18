@@ -15,22 +15,22 @@
                 <div class="mb-3">
                   <label for="mark" class="form-label">Marca</label>
                   <input type="text" class="form-control" id="mark" name="mark" value="<%= locals.old && locals.old.mark ? old.mark : null%>">
-                  <span class="text-danger small"><%= locals.errores && locals.errores.mark ? errores.mark.msg : null %> </span>
+                  <span id="error-mark" class="text-danger small"><%= locals.errores && locals.errores.mark ? errores.mark.msg : null %> </span>
                 </div>
                 <div class="mb-3">
                   <label for="price" class="form-label">Precio</label>
                   <input type="number" class="form-control" id="price" name="price" value="<%= locals.old && locals.old.price ? old.price : null%>">
-                  <span class="text-danger small"><%= locals.errores && locals.errores.price ? errores.price.msg : null %> </span>
+                  <span id="error-price" class="text-danger small"><%= locals.errores && locals.errores.price ? errores.price.msg : null %> </span>
                 </div>
                 <div class="mb-3">
                   <label for="image" class="form-label">Imagen</label>
                   <input type="file" class="form-control" name="image" id="image" >
-                  <span class="text-danger small"><%= locals.errores && locals.errores.image ? errores.image.msg : null %> </span>
+                  <span id="error-image" class="text-danger small"><%= locals.errores && locals.errores.image ? errores.image.msg : null %> </span>
                 </div>
                 <div class="mb-3">
                   <label for="cuotas" class="form-label">Cuotas</label>
                   <input type="number" class="form-control" name="cuotas" id="cuotas" value="<%= locals.old && locals.old.cuotas ? old.cuotas : null%>">
-                  <span class="text-danger small"><%= locals.errores && locals.errores.cuotas ? errores.cuotas.msg : null %> </span>
+                  <span id="error-cuotas"  class="text-danger small"><%= locals.errores && locals.errores.cuotas ? errores.cuotas.msg : null %> </span>
                 </div>
                 <button class="btn btn-primary" type="submit">Guardar</button>
             </form>
