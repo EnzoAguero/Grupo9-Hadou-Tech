@@ -23,27 +23,29 @@ module.exports = {
   processlogin : (req,res) => {
 
     let errors = validationResult(req);
-    const {email, recordar} = req.body;//volver a verlo 
+    const {email, recordar} = req.body;
     if(errors.isEmpty()){
-      let usuario = usuarios.find(usuario => usuario.correo === email)
+      db.User.findOne({
+        where : {
+            email
+        }
+    }).then(user => {
       req.session.userLogin = {
-        id: usuario.id,
-        nombre : usuario.nombre,
-        rol : usuario.rol,
-        apellido : usuario.apellido,
-        
-      }
-      if(recordar){
-        res.cookie('ver',req.session.userLogin,{maxAge: 1000 * 60})
-      }
-      
-      return res.redirect('/')
+          id : user.id,
+          name : user.name,
+          rol : user.rolId,
+         
     }
-    else{
+
+    recordar && res.cookie('craftsyForEver',req.session.userLogin,{maxAge: 1000 * 60})
+    return res.redirect('/')
+    })
+  }else{
       return res.render('login',{
-        errores : errors.mapped()
+          errores : errors.mapped()
       })
-    }
+  }
+     
   },
 
   processRegister : (req,res) => {
