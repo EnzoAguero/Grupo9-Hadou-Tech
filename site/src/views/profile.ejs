@@ -14,14 +14,14 @@
                     
                     <span style="color: white;">Foto de perfil</span>
                     <img class="img-fluid rounded-start" src="/images/default-image.png" alt="" >
-                       <form class="row g-3">
-                        <div class="col-md-6">
+                       <form class="row g-3" style="margin: 0px 10px" enctype="multipart/form-data">
+                        <div class="col-md-6" >
                             <label for="inputEmail4" class="form-label" style="color:white;">Nombre</label>
-                            <div type="email" class="form-control" id="inputEmail4" ><%= user.name %> </div>
+                            <div type="text" class="form-control" id="inputName4" ><%= user.name %> </div>
                           </div>
                           <div class="col-md-6">
                             <label for="inputEmail4" class="form-label" style="color: white;">Apellido</label>
-                            <div type="email" class="form-control" id="inputEmail4"><%= user.last_name %> </div>
+                            <div type="text" class="form-control" id="inputLast_name4"><%= user.last_name %> </div>
                           </div>
                         <div class="col-md-6">
                           <label for="inputEmail4" class="form-label" style="color: white;">Email</label>
@@ -29,38 +29,38 @@
                         </div>
                         <div class="col-md-6">
                           <label for="inputPassword4" class="form-label" style="color: white;">Password</label>
-                          <div type="password" class="form-control" id="inputPassword4"> </div>
+                          <div type="password" class="form-control" id="inputPassword4"> '*******' </div>
                         </div>
                         <div class="col-12">
                           <label for="inputAddress" class="form-label" style="color: white;" >Direccion</label>
-                          <div type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"><%= user.direccion ? user.direccion : '---' %> </div>
+                          <div type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"><%= user.addresses.address ? user.addresses.address : '---' %> </div>
                         </div>
                         <div class="col-12">
                           <label for="inputAddress2" class="form-label" style="color: white;">Pais</label>
-                          <div type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"><%= user.pais ? user.pais : '---' %> </div>
+                          <div type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"><%= user.addresses.country ? user.addresses.country : '---' %> </div>
                         </div>
                         <div class="col-md-6">
                           <label for="inputCity" class="form-label" style="color: white;">Ciudad</label>
-                          <div type="text" class="form-control" id="inputCity"><%= user.ciudad ? user.ciudad : '---' %> </div>
+                          <div type="text" class="form-control" id="inputCity"><%= user.addresses.city ? user.addresses.city : '---' %> </div>
                         </div>
                         <div class="col-md-4">
                           <label for="inputState" class="form-label" style="color: white;">Provincia</label>
-                          <div type="text" class="form-control" id="inputCity"><%= user.provincia ? user.provincia : '---' %> </div>
+                          <div type="text" class="form-control" id="inputCity"><%= user.addresses.province ? user.addresses.province : '---' %> </div>
                           </select>
                         </div>
                         <div class="col-md-2">
                           <label for="inputZip" class="form-label" style="color: white;">Codigo Postal</label>
-                          <div type="text" class="form-control" id="inputZip"><%= user.postal ? user.postal : '---' %></div>
+                          <div type="text" class="form-control" id="inputZip"><%= user.addresses.cp ? user.addresses.cp : '---' %></div>
                         </div>
                         <div class="col-md-6">
                             <label for="inputPassword4" class="form-label" style="color: white;">Telefono</label>
-                            <div type="password" class="form-control" id="inputPassword4"><%= user.telfono ? user.telefono : '---' %> </div>
+                            <div type="password" class="form-control" id="phone"><%= user.addresses.phone ? user.addresses.phone : '---' %> </div>
                           </div>
                         <div class="col-12">
                           
                         </div>
                         <div class="col-12">
-                          <button type="submit" class="btn btn-primary" style="color: white;">Editar</button>
+                          <a href="/users/editProfile/<%= user.id %> " class="btn btn-primary" style="color: white;">Editar</a>
                         </div>
                       </form>
                    

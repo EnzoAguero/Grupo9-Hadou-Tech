@@ -5,10 +5,10 @@ const upload = require('../middlewares/multer')
 
 const {add,detail,edit,update,remove,save,search} = require('../controllers/productsController');
 
-
+const adminCheck = require('../middlewares/adminCheck')
 
 /* GET home page. */
-router.get('/add', add) /* formulario */
+router.get('/add', adminCheck ,add) /* formulario */
 router.post('/add', upload.single('image'),validaciones, save); 
 
 router.get('/detalle/:id',detail); /*   */

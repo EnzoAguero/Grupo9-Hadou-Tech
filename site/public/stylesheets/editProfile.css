@@ -1,0 +1,17 @@
+.datos-profile{
+    background-color: #24303c;
+    width: 85%;
+    height: auto;
+    margin: auto;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.datos-profile img {
+    width: 20%;
+   margin: auto;
+}

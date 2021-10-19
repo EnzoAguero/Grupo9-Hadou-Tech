@@ -52,8 +52,7 @@ module.exports = {
     let errors = validationResult(req);
 
     if(errors.isEmpty()){
-
-       db.User.create({
+          db.User.create({
           name : name.trim(),
           last_name : last_name.trim(),
           email : email.trim(),
@@ -61,15 +60,23 @@ module.exports = {
           rol : 'usuario'
 
       }).then(user => {
+        db.Address.create({
+          city : '-',
+          address : '-',
+          province : '-',
+          country : '-',
+          phone : '1',
+          cp : '1',
+          userId : user.id
+        }).then(result => res.redirect('/'))
         req.session.userLogin = {
             id : user.id,
             name : user.name,
             rol : user.rol
         }
-        res.redirect('/')
+  
       
-        
-      })
+})
     .catch(error => console.log(error)) 
   }else{
       return res.render('register',{
@@ -79,14 +86,19 @@ module.exports = {
   }
 
   },
+
   logout : (req,res) =>{
     req.session.destroy()
     return res.redirect('/')
   },
+
   profile : (req,res) => {
     let usuario = req.session.userLogin
 
     db.User.findOne({
+      include : [
+        {association : 'addresses',}
+    ],
       where : {
           id : req.params.id
       }
@@ -97,24 +109,43 @@ module.exports = {
           })
   }).catch(error => console.log(error))
 },
+
 profileEdit : (req,res) => {
   let usuario = req.session.userLogin
 
   db.User.findOne({
+    include : [
+      {association : 'addresses',}
+  ],
     where : {
         id : req.params.id
     }
 }).then(user =>{
         return res.render('editProfile',{
-          usuario,
-          user
+          user,
+          usuario
+          
         })
 }).catch(error => console.log(error))
 
-  return res.render('editProfile')
 },
 profileUpdate : (req,res) => {
+  let usuario = req.session.userLogin
 
+  const {name,last_name,} = req.body
+  
+  db.User.update({
+    
+  },
+  {
+    where : {id : req.params.id}
+  }
+  ).then(user => {
+    return res.render('/users/profile',{
+      user,
+      usuario
+    })
+  })
 }
 
 }
