@@ -5,7 +5,9 @@ window.addEventListener('load', () => {
 
 const form = $('formRegister');
 
-
+form.addEventListener('submit', e => {
+    e.preventDefault()
+})
 
 $('email').addEventListener('blur', () => {
     if(!$('email').value){

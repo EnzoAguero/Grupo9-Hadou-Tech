@@ -74,4 +74,4 @@ $('cuotas').addEventListener('blur', () => {
         $('error-cuotas').innerHTML = null
     }
 })
-})
+}) 
