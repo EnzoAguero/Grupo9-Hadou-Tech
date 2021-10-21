@@ -1,4 +1,3 @@
-const {usuarios, guardar} = require('../data/user');
 const {validationResult} = require('express-validator');
 const db = require('../../database/models')
 const bcrypt = require('bcryptjs')
@@ -18,7 +17,6 @@ module.exports = {
 
     })
   },
-  //processlogin
 
   processlogin : (req,res) => {
 
@@ -30,10 +28,11 @@ module.exports = {
             email
         }
     }).then(user => {
+      console.log(user);
       req.session.userLogin = {
           id : user.id,
           name : user.name,
-          rol : user.rolId,
+          rol : user.rol,
          
     }
 
@@ -134,16 +133,20 @@ profileEdit : (req,res) => {
 profileUpdate : (req,res) => {
   let usuario = req.session.userLogin
 
-  const {name,last_name,} = req.body
-  
   db.User.update({
-    
+    ...req.body,
+      city : '-',
+          address : '-',
+          province : '-',
+          country : '-',
+          phone : '1',
+          cp : '1',
   },
   {
     where : {id : req.params.id}
   }
   ).then(user => {
-    return res.render('/users/profile',{
+    return res.render('profile',{
       user,
       usuario
     })

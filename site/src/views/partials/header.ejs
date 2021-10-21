@@ -54,6 +54,9 @@
                                     <%= locals.userLogin.name %>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <% if (locals.userLogin.rol === "admin") { %>
+                                        <li><a class="dropdown-item" href="/products/add">Agregar Producto</a></li>
+                                    <% } %>
                                   <li><a class="dropdown-item" href="/users/profile/<%= usuario.id %>">Ver perfil</a></li>
                                   <li><a class="dropdown-item" href="/users/logout">Cerrar Sesion</a></li>
                                   

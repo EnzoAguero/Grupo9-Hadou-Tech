@@ -1,13 +1,11 @@
-/* const $ = id => document.getElementById(id)
+const $ = id => document.getElementById(id)
 
 window.addEventListener('load', () => {
     console.log('Conectado bien!');
 
 const form = $('formRegister');
 
-form.addEventListener('submit', e => {
-    e.preventDefault()
-})
+
 
 $('email').addEventListener('blur', () => {
     if(!$('email').value){
@@ -50,4 +48,31 @@ $('last_name').addEventListener('blur', () => {
     }
 })
 
-})  */
+if(!$('acepta').checked){
+    $('acepta').classList.add('is-invalid')
+    $('error-acepta').innerHTML = "Debes aceptar los términos y condiciones";
+    error = true
+}
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+
+    let elementsForm = $('formRegister').elements;
+    let error = false;
+
+    for (let i = 0; i < elementsForm.length - 1; i++) {
+        
+        if(!elementsForm[i].value){
+            elementsForm[i].classList.add('is-invalid')
+            $('error-empty').innerHTML = 'Los campos señalados son obligatorios';
+            error = true
+        }
+    }
+
+    
+    if(!error){
+        $('formRegister').submit()
+    }
+})
+
+}) 

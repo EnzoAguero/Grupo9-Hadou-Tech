@@ -7,6 +7,21 @@ const form = $('formAdd');
 
 form.addEventListener('submit', e => {
     e.preventDefault()
+
+    let elementsForm = $('formAdd').elements;
+    let error = false;
+
+    for (let i = 0; i < elementsForm.length - 1; i++) {
+        
+        if(!elementsForm[i].value){
+            elementsForm[i].classList.add('is-invalid')
+            $('error-empty').innerHTML = 'Los campos señalados son obligatorios';
+            error = true
+        }
+    }
+    if(!error){
+        $('formAdd').submit()
+    }
 })
 
 $('name').addEventListener('blur', () => {
