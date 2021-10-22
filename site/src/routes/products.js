@@ -6,7 +6,6 @@ const adminCheck = require('../middlewares/adminCheck')
 
 const {add,detail,edit,update,remove,save,search} = require('../controllers/productsController');
 
-const adminCheck = require('../middlewares/adminCheck')
 
 /* GET home page. */
 router.get('/add', adminCheck ,add) /* formulario */

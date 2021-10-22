@@ -66,8 +66,8 @@ module.exports = {
           address : '-',
           province : '-',
           country : '-',
-          phone : '1',
-          cp : '1',
+          phone : 1,
+          cp : 1,
           userId : user.id
         }).then(result => res.redirect('/'))
         req.session.userLogin = {
@@ -133,25 +133,38 @@ profileEdit : (req,res) => {
 profileUpdate : (req,res) => {
   let usuario = req.session.userLogin
 
-  db.User.update({
-    ...req.body,
-      city : '-',
-          address : '-',
-          province : '-',
-          country : '-',
-          phone : '1',
-          cp : '1',
+  let {name,last_name,password} = req.body
+  let {city,address,country,province,cp,phone} = req.body
+
+db.User.update({
+    name:name,
+    last_name:last_name,
+    password: bcrypt.hashSync(password,10),
+   
   },
   {
     where : {id : req.params.id}
   }
-  ).then(user => {
-    return res.render('profile',{
-      user,
-      usuario
-    })
-  })
+  ).then(user =>
+    db.Address.update({
+      city:city,
+      address:address,
+      province:province,
+      country:country,
+      phone:+phone,
+      cp:+cp,
+      userId : user.id
+      },
+    {
+      where : {id : req.params.id}
+    }).then(() => res.redirect('/'))
+    .catch(error => console.log(error))
+    
+    
+  
+  
+  )
+  .catch(error => console.log(error))
 }
-
 }
 

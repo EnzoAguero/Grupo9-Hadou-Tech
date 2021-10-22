@@ -22,7 +22,7 @@ router.get('/logout',logout);
 router.get('/profile/:id', localUser, profile)
 
 router.get('/editProfile/:id',localUser, profileEdit)
-router.put('/editProfile/:id',profileUpdate)
+router.put('/editProfile/:id',localUser,profileUpdate)
 
 
 module.exports = router;
