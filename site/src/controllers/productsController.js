@@ -1,5 +1,3 @@
-const {productos,guardar} = require('../data/products');
-const fs = require('fs')
 const path = require('path')
 const {validationResult} = require('express-validator')
 const db = require('../../database/models')
@@ -8,21 +6,14 @@ const db = require('../../database/models')
 module.exports = {
 
   search : (req,res) => {
-    let result = productos.filter(producto => producto.nombre.toLowerCase().includes (req.query.search.toLowerCase()));
-
-    return res.render('resultSearch',{
-      title: 'Hadou Tech',
-      result,
-      productos,
-      busqueda : req.query.search
-    }) 
+    
 
   },
 
   add : (req,res) => {
+    let usuario = req.session.userLogin
     return res.render('productAdd',{
-      productos,
-      title : "Hadou Tech",
+      usuario
 
     })     
   },
@@ -55,6 +46,7 @@ module.exports = {
     } 
   },
   detail : (req,res) => {
+    let usuario = req.session.userLogin
 
     db.Product.findOne({
       where : {
@@ -66,6 +58,7 @@ module.exports = {
   }).then(producto =>{
           return res.render('detalle',{
               producto,
+              usuario
 
           })
   }).catch(error => console.log(error))
@@ -100,7 +93,12 @@ module.exports = {
   },
 
   remove : (req,res) => {
-
+    db.Product.destroy({
+      where: {
+          id: req.params.id
+      }
+  }).then(() => res.redirect('/'))
+      .catch(error => console.log(error))
   },
 
 }

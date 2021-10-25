@@ -63,7 +63,7 @@
                <% if (locals.userLogin) { %>
                <% if (locals.userLogin.rol === "admin") { %>
                 <a href="/products/edit/<%= producto.id %>" class="action-button">EDITAR PRODUCTO</a>
-               <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+               <form action="/products/remove/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                   <button type="submit" class="action-button">ELIMINAR</button>
                </form>
                <a href="/products/add/" class="action-button">CREAR PRODUCTO</a>
@@ -80,7 +80,7 @@
                      <p class="valor">$<%= producto.price %>
                      </p>
                   </div>
-                  <p class="lista">Precio al contado $<%= producto.price*1.5 %>
+                  <p class="lista">Precio al contado $<%= producto.price %>
                   </p>
                </div>
                <hr>
@@ -130,7 +130,7 @@
                </div>
                <div class="detalle-producto-boton">
                   <div class="boton">
-                     <input class="boton" type="submit" value="COMPRAR">
+                     <input class="boton" type="submit" value="Agregar al carrito">
                   </div>
 
                </div>

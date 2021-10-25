@@ -1,7 +1,6 @@
-const bcrypt = require('bcryptjs');
-const {usuarios, guardar} = require('../data/user');
 const {validationResult} = require('express-validator');
 const db = require('../../database/models')
+const bcrypt = require('bcryptjs')
 
 
 
@@ -18,50 +17,67 @@ module.exports = {
 
     })
   },
-  //processlogin
 
   processlogin : (req,res) => {
 
     let errors = validationResult(req);
-    const {email, recordar} = req.body;//volver a verlo 
+    const {email, recordar} = req.body;
     if(errors.isEmpty()){
-      let usuario = usuarios.find(usuario => usuario.correo === email)
+      db.User.findOne({
+        where : {
+            email
+        }
+    }).then(user => {
+      console.log(user);
       req.session.userLogin = {
-        id: usuario.id,
-        nombre : usuario.nombre,
-        rol : usuario.rol,
-        apellido : usuario.apellido,
-        
-      }
-      if(recordar){
-        res.cookie('ver',req.session.userLogin,{maxAge: 1000 * 60})
-      }
-      
-      return res.redirect('/')
+          id : user.id,
+          name : user.name,
+          rol : user.rol,
+         
     }
-    else{
+
+    recordar && res.cookie('craftsyForEver',req.session.userLogin,{maxAge: 1000 * 60})
+    return res.redirect('/')
+    })
+  }else{
       return res.render('login',{
-        errores : errors.mapped()
+          errores : errors.mapped()
       })
-    }
+  }
+     
   },
 
   processRegister : (req,res) => {
+    
+    const {name,last_name,email,password} = req.body
     let errors = validationResult(req);
 
     if(errors.isEmpty()){
-
-       db.User.create({
-          name : req.body.name,
-          last_name : req.body.last_name,
-          email : req.body.email,
-          password : req.body.password,
+          db.User.create({
+          name : name.trim(),
+          last_name : last_name.trim(),
+          email : email.trim(),
+          password : bcrypt.hashSync(password,10),
           rol : 'usuario'
 
-      }).then(user => res.redirect('/')
+      }).then(user => {
+        db.Address.create({
+          city : '-',
+          address : '-',
+          province : '-',
+          country : '-',
+          phone : 1,
+          cp : 1,
+          userId : user.id
+        }).then(result => res.redirect('/'))
+        req.session.userLogin = {
+            id : user.id,
+            name : user.name,
+            rol : user.rol
+        }
+  
       
-        
-    )
+})
     .catch(error => console.log(error)) 
   }else{
       return res.render('register',{
@@ -71,14 +87,19 @@ module.exports = {
   }
 
   },
+
   logout : (req,res) =>{
     req.session.destroy()
     return res.redirect('/')
   },
+
   profile : (req,res) => {
     let usuario = req.session.userLogin
 
     db.User.findOne({
+      include : [
+        {association : 'addresses',}
+    ],
       where : {
           id : req.params.id
       }
@@ -89,10 +110,14 @@ module.exports = {
           })
   }).catch(error => console.log(error))
 },
+
 profileEdit : (req,res) => {
   let usuario = req.session.userLogin
 
   db.User.findOne({
+    include : [
+      {association : 'addresses',}
+  ],
     where : {
         id : req.params.id
     }
@@ -100,18 +125,46 @@ profileEdit : (req,res) => {
         return res.render('editProfile',{
           user,
           usuario
+          
         })
 }).catch(error => console.log(error))
 
-  return res.render('editProfile',{
-    usuario,
-    
-   
-  })
 },
 profileUpdate : (req,res) => {
+  let usuario = req.session.userLogin
 
+  let {name,last_name,password} = req.body
+  let {city,address,country,province,cp,phone} = req.body
+
+db.User.update({
+    name:name,
+    last_name:last_name,
+    password: bcrypt.hashSync(password,10),
+   
+  },
+  {
+    where : {id : req.params.id}
+  }
+  ).then(user =>
+    db.Address.update({
+      city:city,
+      address:address,
+      province:province,
+      country:country,
+      phone:+phone,
+      cp:+cp,
+      userId : user.id
+      },
+    {
+      where : {id : req.params.id}
+    }).then(() => res.redirect('/'))
+    .catch(error => console.log(error))
+    
+    
+  
+  
+  )
+  .catch(error => console.log(error))
 }
-
 }
 

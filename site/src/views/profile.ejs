@@ -11,34 +11,58 @@
                 <section class="datos-profile">
 
                     
-                    <div class="columna1">
+                    
                     <span style="color: white;">Foto de perfil</span>
-                    <img class="img-fluid rounded-start" src="/images/default-image.png" alt="">
-                        <h4>Nombre</h4>
-                        <div class="campo"><%= user.name %> </div>
-                        <h4>Apellido</h4>
-                        <div class="campo"><%= user.last_name %> </div>
-                        <h4>Email</h4>
-                        <div class="campo"><%= user.email %> </div>
-                        <h4>Contraseña</h4>
-                        <div class="campo"></div>
-                    </div>
-
-                    <div class="columna2">
-                        <h4>Pais</h4>
-                        <div class="campo"><%= user.pais ? user.pais : '---' %> </div>
-                        <h4>Provincia</h4>
-                        <div class="campo"><%= user.provincia ? user.provincia : '---' %></div>
-                        <h4>Ciudad</h4>
-                        <div class="campo"><%= user.ciudad ? user.ciudad : '---' %></div>
-                        <h4>Codigo Postal</h4>
-                        <div class="campo"><%= user.postal ? user.postal : '---' %></div>
-                        <h4>Direccion</h4>
-                        <div class="campo"><%= user.direccion ? user.direccion : '---' %></div>
-                        <h4>telefono</h4>
-                        <div class="campo"><%= user.telfono ? user.telefono : '---' %></div>
-                    </div>
-                    <button class="buttonEdit"><a href="/users/editProfile/<%= user.id %> ">Editar</a></button>
+                    <img class="img-fluid rounded-start" src="/images/default-image.png" alt="" >
+                       <form class="row g-3" style="margin: 0px 10px" enctype="multipart/form-data">
+                        <div class="col-md-6" >
+                            <label for="inputEmail4" class="form-label" style="color:white;">Nombre</label>
+                            <div type="text" class="form-control" id="inputName4" ><%= user.name %> </div>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label" style="color: white;">Apellido</label>
+                            <div type="text" class="form-control" id="inputLast_name4"><%= user.last_name %> </div>
+                          </div>
+                        <div class="col-md-6">
+                          <label for="inputEmail4" class="form-label" style="color: white;">Email</label>
+                          <div type="email" class="form-control" id="inputEmail4"><%= user.email %> </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputPassword4" class="form-label" style="color: white;">Password</label>
+                          <div type="password" class="form-control" id="inputPassword4"> '*******' </div>
+                        </div>
+                        <div class="col-12">
+                          <label for="inputAddress" class="form-label" style="color: white;" >Direccion</label>
+                          <div type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"><%= user.addresses.address ? user.addresses.address : '---' %> </div>
+                        </div>
+                        <div class="col-12">
+                          <label for="inputAddress2" class="form-label" style="color: white;">Pais</label>
+                          <div type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"><%= user.addresses.country ? user.addresses.country : '---' %> </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputCity" class="form-label" style="color: white;">Ciudad</label>
+                          <div type="text" class="form-control" id="inputCity"><%= user.addresses.city ? user.addresses.city : '---' %> </div>
+                        </div>
+                        <div class="col-md-4">
+                          <label for="inputState" class="form-label" style="color: white;">Provincia</label>
+                          <div type="text" class="form-control" id="inputCity"><%= user.addresses.province ? user.addresses.province : '---' %> </div>
+                          </select>
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputZip" class="form-label" style="color: white;">Codigo Postal</label>
+                          <div type="text" class="form-control" id="inputZip"><%= user.addresses.cp ? user.addresses.cp : '---' %></div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label" style="color: white;">Telefono</label>
+                            <div type="password" class="form-control" id="phone"><%= user.addresses.phone ? user.addresses.phone : '---' %> </div>
+                          </div>
+                        <div class="col-12">
+                          
+                        </div>
+                        <div class="col-12">
+                          <a href="/users/editProfile/<%= user.id %> " class="btn btn-primary" style="color: white;">Editar</a>
+                        </div>
+                      </form>
                    
                 </section>
 

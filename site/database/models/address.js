@@ -19,7 +19,8 @@ module.exports = (sequelize, DataTypes) => {
     province: DataTypes.STRING,
     country: DataTypes.STRING,
     phone: DataTypes.INTEGER,
-    cp: DataTypes.INTEGER
+    cp: DataTypes.INTEGER,
+    userId : DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Address',

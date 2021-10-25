@@ -2,55 +2,91 @@
 <html lang="es">
 <%- include('./partials/head') %>
 
-    <body>
+  <body>
 
-        <%- include('./partials/header') %>
+    <%- include('./partials/header') %>
 
-            <main>
-
-                <form class="datos-profile" action="/users/editProfile/<%= user.id %>?_method=PUT">
-
-                    
-                    <div class="columna1">
-                    <span style="color: white;">Foto de perfil</span>
-                    <img class="img-fluid rounded-start" src="/images/default-image.png" alt="">
-                        <h4>Nombre</h4>
-                        <input class="campo" placeholder="<%= user.name %>" style="text-align: center;"> </input>
-                        <h4>Apellido</h4>
-                        <input class="campo" placeholder="<%= user.last_name %>" style="text-align: center;"> </input>
-                        <h4>Email</h4>
-                        <input class="campo" placeholder="<%= user.email %>" style="text-align: center;"> </input>
-                        <h4>Contraseña</h4>
-                        <input class="campo"></input>
-                    </div>
-
-                    <div class="columna2">
-                        <h4>Pais</h4>
-                        <input class="campo" placeholder="<%= user.pais ? user.pais : '---' %>" style="text-align: center;"> </input>
-                        <h4>Provincia</h4>
-                        <input class="campo" placeholder="<%= user.provincia ? user.provincia : '---' %>" style="text-align: center;"></input>
-                        <h4>Ciudad</h4>
-                        <input class="campo" placeholder="<%= user.ciudad ? user.ciudad : '---' %>" style="text-align: center;"></input>
-                        <h4>Codigo Postal</h4>
-                        <input class="campo" placeholder="<%= user.postal ? user.postal : '---' %>" style="text-align: center;"></input>
-                        <h4>Direccion</h4>
-                        <input class="campo" placeholder="<%= user.direccion ? user.direccion : '---' %>" style="text-align: center;"></input>
-                        <h4>telefono</h4>
-                        <input class="campo" placeholder="<%= user.telfono ? user.telefono : '---' %>" style="text-align: center;"></input>
-                    </div>
-
-                    <button ttype="submit" class="btn btn-success" style="margin-top:10px">Confirmar</button>
-                </form>
+      <main>
 
 
-
-            </main>
-
-            <%- include('./partials/footer') %>
+        <section class="datos-profile">
 
 
 
 
-    </body>
+          <span style="color: white; margin: auto;">Foto de perfil</span>
+          <a href="#" class="d-flex align-items:center"><img class="img-fluid rounded-start"
+              src="/images/default-image.png" alt=""></a>
+          <form class="row g-3" style="margin: 0px 10px" action="/users/editProfile/<%= user.id %>?_method=PUT" method="POST">
+            <div class="col-md-6">
+              <label for="" class="form-label" style="color:white;">Nombre</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="<%= user.name %>" value="<%= user.name %> "> </input>
+            </div>
+            <div class="col-md-6">
+              <label for="" class="form-label" style="color:white;">Apellido</label>
+              <input type="text" class="form-control" id="last_name" name="last_name" placeholder="<%= user.last_name %>" value="<%= user.last_name %> "> </input>
+            </div>
+            <div class="col-md-6">
+              <label for="" class="form-label" style="color:white;">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="<%= user.email %>" disabled> </input>
+            </div>
+            <div class="col-md-6">
+              <label for="" class="form-label" style="color:white;" >Contraseña</label>
+              <input type="password" class="form-control" id="password" name="password" ></input>
+            </div>
+
+
+            <div class="col-md-6">
+              <label for="" class="form-label" style="color:white;">Pais</label>
+              <input type="text" class="form-control" id="country" name="country"
+                placeholder="<%= user.addresses.country ? user.addresses.country : '---' %>"
+                style="text-align: center;" value="<%= user.addresses.country %> "></input>
+            </div>
+            <div class="col-md-6">
+              <label for="" class="form-label" style="color:white;">Provincia</label>
+              <input type="text" class="form-control" id="province" name="province"
+                placeholder="<%= user.addresses.province ? user.addresses.province : '---' %>"
+                style="text-align: center;" value="<%= user.addresses.province %> "></input>
+            </div>
+            <div class="col-md-6">
+              <label for="" class="form-label" style="color:white;">Ciudad</label>
+              <input type="text" class="form-control" id="city" name="city"
+                placeholder="<%= user.addresses.city ? user.addresses.city : '---' %>"
+                style="text-align: center;" value="<%= user.addresses.city %> "></input>
+            </div>
+            <div class="col-md-6">
+              <label for="" class="form-label" style="color:white;">Codigo Postal</label>
+              <input type="number" class="form-control" id="cp" name="cp"
+                placeholder="<%= user.addresses.cp ? user.addresses.cp : '---' %>" style="text-align: center;" value="<%= user.addresses.cp %> "></input>
+            </div>
+            <div class="col-md-6">
+              <label for="" class="form-label" style="color:white;">Dirección</label>
+              <input type="text" class="form-control" id="address" name="address"
+                placeholder="<%= user.addresses.address ? user.addresses.address : '---' %>"
+                style="text-align: center;" value="<%= user.addresses.address %> "></input>
+            </div>
+            <div class="col-md-6">
+              <label for="" class="form-label" style="color:white;">Telefono</label>
+              <input type="number" class="form-control" id="phone" name="phone"
+                placeholder="<%= user.addresses.phone ? user.addresses.phone : '---' %>"
+                style="text-align: center;" value="<%= user.addresses.phone %> "></input>
+            </div>
+
+
+            <button type="submit" class="btn btn-success" style="margin-top:80px">Confirmar</button>
+          </form>
+
+        </section>
+
+
+
+      </main>
+
+      <%- include('./partials/footer') %>
+
+
+
+
+  </body>
 
 </html>
