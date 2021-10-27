@@ -1,12 +1,18 @@
 const path = require('path')
 const {validationResult} = require('express-validator')
 const db = require('../../database/models')
+const {productos} = require('../data/products_db')
 
 
 module.exports = {
 
   search : (req,res) => {
-    
+    let result = productos.filter(producto => producto.nombre.toLowerCase().includes(req.query.search.toLowerCase()));
+    return res.render('resultSearch',{
+        result,
+        productos,
+        busqueda : req.query.search
+    })
 
   },
 
@@ -102,3 +108,4 @@ module.exports = {
   },
 
 }
+
