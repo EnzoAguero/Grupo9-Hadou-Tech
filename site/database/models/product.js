@@ -12,6 +12,17 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       Product.hasMany(models.Image,{
         as : 'images',
+        foreignKey :'id',
+        onDelete : 'cascade'
+      }),
+      Product.hasMany(models.category,{
+        as : 'categories',
+        foreignKey :'id',
+        onDelete : 'cascade'
+      }),
+      Product.hasMany(models.mark,{
+        as : 'marks',
+        foreignKey :'id',
         onDelete : 'cascade'
       })
     }
@@ -20,7 +31,8 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     price: DataTypes.INTEGER,
     cuotas: DataTypes.INTEGER,
-    mark: DataTypes.STRING
+    description : DataTypes.STRING,
+    
   }, {
     sequelize,
     modelName: 'Product',

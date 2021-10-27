@@ -5,15 +5,18 @@ module.exports = {
         
         db.Product.findAll({
              include : [
-                 {association : 'images', }
+                 {association : 'images'}
              ],
+             where : {
+                 mark : req.query.mark
+             }
          })
          .then(productos => {
              let response = {
                 meta : {
                     status : 200,
                     data : productos.length,
-                    url : '/products/products'
+                    url : '/api/products/productos'
 
                 },
                 data : productos

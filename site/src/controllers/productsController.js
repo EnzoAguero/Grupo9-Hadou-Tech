@@ -33,6 +33,7 @@ module.exports = {
         mark: req.body.mark.trim(),
         price: req.body.price,
         cuotas: req.body.cuotas,
+        description: req.body.description
         
       }).then(producto => {
         db.Image.create({
@@ -58,8 +59,7 @@ module.exports = {
       where : {
           id : req.params.id
       },
-      include : [
-          {association : 'images'},
+      include : ['images','marks',
       ]
   }).then(producto =>{
           return res.render('detalle',{
