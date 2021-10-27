@@ -36,7 +36,7 @@
 
 
                 <div class="titulo-productos">
-                    <h1>Ofertas</h1>
+                    <h1>Productos</h1>
                     <a href="#">
                         <h4>Ver todos</h4>
                     </a>
@@ -54,7 +54,10 @@
 
                         
                         <article>
-                            <img src="/images/<%= producto.images[0].file %>"  alt="mouse">
+                            <div class="d-flex justify-content-center">
+                                <img src="/images/<%= producto.images[0].file %>"  alt="mouse">
+                            </div>
+                            
 
                             <div class="descripcion-de-producto">
                                 <a href="/products/detalle/<%= producto.id %> ">

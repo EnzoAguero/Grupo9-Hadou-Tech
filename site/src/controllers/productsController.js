@@ -101,4 +101,23 @@ module.exports = {
       .catch(error => console.log(error))
   },
 
+  products : (req,res) => {
+    res.render('productos')
+   /*  let usuario = req.session.userLogin
+
+    db.Product.findAll({
+      include : [
+        {association : 'images',}
+    ],
+    }).then(products => {
+      
+        res.render('productos',
+        usuario,
+        products
+
+        
+    )}) */
+
+    
+  }
 }

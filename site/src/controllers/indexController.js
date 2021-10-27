@@ -9,10 +9,11 @@ module.exports = {
        db.Product.findAll({
             include : [
                 {association : 'images',}
-            ]
+            ],
+            limit : 8
         })
         .then(productos => 
-            {console.log(productos);
+            {
             res.render('index',{
             title : "Inicio",
             usuario,
