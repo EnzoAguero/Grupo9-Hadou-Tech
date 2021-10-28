@@ -15,12 +15,12 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey :'id',
         onDelete : 'cascade'
       }),
-      Product.hasMany(models.category,{
+      Product.hasMany(models.Category,{
         as : 'categories',
         foreignKey :'id',
         onDelete : 'cascade'
       }),
-      Product.hasMany(models.mark,{
+      Product.hasMany(models.Mark,{
         as : 'marks',
         foreignKey :'id',
         onDelete : 'cascade'
