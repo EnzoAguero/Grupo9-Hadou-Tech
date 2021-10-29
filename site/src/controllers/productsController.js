@@ -1,12 +1,18 @@
 const path = require('path')
 const {validationResult} = require('express-validator')
 const db = require('../../database/models')
+const {productos} = require('../data/products_db')
 
 
 module.exports = {
 
   search : (req,res) => {
-    
+    let result = productos.filter(producto => producto.nombre.toLowerCase().includes(req.query.search.toLowerCase()));
+    return res.render('resultSearch',{
+        result,
+        productos,
+        busqueda : req.query.search
+    })
 
   },
 
@@ -27,6 +33,7 @@ module.exports = {
         mark: req.body.mark.trim(),
         price: req.body.price,
         cuotas: req.body.cuotas,
+        description: req.body.description
         
       }).then(producto => {
         db.Image.create({
@@ -52,8 +59,7 @@ module.exports = {
       where : {
           id : req.params.id
       },
-      include : [
-          {association : 'images'},
+      include : ['images','marks',
       ]
   }).then(producto =>{
           return res.render('detalle',{
@@ -101,4 +107,24 @@ module.exports = {
       .catch(error => console.log(error))
   },
 
+  products : (req,res) => {
+    res.render('productos')
+   /*  let usuario = req.session.userLogin
+
+    db.Product.findAll({
+      include : [
+        {association : 'images',}
+    ],
+    }).then(products => {
+      
+        res.render('productos',
+        usuario,
+        products
+
+        
+    )}) */
+
+    
+  }
 }
+

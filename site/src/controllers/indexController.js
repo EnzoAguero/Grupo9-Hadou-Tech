@@ -7,12 +7,12 @@ module.exports = {
         let usuario = req.session.userLogin
         
        db.Product.findAll({
-            include : [
-                {association : 'images',}
-            ]
+            include : [ 'images','marks'
+            ],
+            limit : 8
         })
         .then(productos => 
-            {console.log(productos);
+            {
             res.render('index',{
             title : "Inicio",
             usuario,
