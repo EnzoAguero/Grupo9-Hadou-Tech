@@ -3,6 +3,7 @@ var router = express.Router();
 const validaciones = require('../middlewares/addProductValidation');
 const upload = require('../middlewares/multer')
 const adminCheck = require('../middlewares/adminCheck')
+const localUser = require('../middlewares/localUser')
 
 const {add,detail,edit,update,remove,save,search,products} = require('../controllers/productsController');
 

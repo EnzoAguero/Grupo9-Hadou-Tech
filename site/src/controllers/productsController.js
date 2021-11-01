@@ -108,21 +108,21 @@ module.exports = {
   },
 
   products : (req,res) => {
-    res.render('productos')
-   /*  let usuario = req.session.userLogin
+    let usuario = req.session.userLogin
 
     db.Product.findAll({
-      include : [
-        {association : 'images',}
+      include : [ 'images','marks'
     ],
-    }).then(products => {
+    }).then(productos => {
       
-        res.render('productos',
+        res.render('productos',{
         usuario,
-        products
+        producto : productos
+        }
+        
 
         
-    )}) */
+    )}) 
 
     
   }
