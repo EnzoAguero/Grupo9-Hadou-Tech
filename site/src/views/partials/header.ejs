@@ -1,108 +1,108 @@
 <header>
-    <div class="allheader">
-        <div class="logo-nombre">
-            <a href="/"><img src="/images/intentounmillon.png" alt="logo" class="logo"></a>
-            <a href="/">
-                <h3 class="NameLogo1">Hadou Tech</h3>
-            </a>
+  <div class="allheader">
+    <div class="logo-nombre">
+      <a href="/"><img src="/images/intentounmillon.png" alt="logo" class="logo"></a>
+      <a href="/">
+        <h3 class="NameLogo1">Hadou Tech</h3>
+      </a>
 
+    </div>
+    <div class="name-input">
+      <a href="/">
+        <h3 class="NameLogo2">Hadou Tech</h3>
+      </a>
+    </div>
+    <form action=""><input class="buscador1" type="text" placeholder="Buscar..."></form>
+
+
+    <div class="nav1">
+      <nav>
+        <ul>
+          <li><a href="/products/productos">Productos</a></li>
+          <li><a href="">Nosotros</a></li>
+
+          <li><a href="">Marcas</a></li>
+        </ul>
+      </nav>
+
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <form action="/products/search" id="f-s-h" class="d-flex" method="GET" onsubmit="event.preventDefault()">
+            <input id="i-s-h" name="search" class="form-control me-2" type="search" placeholder="Busqueda"
+                                                                                    aria-label="Buscar">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
         </div>
-        <div class="name-input">
-            <a href="/">
-                <h3 class="NameLogo2">Hadou Tech</h3>
-            </a>
-        </div>
-        <form action=""><input class="buscador1" type="text" placeholder="Buscar..."></form>
+      </nav>
 
 
-        <div class="nav1">
-            <nav>
-                <ul>
-                    <li><a href="/products/productos">Productos</a></li>
-                    <li><a href="">Nosotros</a></li>
-
-                    <li><a href="">Marcas</a></li>
-                </ul>
-            </nav>
-
-            <nav class="navbar navbar-light bg-light">
-                <div class="container-fluid">
-                    <form action="/products/search" class="d-flex" method="GET">
-                        <input name="search" class="form-control me-2" type="search" placeholder="Busqueda"
-                            aria-label="Buscar">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
-                    </form>
-                </div>
-            </nav>
-
-
-        </div>
-
-        <div class="nav2">
-
-            <!-- MATI FALTA HACER QUE EN EL HEADER CUANDO SE LOGEE EL ADMIN Y UN usuario comun -->
-            
-            <nav>
-                <ul>
-                    <% if (locals.userLogin) { %>
-                        <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
-
-                       
-                        <li>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <%= locals.userLogin.name %>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <% if (locals.userLogin.rol === "admin") { %>
-                                        <li><a class="dropdown-item" href="/products/add">Agregar Producto</a></li>
-                                    <% } %>
-                                  <li><a class="dropdown-item" href="/users/profile/<%= usuario.id %>">Ver perfil</a></li>
-                                  <li><a class="dropdown-item" href="/users/logout">Cerrar Sesion</a></li>
-                                  
-                                </ul>
-                              </div>
-                        </li>
-                        
-                        <li>
-                            <a href="/users/logout">Cerrar Sesion</a>
-                        </li>
-                        <% } else { %>
-
-                            <li>
-                                <a href="/users/login">Ingresar</a>
-                            </li>
-                            <li>
-                                <a href="/users/register" class="button-registro">Registro</a>
-                            </li>
-                            <% } %>
-
-                </ul>
-            </nav>
-        </div>
     </div>
 
+    <div class="nav2">
+
+      <!-- MATI FALTA HACER QUE EN EL HEADER CUANDO SE LOGEE EL ADMIN Y UN usuario comun -->
+
+      <nav>
+        <ul>
+          <% if (locals.userLogin) { %>
+          <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
 
 
-    
-        <div class="burger justify-content-center">
-            <div class="respmenu">
-                <input type="checkbox">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-times"></i>
-                <nav>
-                    <ul>
-                        <li><a href="/users/login">Ingresar</a></li>
-                        <li><a href="/users/register">Registro</a></li>
-                        <li><a href="/products/productos">Productos</a></li>
-                        <li><a href="#">Nosotros</a></li>
-                        <li><a href="#">Marcas</a></li>
-                    </ul>
-                </nav>
+          <li>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <%= locals.userLogin.name %>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <% if (locals.userLogin.rol === "admin") { %>
+                <li><a class="dropdown-item" href="/products/add">Agregar Producto</a></li>
+                <% } %>
+                <li><a class="dropdown-item" href="/users/profile/<%= usuario.id %>">Ver perfil</a></li>
+                <li><a class="dropdown-item" href="/users/logout">Cerrar Sesion</a></li>
+
+              </ul>
             </div>
-        </div>
- 
-   
+          </li>
+
+          <li>
+            <a href="/users/logout">Cerrar Sesion</a>
+          </li>
+          <% } else { %>
+
+          <li>
+            <a href="/users/login">Ingresar</a>
+          </li>
+          <li>
+            <a href="/users/register" class="button-registro">Registro</a>
+          </li>
+          <% } %>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+
+
+  <div class="burger justify-content-center">
+    <div class="respmenu">
+      <input type="checkbox">
+      <i class="fas fa-bars"></i>
+      <i class="fas fa-times"></i>
+      <nav>
+        <ul>
+          <li><a href="/users/login">Ingresar</a></li>
+          <li><a href="/users/register">Registro</a></li>
+          <li><a href="/products/productos">Productos</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Marcas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
 
 
 
