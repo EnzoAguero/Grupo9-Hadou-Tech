@@ -254,9 +254,7 @@
     
 }
 
-.aside{
-    width: 30%;
-}
+
 
 .titulo-productos{
     display: flex;
@@ -282,7 +280,7 @@
      display: flex; 
     align-items: center; 
     justify-content: center;
-    /* width: 70%; */
+    
     
 }
 
@@ -293,7 +291,7 @@
     text-align: center;
     display: block;
     margin-right: 10px;
-    max-width: 23%;
+    width: 40%;
     height: auto
 
 }

@@ -1,6 +1,6 @@
 .main{
     
-  /* background-image: url('/images/fondo.main.jpeg');   */
+
   background-color: #202324;
   background-size: 100%;
   width: 100%;
@@ -328,16 +328,6 @@ h1.desc-dispositivos {
 
 }
 
-/* .banner-productos article:first-child{
-    display: block;
-}
- .banner-productos article:last-child{
-    border: 2px solid black;
-    border-radius: 5%;
-    text-align: center;
-     display: block; 
-    
-}  */
 
 
 .banner-productos article img{
@@ -406,4 +396,15 @@ h1.desc-dispositivos {
     height: 8rem;
     background-repeat: repeat-x;
 }
+}
+
+@media (min-width:1720px){
+    .main{
+    
+
+        background-color: #202324;
+        background-size: 100%;
+        width: 100%;
+      
+      }
 }
