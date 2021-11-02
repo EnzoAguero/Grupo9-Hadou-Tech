@@ -1,6 +1,7 @@
 .main{
     
-    background-image: url('/images/fondo.main.jpeg');  
+    /* background-image: url('/images/fondo.main.jpeg');  */
+  background: #202324; 
   background-size: 100%;
   width: 100%;
 
