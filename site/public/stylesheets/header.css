@@ -236,6 +236,9 @@ article:last-child{
         
     }
 
+
+    
+
     .logo-nombre{
         display: flex;
         width: 15%;
@@ -317,8 +320,8 @@ article:last-child{
       }
     
     .fa-shopping-cart{
-        margin-left: 2rem;
-        margin-right: 3rem;
+        margin-left: 1rem;
+        margin-right: 2rem;
         font-size: 2.5rem;
     }
     
@@ -330,12 +333,25 @@ article:last-child{
         
     
     }
+
+    .nav2-iconos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .nav2 li{
         display: inline-block;
         text-align: right;
         padding-right: 1rem;
         font-size: 1rem;
         
+    }
+
+    .avatar img{
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        border-radius: 50%;
     }
    
     
@@ -431,6 +447,14 @@ border-bottom: 2px solid ;
 border-color: white;
 }
 
+.avatar img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+
 
 .buscador{
     width: 23em;
@@ -445,7 +469,7 @@ border-color: white;
     font-size: 2.5rem;
 }
 
-.nav2{
+.nav2 nav{
     text-align: center;
         display: flex;
         font-weight: bold;
@@ -556,8 +580,17 @@ border-color: white;
         display: flex;
         font-weight: bold;
         align-items: center;
+        
     
     }
+
+    .avatar img{
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+
     .nav2 li{
         display: inline-block;
         text-align: right;

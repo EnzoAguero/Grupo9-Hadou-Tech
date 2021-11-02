@@ -91,15 +91,20 @@
 
         <div class="nav2">
 
-            <!-- MATI FALTA HACER QUE EN EL HEADER CUANDO SE LOGEE EL ADMIN Y UN usuario comun -->
+            
 
             <nav>
-                <ul>
+                <ul class="nav2-iconos">
                     <% if (locals.userLogin) { %>
                         <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
 
+                        <div class="avatar">
+                            <img src="/images/<%= locals.userLogin.image %> " alt="avatar">
+                        </div>
 
-                        <li>
+                       
+                  <li>
+                            
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                                     data-bs-toggle="dropdown" aria-expanded="false">

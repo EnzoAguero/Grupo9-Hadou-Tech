@@ -6,6 +6,7 @@ var logger = require('morgan');
 const methodOverride = require('method-override')
 const session = require('express-session')
 const localsUserCheck = require('./middlewares/localsUserCheck')
+const Swal = require('sweetalert2')
 /* const multer = require('multer') */
 
 var indexRouter = require('./routes/index');
