@@ -1,4 +1,4 @@
-const $ = id => document.getElementById(id)
+ const $ = id => document.getElementById(id)
 
 window.addEventListener('load', () => {
     console.log('Conectado bien!');

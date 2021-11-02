@@ -45,6 +45,7 @@ module.exports = {
 
   add : (req,res) => {
     let usuario = req.session.userLogin
+    
     return res.render('productAdd',{
       usuario
 
@@ -152,6 +153,62 @@ module.exports = {
     )}) 
 
     
+  },
+  mouse : (req,res) => {
+    let usuario = req.session.userLogin
+
+    db.Product.findAll({
+      include : ['images','marks'],
+      where : {
+        name : 'Mouse'
+      }
+    })
+    .then(productos => res.render('productos',{
+      producto : productos,
+      usuario
+    }))
+  },
+  teclado : (req,res) => {
+    let usuario = req.session.userLogin
+
+    db.Product.findAll({
+      include : ['images','marks'],
+      where : {
+        name : 'Teclado'
+      }
+    })
+    .then(productos => res.render('productos',{
+      producto : productos,
+      usuario
+    }))
+  },
+ auricular : (req,res) => {
+  let usuario = req.session.userLogin
+
+    db.Product.findAll({
+      include : ['images','marks'],
+      where : {
+        name : 'Auriculares'
+      }
+    })
+    .then(productos => res.render('productos',{
+      producto : productos,
+      usuario
+    }))
+  },
+  monitor : (req,res) => {
+    let usuario = req.session.userLogin
+
+    db.Product.findAll({
+      include : ['images','marks'],
+      where : {
+        name : 'Monitor'
+      }
+    })
+    .then(productos => res.render('productos',{
+      producto : productos,
+      usuario
+    }))
   }
 }
 

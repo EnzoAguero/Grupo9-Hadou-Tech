@@ -32,6 +32,7 @@ module.exports = {
       req.session.userLogin = {
           id : user.id,
           name : user.name,
+          image : user.image,
           rol : user.rol,
          
     }
@@ -58,6 +59,7 @@ module.exports = {
           last_name : last_name.trim(),
           email : email.trim(),
           password : bcrypt.hashSync(password,10),
+          image : 'default-avatar.jpg',
           rol : 'usuario'
 
       }).then(user => {
