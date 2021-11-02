@@ -23,6 +23,7 @@
         box-shadow: 7px 13px 37px #000;
         display: flex;
         flex-direction: column;  
+        
     }
 
     .form-register .titulo {
@@ -232,10 +233,14 @@ hr {
     margin: 10px 0;
 }
 
+
 .contenedor {
     margin-bottom: 30px;
     display: flex;
     align-items: center;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     
     
 }
@@ -244,5 +249,6 @@ body {
     background-image: url(/images/3874-gris-oscuro.jpg);
     background-repeat: round;
     background-size: contain;
+    
 }
 

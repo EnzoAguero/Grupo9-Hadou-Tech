@@ -19,8 +19,60 @@
             <nav>
                 <ul>
                     <li><a href="/products/productos">Productos</a></li>
-                    <li><a href="">Nosotros</a></li>
-                    <li><a href="">Marcas</a></li>
+                    <li>
+                        <!-- Button trigger modal -->
+                        <button style="color: aliceblue; font-weight: bold; font-size: 100%;" type="button"
+                            class="btn primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Nosotros
+                        </button>
+
+                        <!-- Modal -->
+                        <div style="color: darkblue; box-shadow: rgb(180, 41, 41);" class="modal fade" id="exampleModal"
+                            tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel"
+                                            style="font-weight: bold; font-size: 100%; color: rgb(52, 10, 168);">HADOU TECH</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-colcount="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img style="width: 100px;" src="/images/intentounmillon.png" alt="">
+                                        Hadou Tech es una empresa nacional donde nos encargamos de vender hardware de
+                                        calidad de diferentes marcas, entre ellas HyperX, Logitech Redragon, etc.
+                                        Ofrecemos un sitio confiable donde la gente puede disfrutar de los mejores
+                                        precios acerca de sus componentes favoritos.
+
+                                        Apuntamos a un público de todas las edades, interesadas por la informática y
+                                        el gaming. Brindamos las mejores ofertas precio y calidad para
+                                        desarrollarse en el ámbito gamer.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Continuar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><button style="color: rgb(250, 250, 250); font-weight: bold; font-size: 100%;" type="button" class="btn primary" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Marcas</button>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 style="color: darkblue; font-weight: bolder; "  id="offcanvasRightLabel">MARCAS</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                ...
+                            </div>
+                        </div>
+                    </li>
+
                 </ul>
             </nav>
 
@@ -39,8 +91,8 @@
 
         <div class="nav2">
 
-           
             
+
             <nav>
                 <ul class="nav2-iconos">
                     <% if (locals.userLogin) { %>
@@ -54,20 +106,22 @@
                   <li>
                             
                             <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     <%= locals.userLogin.name %>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <% if (locals.userLogin.rol === "admin") { %>
+                                    <% if (locals.userLogin.rol==="admin" ) { %>
                                         <li><a class="dropdown-item" href="/products/add">Agregar Producto</a></li>
-                                    <% } %>
-                                  <li><a class="dropdown-item" href="/users/profile/<%= usuario.id %>">Ver perfil</a></li>
-                                  <li><a class="dropdown-item" href="/users/logout">Cerrar Sesion</a></li>
-                                  
+                                        <% } %>
+                                            <li><a class="dropdown-item" href="/users/profile/<%= usuario.id %>">Ver
+                                                    perfil</a></li>
+                                            <li><a class="dropdown-item" href="/users/logout">Cerrar Sesion</a></li>
+
                                 </ul>
-                              </div>
+                            </div>
                         </li>
-                        
+
                         <li>
                             <a href="/users/logout">Cerrar Sesion</a>
                         </li>
@@ -88,28 +142,23 @@
 
 
 
-    
-        <div class="burger justify-content-center">
-            <div class="respmenu">
-                <input type="checkbox">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-times"></i>
-                <nav>
-                    <ul>
-                        <li><a href="/users/login">Ingresar</a></li>
-                        <li><a href="/users/register">Registro</a></li>
-                        <li><a href="/products/productos">Productos</a></li>
-                        <li><a href="#">Nosotros</a></li>
-                        <li><a href="#">Marcas</a></li>
-                    </ul>
-                </nav>
-            </div>
+
+    <div class="burger justify-content-center">
+        <div class="respmenu">
+            <input type="checkbox">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+            <nav>
+                <ul>
+                    <li><a href="/users/login">Ingresar</a></li>
+                    <li><a href="/users/register">Registro</a></li>
+                    <li><a href="/products/productos">Productos</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Marcas</a></li>
+                </ul>
+            </nav>
         </div>
- 
-   
-
-
-
+    </div>
 
 
 </header>
