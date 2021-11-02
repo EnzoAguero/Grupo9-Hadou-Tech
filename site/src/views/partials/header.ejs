@@ -48,37 +48,53 @@
           <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
 
 
-          <li>
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                <%= locals.userLogin.name %>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <% if (locals.userLogin.rol === "admin") { %>
-                <li><a class="dropdown-item" href="/products/add">Agregar Producto</a></li>
-                <% } %>
-                <li><a class="dropdown-item" href="/users/profile/<%= usuario.id %>">Ver perfil</a></li>
-                <li><a class="dropdown-item" href="/users/logout">Cerrar Sesion</a></li>
+        <div class="nav2">
 
-              </ul>
-            </div>
-          </li>
+           
+            
+            <nav>
+                <ul class="nav2-iconos">
+                    <% if (locals.userLogin) { %>
+                        <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
 
-          <li>
-            <a href="/users/logout">Cerrar Sesion</a>
-          </li>
-          <% } else { %>
+                        <div class="avatar">
+                            <img src="/images/<%= locals.userLogin.image %> " alt="avatar">
+                        </div>
 
-          <li>
-            <a href="/users/login">Ingresar</a>
-          </li>
-          <li>
-            <a href="/users/register" class="button-registro">Registro</a>
-          </li>
-          <% } %>
+                       
+                  <li>
+                            
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <%= locals.userLogin.name %>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <% if (locals.userLogin.rol === "admin") { %>
+                                        <li><a class="dropdown-item" href="/products/add">Agregar Producto</a></li>
+                                    <% } %>
+                                  <li><a class="dropdown-item" href="/users/profile/<%= usuario.id %>">Ver perfil</a></li>
+                                  <li><a class="dropdown-item" href="/users/logout">Cerrar Sesion</a></li>
+                                  
+                                </ul>
+                              </div>
+                        </li>
+                        
+                        <li>
+                            <a href="/users/logout">Cerrar Sesion</a>
+                        </li>
+                        <% } else { %>
 
-        </ul>
-      </nav>
+                            <li>
+                                <a href="/users/login">Ingresar</a>
+                            </li>
+                            <li>
+                                <a href="/users/register" class="button-registro">Registro</a>
+                            </li>
+                            <% } %>
+
+                </ul>
+            </nav>
+        </div>
     </div>
   </div>
 

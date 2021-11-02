@@ -64,9 +64,10 @@
                <% if (locals.userLogin.rol === "admin") { %>
                   <div style="margin-top: 10px;">
                      <a href="/products/edit/<%= producto.id %>" class="action-button">EDITAR PRODUCTO</a>
-               <form action="/products/remove/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+               <form id="formDelete" action="/products/remove/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                   <button type="submit" class="action-button" onclick="">ELIMINAR</button>
                </form>
+               <button id="eliminar" type="submit" class="action-button" onclick="">ELIMINAR</button>
                <a href="/products/add/" class="action-button">CREAR PRODUCTO</a>
                   </div>
                 
@@ -155,8 +156,15 @@
       </main>
 
       <%- include ('./partials/footer') %>
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script src="/javascripts/sweetalert.js"></script>
 
-      <script src="/javascripts/sweetalert.js"></script>
+           
+            
+
+     
+
+   
 
 
    </body>

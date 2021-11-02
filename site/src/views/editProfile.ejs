@@ -16,7 +16,7 @@
 
           <span style="color: white; margin: auto;">Foto de perfil</span>
           <a href="#" class="d-flex align-items:center"><img class="img-fluid rounded-start"
-              src="/images/default-image.png" alt=""></a>
+              src="/images/<%= user.image %> " alt=""></a>
           <form class="row g-3" style="margin: 0px 10px" action="/users/editProfile/<%= user.id %>?_method=PUT" method="POST">
             <div class="col-md-6">
               <label for="" class="form-label" style="color:white;">Nombre</label>

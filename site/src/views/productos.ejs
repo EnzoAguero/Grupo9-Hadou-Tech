@@ -19,7 +19,7 @@
                       Mouse
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Logitech</a></li>
+                      <li><a class="dropdown-item" href="/products/productos/mouse">Logitech</a></li>
                       <li><a class="dropdown-item" href="#">Noga</a></li>
                       <li><a class="dropdown-item" href="#">Asus</a></li>
                     </ul>
@@ -61,7 +61,7 @@
 
         <div id="carouselExampleFade" class="carouselProducto slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carouselProductos -item active">
+                <div class="carousel-item active">
                     <img src="/images/banner-2.jpeg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
@@ -83,24 +83,31 @@
             </button>
         </div>
 
+
+       
+
     <section class="banner-productosProducto">
-        <article>
+
+        <% producto.forEach(producto => { %>
+            
+            <article>
             <div class="d-flex justify-content-center">
-                <img src=""  alt="mouse">
+                <img src="/images/<%= producto.images[0].file %>"  alt="mouse">
             </div>
             
 
             <div class="descripcion-de-producto">
                 <a href="">
-                    <h3>
-                        nombre-producto
-                        Marca
-                    </h3>
+                    <h4>
+                        <%= producto.name %>
+                    <%= producto.marks[0].name %>
+                    </h4>
                 </a>
 
-                <span>Precio 12312</span>
+                <span>$<%= producto.price %></span>
 
-                <h5>En 20 cuotas
+                <h5>En $ <%= producto.cuotas %> cuotas de $<%=Math.round(producto.price
+                    /producto.cuotas) %>
                 </h5>
                 <a href="">
                     <p>Comprar</p>
@@ -108,126 +115,10 @@
             </div>
 
         </article>
-        <article>
-            <div class="d-flex justify-content-center">
-                <img src=""  alt="mouse">
-            </div>
-            
+        <% }) %>
+       
 
-            <div class="descripcion-de-producto">
-                <a href="">
-                    <h3>
-                        nombre-producto
-                        Marca
-                    </h3>
-                </a>
-
-                <span>Precio 12312</span>
-
-                <h5>En 20 cuotas
-                </h5>
-                <a href="">
-                    <p>Comprar</p>
-                </a>
-            </div>
-
-        </article>
-        <article>
-            <div class="d-flex justify-content-center">
-                <img src=""  alt="mouse">
-            </div>
-            
-
-            <div class="descripcion-de-producto">
-                <a href="">
-                    <h3>
-                        nombre-producto
-                        Marca
-                    </h3>
-                </a>
-
-                <span>Precio 12312</span>
-
-                <h5>En 20 cuotas
-                </h5>
-                <a href="">
-                    <p>Comprar</p>
-                </a>
-            </div>
-
-        </article>
-        <article>
-            <div class="d-flex justify-content-center">
-                <img src=""  alt="mouse">
-            </div>
-            
-
-            <div class="descripcion-de-producto">
-                <a href="">
-                    <h3>
-                        nombre-producto
-                        Marca
-                    </h3>
-                </a>
-
-                <span>Precio 12312</span>
-
-                <h5>En 20 cuotas
-                </h5>
-                <a href="">
-                    <p>Comprar</p>
-                </a>
-            </div>
-
-        </article>
-        <article>
-            <div class="d-flex justify-content-center">
-                <img src=""  alt="mouse">
-            </div>
-            
-
-            <div class="descripcion-de-producto">
-                <a href="">
-                    <h3>
-                        nombre-producto
-                        Marca
-                    </h3>
-                </a>
-
-                <span>Precio 12312</span>
-
-                <h5>En 20 cuotas
-                </h5>
-                <a href="">
-                    <p>Comprar</p>
-                </a>
-            </div>
-
-        </article>
-        <article>
-            <div class="d-flex justify-content-center">
-                <img src=""  alt="mouse">
-            </div>
-            
-
-            <div class="descripcion-de-producto">
-                <a href="">
-                    <h3>
-                        nombre-producto
-                        Marca
-                    </h3>
-                </a>
-
-                <span>Precio 12312</span>
-
-                <h5>En 20 cuotas
-                </h5>
-                <a href="">
-                    <p>Comprar</p>
-                </a>
-            </div>
-
-        </article>    </section>
+           </section>
   
        
         
