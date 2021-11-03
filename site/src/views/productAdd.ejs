@@ -18,6 +18,11 @@
                   <span id="error-mark" class="text-danger small"><%= locals.errores && locals.errores.mark ? errores.mark.msg : null %> </span>
                 </div>
                 <div class="mb-3">
+                  <label for="description" class="form-label">Descripcion</label>
+                  <input type="text" class="form-control" id="description" name="description" value="<%= locals.old && locals.old.description? old.description : null%>">
+                  <span id="error-description" class="text-danger small"><%= locals.errores && locals.errores.description ? errores.description.msg : null %> </span>
+                </div>
+                <div class="mb-3">
                   <label for="price" class="form-label">Precio</label>
                   <input type="number" class="form-control" id="price" name="price" value="<%= locals.old && locals.old.price ? old.price : null%>">
                   <span id="error-price" class="text-danger small"><%= locals.errores && locals.errores.price ? errores.price.msg : null %> </span>

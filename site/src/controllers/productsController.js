@@ -54,14 +54,13 @@ module.exports = {
   },
   save : (req,res) =>{
     let errors = validationResult(req);
-    let usuario = req.session.userLogin
     
     if(errors.isEmpty()){  
       db.Product.create({
         name: req.body.name.trim(),
         price: req.body.price,
         cuotas: req.body.cuotas,
-        description: req.body.description ? req.body.description : '-'
+        description: req.body.description
         
       }).then(producto => {
         db.Image.create({
