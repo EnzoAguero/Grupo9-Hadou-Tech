@@ -103,7 +103,7 @@
                       <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
 
                       <div class="avatar">
-                          <img src="/images/<%= locals.userLogin.image %> " alt="avatar">
+                          <img src="/images/users/<%= locals.userLogin.image %> " alt="avatar">
                       </div>
 
                      
@@ -118,7 +118,7 @@
                                   <% if (locals.userLogin.rol==="admin" ) { %>
                                       <li><a class="dropdown-item" href="/products/add">Agregar Producto</a></li>
                                       <% } %>
-                                          <li><a class="dropdown-item" href="/users/profile/<%= usuario.id %>">Ver
+                                          <li><a class="dropdown-item" href="/users/profile">Ver
                                                   perfil</a></li>
                                           <li><a class="dropdown-item" href="/users/logout">Cerrar Sesion</a></li>
 

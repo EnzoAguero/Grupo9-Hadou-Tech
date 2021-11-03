@@ -103,7 +103,7 @@ module.exports = {
         {association : 'addresses',}
     ],
       where : {
-          id : req.params.id
+          id : usuario.id
       }
   }).then(user =>{
           return res.render('profile',{
@@ -121,7 +121,7 @@ profileEdit : (req,res) => {
       {association : 'addresses',}
   ],
     where : {
-        id : req.params.id
+        id : usuario.id
     }
 }).then(user =>{
         return res.render('editProfile',{
@@ -133,21 +133,22 @@ profileEdit : (req,res) => {
 
 },
 profileUpdate : (req,res) => {
+ /*  return res.send(req.file) */
   let usuario = req.session.userLogin
 
   let {city,address,country,province,cp,phone} = req.body
   var {name,last_name,password} = req.body
   
 db.User.update({
-    name:name,
-    last_name:last_name,
+    name,
+    last_name,
     password: password != " " && bcrypt.hashSync(password,10),
-   
+    image : req.file ? req.file.filename : usuario.image
   },
   {
-    where : {id : req.params.id}
+    where : {id : usuario.id}
   }
-  ).then(user =>
+  ).then(() =>
     db.Address.update({
       city:city,
       address:address,
@@ -155,19 +156,27 @@ db.User.update({
       country:country,
       phone:+phone,
       cp:+cp,
-      userId : user.id
       },
     {
-      where : {id : req.params.id}
-    }).then(() => res.render('profile',
-    usuario))
-      .catch(error => console.log(error)) 
+      where : {userId : usuario.id}
+    }).then(() => {
+      req.session.userLogin = {
+        id : usuario.id,
+        name : name,
+        image : req.file ? req.file.filename : usuario.image,
+        rol : usuario.rol
+
+       
+  } 
+
+    res.redirect('/users/profile')
+  })
+
+
+    .catch(error => console.log(error)) 
     
-    
-  
-  
   )
-  .catch(error => console.log(error))
+  
 }
 }
 
