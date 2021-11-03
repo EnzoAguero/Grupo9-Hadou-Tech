@@ -1,120 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include ('./partials/head')%>
+  <%- include ('./partials/head')%>
 
-    <body class="home">
+  <body class="home">
 
-        <%- include ('./partials/header')%>
+    <%- include ('./partials/header')%>
 
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/images/banner-2.jpeg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/images/banner-3.jpeg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/images/m[197].jpg" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/images/banner-2.jpeg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/images/banner-3.jpeg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/images/m[197].jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                                                          data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                                                          data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    <main class="main">
+
+
+      <div class="titulo-productos">
+        <h1>Productos</h1> 
+        <a href="#">
+          <h4>Ver todos</h4>
+        </a>
+      </div>
+
+      <!-- Comienza seccion de productos -->
+
+
+      <section class="banner-productos">
+
+        <% producto.forEach(producto=> { %>
+
+
+
+
+
+        <article>
+          <a href="/products/detalle/<%= producto.id %> ">
+            <div class="d-flex justify-content-center">
+              <img src="/images/<%= producto.images[0].file %>"  alt="mouse">
             </div>
 
 
-            <main class="main">
+            <div class="descripcion-de-producto">
+              <a href="/products/detalle/<%= producto.id %> ">
+                <h3>
+                  <%= producto.name %>
+                  <%= producto.marks[0].name %>
+                </h3>
+              </a>
+
+              <span>$<%= producto.price %></span>
+
+              <h5>En $ <%= producto.cuotas %> cuotas de $<%=Math.round(producto.price
+                 /producto.cuotas) %>
+              </h5>
+          </a>
+          <a href="/carrito">
+            <p>VER PRODUCTO</p>
+          </a>
+            </div>
+
+        </article>
+        <% }) %>
+      </section>
 
 
-                <div class="titulo-productos">
-                    <h1>Productos</h1> 
-                    <a href="#">
-                        <h4>Ver todos</h4>
-                    </a>
-                </div>
 
-                <!-- Comienza seccion de productos -->
+      <!-- termina la seccion de productos -->
 
+      <!-- Comienza iconos de productos -->
+      <h1 class="desc-dispositivos">Todos tus dispositivos favoritos</h1>
+      <div class="dispositivos">
+        <div class="contenedor-dispositivos">
+          <a href="/products/productos/auricular"><i class="fas fa-headphones"></i></a>
+          <p>Auriculares</p>
+        </div>
+        <div class="contenedor-dispositivos">
+          <a href="/products/productos/teclado"><i class="fas fa-keyboard"></i></a>
+          <p>Teclados</p>
+        </div>
+        <div class="contenedor-dispositivos">
+          <a href="/products/productos/monitor"><i class="fas fa-desktop"></i></a>
+          <p>Monitores</p>
+        </div>
+        <div class="contenedor-dispositivos">
+          <a href="/products/productos/mouse"><i class="fas fa-mouse"></i></a>
+          <p>Mouse</p>
+        </div>
+      </div>
+      </div>
+      <section class="banner-marcas">
 
-                <section class="banner-productos">
+      </section>
 
-                    <% producto.forEach(producto=> { %>
-
-
-
-
-                        
-                        <article>
-                            <div class="d-flex justify-content-center">
-                                <img src="/images/<%= producto.images[0].file %>"  alt="mouse">
-                            </div>
-                            
-
-                            <div class="descripcion-de-producto">
-                                <a href="/products/detalle/<%= producto.id %> ">
-                                    <h3>
-                                        <%= producto.name %>
-                                            <%= producto.marks[0].name %>
-                                    </h3>
-                                </a>
-
-                                <span>$<%= producto.price %></span>
-
-                                <h5>En $ <%= producto.cuotas %> cuotas de $<%=Math.round(producto.price
-                                            /producto.cuotas) %>
-                                </h5>
-                                <a href="/carrito">
-                                    <p>VER PRODUCTO</p>
-                                </a>
-                            </div>
-
-                        </article>
-                        <% }) %>
-                </section>
-
-        
-
-                        <!-- termina la seccion de productos -->
-
-                        <!-- Comienza iconos de productos -->
-                        <h1 class="desc-dispositivos">Todos tus dispositivos favoritos</h1>
-                        <div class="dispositivos">
-                            <div class="contenedor-dispositivos">
-                                <a href="/products/productos/auricular"><i class="fas fa-headphones"></i></a>
-                                <p>Auriculares</p>
-                            </div>
-                            <div class="contenedor-dispositivos">
-                                <a href="/products/productos/teclado"><i class="fas fa-keyboard"></i></a>
-                                <p>Teclados</p>
-                            </div>
-                            <div class="contenedor-dispositivos">
-                                <a href="/products/productos/monitor"><i class="fas fa-desktop"></i></a>
-                                <p>Monitores</p>
-                            </div>
-                            <div class="contenedor-dispositivos">
-                                <a href="/products/productos/mouse"><i class="fas fa-mouse"></i></a>
-                                <p>Mouse</p>
-                            </div>
-                        </div>
-                        </div>
-                        <section class="banner-marcas">
-
-                        </section>
-
-            </main>
+    </main>
 
 
-            <%- include ('./partials/footer') %>
+    <%- include ('./partials/footer') %>
 
-    </body>
+  </body>
 
 </html>

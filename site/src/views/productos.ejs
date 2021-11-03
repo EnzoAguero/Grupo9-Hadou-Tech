@@ -1,130 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
-</head>
-<body>
+  </head>
+  <body>
     <%- include ('./partials/head')%>
 
     <%- include ('./partials/header')%>
 
     <main class="container">
-        <div class="box-aside">
-            <aside class="aside d-flex flex-column justify-content-center align-items-center">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      Mouse
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="/products/productos/mouse">Logitech</a></li>
-                      <li><a class="dropdown-item" href="#">Noga</a></li>
-                      <li><a class="dropdown-item" href="#">Asus</a></li>
-                    </ul>
-                  </div>
-                  <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Teclados
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </div>
-                  <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Auriculares
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </div>
-                  <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Monitores
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </div>
-            </aside>
-
-        </div>
-        
-
-        <div id="carouselExampleFade" class="carouselProducto slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/images/banner-2.jpeg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="/images/banner-3.jpeg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="/images/m[197].jpg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+      <div class="box-aside">
+        <aside class="aside d-flex flex-column justify-content-center align-items-center">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Mouse
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="/products/productos/mouse">Logitech</a></li>
+              <li><a class="dropdown-item" href="#">Noga</a></li>
+              <li><a class="dropdown-item" href="#">Asus</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Teclados
             </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Auriculares
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Monitores
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+
+      <div id="carouselExampleFade" class="carouselProducto slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/images/banner-2.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/banner-3.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/m[197].jpg" class="d-block w-100" alt="...">
+          </div>
         </div>
-
-
-       
-
-    <section class="banner-productosProducto">
-
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                                                            data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                                                            data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <section class="banner-productosProducto">
         <% producto.forEach(producto => { %>
-            
-            <article>
+        <article>
+          <a href="/products/detalle/<%= producto.id %> ">
             <div class="d-flex justify-content-center">
-                <img src="/images/<%= producto.images[0].file %>"  alt="mouse">
+              <img src="/images/<%= producto.images[0].file %>"  alt="mouse">
             </div>
-            
-
             <div class="descripcion-de-producto">
-                <a href="">
-                    <h4>
-                        <%= producto.name %>
-                    <%= producto.marks[0].name %>
-                    </h4>
-                </a>
-
-                <span>$<%= producto.price %></span>
-
-                <h5>En $ <%= producto.cuotas %> cuotas de $<%=Math.round(producto.price
-                    /producto.cuotas) %>
-                </h5>
-                <a href="">
-                    <p>Comprar</p>
-                </a>
+                <h4>
+                  <%= producto.name %>
+                  <%= producto.marks[0].name %>
+                </h4>
+              <span>$<%= producto.price %></span>
+              <h5>En $ <%= producto.cuotas %> cuotas de $<%=Math.round(producto.price
+                 /producto.cuotas) %>
+              </h5>
+          </a>
+          <a href="#">
+            <p>Comprar</p>
+          </a>
             </div>
-
         </article>
         <% }) %>
-       
-
-           </section>
-  
-       
-        
+      </section>
     </main>
-
-
     <%- include ('./partials/footer')%>
-</body>
+  </body>
 </html>
