@@ -1,4 +1,4 @@
-function swal(event) {
+/* function swal(event) {
  
   var form = event.target.form
   Swal.fire({
@@ -21,3 +21,4 @@ function swal(event) {
  })
 }
     
+ */

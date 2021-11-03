@@ -54,21 +54,26 @@ module.exports = {
   },
   save : (req,res) =>{
     let errors = validationResult(req);
-
+    let usuario = req.session.userLogin
     
     if(errors.isEmpty()){  
       db.Product.create({
         name: req.body.name.trim(),
-        mark: req.body.mark.trim(),
         price: req.body.price,
         cuotas: req.body.cuotas,
-        description: req.body.description
+        description: req.body.description ? req.body.description : '-'
         
       }).then(producto => {
         db.Image.create({
           file : req.file.filename,
           productId : producto.id
-        }).then(result => res.redirect('/')
+          
+        }).then(image => {
+          db.Mark.create({
+            name : req.body.mark.trim(),
+            productId : producto.id
+          }).then(result => res.redirect('/'))
+        }
         
         )
         
