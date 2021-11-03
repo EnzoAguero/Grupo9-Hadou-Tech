@@ -46,7 +46,7 @@ h1.desc-dispositivos {
 .banner-productos article{
     margin-top: 10px;
     padding: 5px;
-    background-color: #24303c;
+    background-color: rgba(0, 0, 0, 0.281);
     box-shadow: 7px 13px 37px #000;
     margin-bottom: 15px;
 }

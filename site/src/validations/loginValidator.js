@@ -1,4 +1,4 @@
-const {body} = require('express-validator');
+/* const {body} = require('express-validator');
 const {usuarios} = require('../data/user');
 const bcrypt = require('bcryptjs');
 module.exports = [
@@ -13,4 +13,4 @@ module.exports = [
     }
   }).withMessage('credenciales incorrectas')
 ]  
-
+ */

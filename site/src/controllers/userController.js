@@ -135,13 +135,13 @@ profileEdit : (req,res) => {
 profileUpdate : (req,res) => {
   let usuario = req.session.userLogin
 
-  let {name,last_name,password} = req.body
   let {city,address,country,province,cp,phone} = req.body
-
+  var {name,last_name,password} = req.body
+  
 db.User.update({
     name:name,
     last_name:last_name,
-    password: bcrypt.hashSync(password,10),
+    password: password != " " && bcrypt.hashSync(password,10),
    
   },
   {
@@ -159,8 +159,9 @@ db.User.update({
       },
     {
       where : {id : req.params.id}
-    }).then(() => res.redirect('/'))
-    .catch(error => console.log(error))
+    }).then(() => res.render('profile',
+    usuario))
+      .catch(error => console.log(error)) 
     
     
   

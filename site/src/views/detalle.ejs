@@ -1,172 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
-
-   <%- include ('./partials/head')%>
-
-   <body class="home">
-
-      <%- include ('./partials/header')%>
-
-      <main class="detalle">
-         <section class="detalle-producto">
-
-
-            <div class="detalle-producto-imagen">
-               <div class="nombre-producto">
-                  <h4>
-                     <%= producto.name %>
-                     <%= producto.marks[0].name %>
-                  </h4>
-               </div>
-               <div>
-                  <hr>
-               </div>
-
-               <img src="/images/<%= producto.images[0].file %>" alt="producto">
-
-               <div class="accordion accordion-flush" id="accordionFlushExample">
-                  <div class="accordion-item">
-                     <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                           Accordion Item #1
-                        </button>
-                     </h2>
-                     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                     </div>
-                  </div>
-                  <div class="accordion-item">
-                     <h2 class="accordion-header" id="flush-headingTwo">
-                        <!-- <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                           Accordion Item #2
-                           </button> -->
-                     </h2>
-                     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                     </div>
-                  </div>
-                  <div class="accordion-item">
-                     <h2 class="accordion-header" id="flush-headingThree">
-                        <!-- <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                           Accordion Item #3
-                           </button> -->
-                     </h2>
-                     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                     </div>
-                  </div>
-               </div>
-
-
-
-               <!--Botones para editar un producto-->
-               <% if (locals.userLogin) { %>
-               <% if (locals.userLogin.rol === "admin") { %>
-                  <div style="margin-top: 10px;">
-                     <a href="/products/edit/<%= producto.id %>" class="action-button">EDITAR PRODUCTO</a>
-               <form id="formDelete" action="/products/remove/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-                  <button type="submit" class="action-button" onclick="">ELIMINAR</button>
-               </form>
-               <button id="eliminar" type="submit" class="action-button" onclick="">ELIMINAR</button>
-               <a href="/products/add/" class="action-button">CREAR PRODUCTO</a>
-                  </div>
-                
-               <% } %>
-               <% } %>
-               
-                 <!-- cambio modificado en la ruta -->
-
-
+  <%- include ('./partials/head')%>
+  <body class="home">
+    <%- include ('./partials/header')%>
+    <main class="detalle">
+      <section class="detalle-producto">
+        <div class="detalle-producto-imagen">
+          <div class="nombre-producto">
+            <h4>
+              <%= producto.name %>
+              <%= producto.marks[0].name %>
+            </h4>
+          </div>
+          <div>
+            <hr>
+          </div>
+          <img src="/images/<%= producto.images[0].file %>" alt="producto">
+          <div >
+            <h5>
+              <%= producto.description %>
+            </h5>
+          </div>
+          <!--Botones para editar un producto-->
+          <% if (locals.userLogin) { %>
+          <% if (locals.userLogin.rol === "admin") { %>
+          <div style="margin-top: 10px;">
+            <a href="/products/edit/<%= producto.id %>" class="action-button">EDITAR PRODUCTO</a>
+            <form id="formDelete" action="/products/remove/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+              <button type="submit" class="action-button" onclick="">ELIMINAR</button>
+            </form>
+            <button id="eliminar" type="submit" class="action-button" onclick="">ELIMINAR</button>
+            <a href="/products/add/" class="action-button">CREAR PRODUCTO</a>
+          </div>
+          <% } %>
+          <% } %>
+          <!-- cambio modificado en la ruta -->
+        </div>
+        <div class="detalle-producto-descripcion">
+          <div class="detalle-producto-precio">
+            <div>
+              <p class="valor">$<%= producto.price %>
+              </p>
             </div>
-            <div class="detalle-producto-descripcion">
-               <div class="detalle-producto-precio">
-                  <div>
-                     <p class="valor">$<%= producto.price %>
-                     </p>
-                  </div>
-                  <p class="lista">Precio al contado $<%= producto.price %>
-                  </p>
-               </div>
-               <hr>
-               <div class="detalle-producto-cuotas">
-                  <div class="icono">
-                     <i class="far fa-credit-card"></i>
-                  </div>
-                  <div>
-                     <p>
-                     <%= producto.cuotas %> cuotas sin interes de $<%=Math.round(producto.price /producto.cuotas) %> a
-                     precio de lista
-                     </p>
-                     <a style="color: blue;" href="#">Ver Cuotas</a>
-                  </div>
-               </div>
-               <hr>
-               <div class="detalle-producto-retiro">
-                  <div class="icono">
-                     <i class="fas fa-home"> </i>
-                  </div>
-                  <div>
-                     <p>Retiro ¡GRATIS!</p>
-                  </div>
-               </div>
-               <hr>
-               <div class="detalle-producto-envio">
-                  <div class="icono">
-                     <i class="fas fa-truck"></i>
-                  </div>
-                  <div>
-                     <p> Envio a todo el pais</p>
-                  </div>
-               </div>
-               <hr>
-               <div class="detalle-producto-garantia">
-                  <div class="icono">
-                     <i class="fas fa-shield-alt"></i>
-                  </div>
-                  <div>
-                     <p>GARANTIA</p>
-                     <p>180 dias</p>
-                  </div>
-               </div>
-               <hr>
-               <div class="detalle-producto-cantidad">
-                  <input class="cantidad" type="number" placeholder="Cantidad">
-               </div>
-               <div class="detalle-producto-boton">
-                  <div class="boton">
-                     <input class="boton" type="submit" value="Agregar al carrito">
-                  </div>
-
-               </div>
-               <div class="detalle-producto-redes">
-
-                  <a href="#"><i class="fab fa-facebook-square"></i></a>
-
-                  <a href="#"><i class="fab fa-twitter-square"></i> </a>
-
-                  <a href="#"><i class="fab fa-whatsapp"></i> </a>
-
-                  <a href="#"><i class="fas fa-link"></i> </a>
-
-               </div>
+            <p class="lista">Precio al contado $<%= producto.price %>
+            </p>
+          </div>
+          <hr>
+          <div class="detalle-producto-cuotas">
+            <div class="icono">
+              <i class="far fa-credit-card"></i>
             </div>
+            <div>
+              <p>
+              <%= producto.cuotas %> cuotas sin interes de $<%=Math.round(producto.price /producto.cuotas) %> a
+              precio de lista
+              </p>
+              <a style="color: blue;" href="#">Ver Cuotas</a>
+            </div>
+          </div>
+          <hr>
+          <div class="detalle-producto-retiro">
+            <div class="icono">
+              <i class="fas fa-home"> </i>
+            </div>
+            <div>
+              <p>Retiro ¡GRATIS!</p>
+            </div>
+          </div>
+          <hr>
+          <div class="detalle-producto-envio">
+            <div class="icono">
+              <i class="fas fa-truck"></i>
+            </div>
+            <div>
+              <p> Envio a todo el pais</p>
+            </div>
+          </div>
+          <hr>
+          <div class="detalle-producto-garantia">
+            <div class="icono">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div>
+              <p>GARANTIA</p>
+              <p>180 dias</p>
+            </div>
+          </div>
+          <hr>
+          <div class="detalle-producto-cantidad">
+            <input class="cantidad" type="number" placeholder="Cantidad">
+          </div>
+          <div class="detalle-producto-boton">
+            <div class="boton">
+              <input class="boton" type="submit" value="Agregar al carrito">
+            </div>
+          </div>
+          <hr>
 
 
-         </section>
-      </main>
-
-      <%- include ('./partials/footer') %>
-     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-     <script src="/javascripts/sweetalert.js"></script>
-
-           
-            
-
-     
-
-   
-
-
-   </body>
-
+          <div class="detalle-producto-redes">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i> </a>
+            <a href="https://wa.me/+5493872196146" target="_blank"><i class="fab fa-whatsapp"></i> </a>
+            <a href="#"><i class="fas fa-link"></i> </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include ('./partials/footer') %>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/javascripts/sweetalert.js"></script>
+  </body>
 </html>
