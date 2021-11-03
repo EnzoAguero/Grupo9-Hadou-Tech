@@ -17,7 +17,8 @@ module.exports = {
     },
 
    search : (req, res) => {
-      db.Product.findAll({
+      db.Product.findAll( { 
+         include : ['marks', 'images'],
          where : {
             [Op.or] : [
                {
