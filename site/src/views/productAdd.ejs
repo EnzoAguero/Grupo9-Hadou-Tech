@@ -32,8 +32,10 @@
                   <input type="number" class="form-control" name="cuotas" id="cuotas" value="<%= locals.old && locals.old.cuotas ? old.cuotas : null%>">
                   <span id="error-cuotas"  class="text-danger small"><%= locals.errores && locals.errores.cuotas ? errores.cuotas.msg : null %> </span>
                 </div>
+               
                 <button class="btn btn-primary" type="submit">Guardar</button>
             </form>
+            <span id="error-empty" class="text-danger"></span>
         </div>
     </div>
   

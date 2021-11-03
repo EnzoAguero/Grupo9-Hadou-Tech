@@ -13,11 +13,17 @@
 
 
 
-
-          <span style="color: white; margin: auto;">Foto de perfil</span>
-          <a href="#" class="d-flex align-items:center"><img class="img-fluid rounded-start"
-              src="/images/<%= user.image %> " alt=""></a>
+         
+           
+        
+         
           <form class="row g-3" style="margin: 0px 10px" action="/users/editProfile/<%= user.id %>?_method=PUT" method="POST">
+
+            <span style="color: white; font-size: 30px;" class="d-flex align-items:center justify-content-center">Foto de perfil</span>
+            <a href="" class="d-flex align-items:center"><img class="img-fluid rounded-start"
+                src="/images/<%= user.image %> " alt="">
+                <input type="file" class="" name="image" id="image" >
+              </a>
             <div class="col-md-6">
               <label for="" class="form-label" style="color:white;">Nombre</label>
               <input type="text" class="form-control" id="name" name="name" placeholder="<%= user.name %>" value="<%= user.name %> "> </input>

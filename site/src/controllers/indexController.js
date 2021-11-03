@@ -6,17 +6,21 @@ module.exports = {
     index : (req,res) => {
         let usuario = req.session.userLogin
         
-       db.Product.findAll({
-            include : [ 'images','marks'
-            ],
+       let images = db.Image.findAll();
+       let marks = db.Mark.findAll();
+       let productos = db.Product.findAll({
+           include : ['images','marks'],
             limit : 8
         })
-        .then(productos => 
+        Promise.all([images,marks,productos])
+        .then(([images,marks,productos]) => 
             {
             res.render('index',{
             title : "Inicio",
             usuario,
             producto : productos,
+            images,
+            marks,
     
             })})
     
