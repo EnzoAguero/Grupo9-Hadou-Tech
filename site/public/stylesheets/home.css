@@ -32,9 +32,6 @@ h1.desc-dispositivos {
     color: white
 }
 
-/* article:first-child{
-    display: none;
-} */
 .banner-productos{
     background: #202324;
     display: flex;
@@ -50,18 +47,13 @@ h1.desc-dispositivos {
     box-shadow: 7px 13px 37px #000;
     margin-bottom: 15px;
 }
-.banner-productos article:last-child{
-   display: block;
-    
-   
 
-}
 
 
 .descripcion-de-producto{
     color: white;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     padding: 5px;
 }
@@ -98,8 +90,7 @@ h1.desc-dispositivos {
  @media (min-width:768px){
 
 .main{
-    
-      /* background-image: url('/images/fondo.main.jpeg'); */
+
       background: #202324;  
     background-size: 100%;
     width: 100%;
@@ -132,7 +123,7 @@ h1.desc-dispositivos {
     }
 .banner-productos article{
     padding: 5px;
-    background-color: #24303c;
+    background: #202324;
     box-shadow: 7px 13px 37px #000;
     max-width: 40%;
     margin-bottom: 15px;
@@ -142,9 +133,8 @@ h1.desc-dispositivos {
 .descripcion-de-producto{
     color: white;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column;  */
     align-items: center;
-    /* border: 2px solid #1f53c5; */
     padding: 5px;
 }
 .banner-productos span{
@@ -170,8 +160,6 @@ h1.desc-dispositivos {
 
 @media (min-width:1024px){
     .main{
-       
-       /* background-image: url('/images/fondo.main.jpeg'); */
        background-repeat: no-repeat;
        background-size: 100%;
        
@@ -221,8 +209,7 @@ h1.desc-dispositivos {
    
    
    .home .descripcion-de-producto{
-       /*  border-top: 2px solid #1f53c5; */
-       flex-direction: column;
+       /* flex-direction: column; */
        width: 80%; 
        display: flex;
        justify-content: center;
@@ -285,7 +272,7 @@ h1.desc-dispositivos {
 @media (min-width:1520px){
  .main{
     
-    /* background-image: url('/images/fondo.main.jpeg'); */
+   
     background-repeat: no-repeat;
     background-size: 100%;
     
@@ -339,7 +326,7 @@ h1.desc-dispositivos {
 
 
 .home .descripcion-de-producto{
-    /*  border-top: 2px solid #1f53c5; */
+
     flex-direction: column;
     width: 80%;
     /* height: 550px; */

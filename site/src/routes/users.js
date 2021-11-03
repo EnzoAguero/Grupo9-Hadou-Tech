@@ -21,7 +21,8 @@ router.post('/register', validaciones, processRegister);
 
 router.get('/logout',logout);
 
-router.get('/profile/:id', localUser, profile)
+router.get('/profile/:id', localUser && adminCheck, profile)
+
 
 router.get('/editProfile/:id',localUser,upload.single('image'), profileEdit)
 router.put('/editProfile/:id',localUser,profileUpdate)
