@@ -27,13 +27,13 @@
                       </button>
 
                       <!-- Modal -->
-                      <div style="color: darkblue; box-shadow: rgb(180, 41, 41);" class="modal fade" id="exampleModal"
+                      <div style="color: darkblue;" class="modal fade" id="exampleModal"
                           tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                           <div class="modal-dialog">
                               <div class="modal-content">
                                   <div class="modal-header">
                                       <h5 class="modal-title" id="exampleModalLabel"
-                                          style="font-weight: bold; font-size: 100%; color: rgb(52, 10, 168);">HADOU TECH</h5>
+                                          style="font-weight: bold; font-size: 150%; color: #bfc037; font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;">HADOU TECH</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal"
                                           aria-colcount="Close"></button>
                                   </div>
@@ -41,19 +41,18 @@
                                     <div>
                                       <img style="width: 100px;" src="/images/intentounmillon.png" alt="">
                                     </div>
-                                     <div>
+                                    <div>
                                       Somos una empresa nacional donde nos encargamos de vender hardware de
                                       calidad de diferentes marcas, entre ellas HyperX, Logitech Redragon, etc.
                                       Ofrecemos un sitio confiable donde usted puede disfrutar de los mejores
                                       precios acerca de sus componentes favoritos.
 
                                       Apuntamos a un público de todas las edades, interesadas por la informática y
-                                      el gaming. Brindamos las mejores OFERTAS PRECIO y CALIDAD para
+                                      el gaming. Brindando las mejores OFERTAS PRECIO y CALIDAD para
                                       desarrollarse en el ámbito gamer.
-                                     </div>
-                                    
+                                    </div>
                                   </div>
-                                  <div class="modal-footer">
+                                  <div style="background-color: black;" class="modal-footer">
                                       <button type="button" class="btn btn-secondary"
                                           data-bs-dismiss="modal">Continuar</button>
                                   </div>
@@ -81,12 +80,12 @@
               </ul>
           </nav>
 
-          <nav class="navbar navbar-light bg-light">
+          <nav style="background-color: black;" class="navbar navbar-light bg-light">
               <div class="container-fluid">
-                  <form action="/products/search" class="d-flex" method="GET">
-                      <input name="search" class="form-control me-2" type="search" placeholder="Búsqueda"
+                  <form action="/products/search" id="f-s-h" class="d-flex" method="GET">
+                      <input name="search" class="form-control me-2" id="i-s-h" type="search" placeholder="Busqueda"
                           aria-label="Buscar">
-                      <button class="btn btn-outline-success" type="submit">Buscar</button>
+                      <button class="btn btn-outline-success"  type="submit">BUSCAR</button>
                   </form>
               </div>
           </nav>
@@ -104,7 +103,7 @@
                       <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
 
                       <div class="avatar">
-                          <img src="/images/<%= locals.userLogin.image %> " alt="avatar">
+                          <img src="/images/users/<%= locals.userLogin.image %> " alt="avatar">
                       </div>
 
                      
@@ -119,7 +118,7 @@
                                   <% if (locals.userLogin.rol==="admin" ) { %>
                                       <li><a class="dropdown-item" href="/products/add">Agregar Producto</a></li>
                                       <% } %>
-                                          <li><a class="dropdown-item" href="/users/profile/<%= usuario.id %>">Ver
+                                          <li><a class="dropdown-item" href="/users/profile">Ver
                                                   perfil</a></li>
                                           <li><a class="dropdown-item" href="/users/logout">Cerrar Sesion</a></li>
 
@@ -153,20 +152,20 @@
             <i class="fas fa-times"></i>
             <nav>
                 <ul>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <%= locals.userLogin.name %>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <% if (locals.userLogin.rol==="admin" ) { %>
-                                <li><a class="dropdown-item" href="/products/add">Agregar Producto</a></li>
-                                <% } %>
-                                    <li><a class="dropdown-item" href="/users/profile">Ver
-                                            perfil</a></li>
-                                    <li><a class="dropdown-item" href="/users/logout">Cerrar Sesion</a></li>
+                     <div class="dropdown">
+                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                  data-bs-toggle="dropdown" aria-expanded="false">
+                                  <%= locals.userLogin.name %>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                  <% if (locals.userLogin.rol==="admin" ) { %>
+                                      <li><a class="dropdown-item" href="/products/add">Agregar Producto</a></li>
+                                      <% } %>
+                                          <li><a class="dropdown-item" href="/users/profile">Ver
+                                                  perfil</a></li>
+                                          <li><a class="dropdown-item" href="/users/logout">Cerrar Sesion</a></li>
 
-                        </ul>
+                              </ul>
                     <li><a href="/users/register">Registro</a></li>
                     <li><a href="/products/productos">Productos</a></li>
                     <li><a href="#">Nosotros</a></li>
@@ -178,24 +177,6 @@
 <% } %>
  
 
-
-
-  <div class="burger justify-content-center">
-      <div class="respmenu">
-          <input type="checkbox">
-          <i class="fas fa-bars"></i>
-          <i class="fas fa-times"></i>
-          <nav>
-              <ul>
-                  <li><a href="/users/login">Ingresar</a></li>
-                  <li><a href="/users/register">Registro</a></li>
-                  <li><a href="/products/productos">Productos</a></li>
-                  <li><a href="#">Nosotros</a></li>
-                  <li><a href="#">Marcas</a></li>
-              </ul>
-          </nav>
-      </div>
-  </div>
 
 
 </header>

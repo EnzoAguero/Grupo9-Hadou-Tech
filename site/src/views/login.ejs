@@ -15,6 +15,7 @@
           </div>
           <div>
             <input class="control-form"  type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese su contraseña">
+            <button class="btn btn-primary" type="button" onclick="mostrarContrasena()" style="margin-bottom: 15px;">Mostrar Contraseña</button>
           </div>
           <hr>
 
@@ -45,44 +46,12 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
     <script src="/javascripts/register.js"></script>
+    <script src="/javascripts/login.js"></script>
   </body>
 
-   <%- include ('./partials/head')%>
+   
 
-   <body class="home">
-
-      <%- include ('./partials/header')%>
-
-      <main class="login">
-         <form action="./login" method="POST">
-            <section class="login__principal">
-               <div class="login__bienvenida">
-                  <h1>Bienvenido</h1> 
-               </div>
-               <div class="login__usuario">
-                  <p><input type="email" name="email" id="email" placeholder="Ingrese su mail"></p>
-                  <h4 class="text-danger"><%= locals.errores && locals.errores.email ? errores.email.msg : null %></h4>
-                  <p><input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese su contraseña"></p><button class="btn btn-primary" type="button" onclick="mostrarContrasena()" style="margin-bottom: 15px;">Mostrar Contraseña</button>
-                  <p>Recordarme</p>
-                  <p>
-                  <input type="checkbox"  id="check" name="recordar">
-                  </p>
-                  <p><input type="submit" value="Login"></p>
-
-               </div>
-               <div class="login__registrate">
-                  <p>¿Perdiste tu contraseña</p>
-                  <p>¿No tienes Cuenta? <a href="./register">Registrate</a> </p>
-                  <p class="login__registrate--volver"><a href="/"><i class="fas fa-arrow-left"></i> Volver</a></p>
-               </div>
-            </section>
-         </form>
-
-      </main>
-
-      <%- include ('./partials/footer') %>
-
-      <script src="/javascripts/login.js"></script>
+     
 
    </body>
 </html>
