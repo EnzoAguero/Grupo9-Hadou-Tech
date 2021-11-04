@@ -4,7 +4,7 @@ module.exports = [
     check('name').notEmpty().withMessage('Debe seleccionar al menos un nombre'),
     check('mark').notEmpty().withMessage('Debe seleccionar al menos una marca'),
     check('price').notEmpty().withMessage('Debe seleccionar al menos un precio'),
-    check('cuotas').notEmpty().withMessage('Debe seleccionar al menos cuantas cuotas tendra el producto')
-   
+    check('cuotas').notEmpty().withMessage('Debe seleccionar al menos cuantas cuotas tendra el producto'),
+    check('description').notEmpty().withMessage('El producto debe tener una descripción')
     
 ]

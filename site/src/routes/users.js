@@ -12,6 +12,7 @@ const upload = require('../middlewares/userAvatar')
 
 const adminCheck = require('../middlewares/adminCheck')
 
+
 /* GET users listing. */
 router.get('/login', login);
 router.post('/login', /* loginValidator */ processlogin);
@@ -21,7 +22,7 @@ router.post('/register', validaciones, processRegister);
 
 router.get('/logout',logout);
 
-router.get('/profile', localUser, profile)
+router.get('/profile',localUser , profile)
 
 
 router.get('/editProfile',localUser, profileEdit)

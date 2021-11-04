@@ -23,6 +23,8 @@
             <a href="" class="d-flex align-items:center"><img class="img-fluid rounded-start"
                 src="/images/users/<%= user.image %> " alt="">
                 <input type="file" class="" name="image" id="image" >
+                <hr>
+              <div id="preview"></div>
               </a>
             <div class="col-md-6">
               <label for="" class="form-label" style="color:white;">Nombre</label>
@@ -89,6 +91,8 @@
       </main>
 
       <%- include('./partials/footer') %>
+
+      <script src="/javascripts/editProfile.js"></script>
 
 
 

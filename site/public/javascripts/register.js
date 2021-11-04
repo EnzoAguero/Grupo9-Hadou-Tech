@@ -47,11 +47,14 @@ $('last_name').addEventListener('blur', () => {
     }
 })
 
-if(!$('acepta').checked){
-    $('acepta').classList.add('is-invalid')
-    $('error-acepta').innerHTML = "Debes aceptar los términos y condiciones";
-    error = true
-}
+
+    $('exampleCheck1').addEventListener('change', () => {
+        if($(!'exampleCheck1').checked){
+            $('exampleCheck1').classList.add('is-invalid')
+            $('error-exampleCheck1').innerHTML = "Debes aceptar los términos y condiciones";
+        }
+    })
+ 
 
 form.addEventListener('submit', e => {
     e.preventDefault()

@@ -474,17 +474,16 @@ border-color: white;
         display: flex;
         font-weight: bold;
         align-items: center;
-        width: 18%
-
+       
 }
+
 .nav2 li{
     display: inline-block;
     text-align: right;
-    padding-right: 1rem;
+   /*  padding-right: 1rem; */
     font-size: 1.3rem;
     
 }
-
 .nav2 li .button-registro{
     border-radius: 40px;
     background-color: lightblue; 
@@ -492,7 +491,7 @@ border-color: white;
 }
 }
 
-@media (min-width:1720px){
+@media (min-width:1721px){
 
 
     .logo-NombreLogo{
@@ -597,6 +596,10 @@ border-color: white;
         padding-right: 1rem;
         font-size: 1.3rem;
     
+    }
+
+    .nav2 ul{
+        width: 40%;
     }
     
     .nav2 li .button-registro{

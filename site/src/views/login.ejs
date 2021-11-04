@@ -16,7 +16,7 @@
                <div class="login__usuario">
                   <p><input type="email" name="email" id="email" placeholder="Ingrese su mail"></p>
                   <h4 class="text-danger"><%= locals.errores && locals.errores.email ? errores.email.msg : null %></h4>
-                  <p><input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese su contraseña"></p>
+                  <p><input type="password" name="contrasenia" id="contrasenia" placeholder="Ingrese su contraseña"></p><button class="btn btn-primary" type="button" onclick="mostrarContrasena()" style="margin-bottom: 15px;">Mostrar Contraseña</button>
                   <p>Recordarme</p>
                   <p>
                   <input type="checkbox"  id="check" name="recordar">
@@ -35,6 +35,8 @@
       </main>
 
       <%- include ('./partials/footer') %>
+
+      <script src="/javascripts/login.js"></script>
 
    </body>
 </html>
