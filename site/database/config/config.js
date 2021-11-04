@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "Independiente22",
+    "password": "carlita14",
     
     "database": "hadou_tech",
     "host": "127.0.0.1",
