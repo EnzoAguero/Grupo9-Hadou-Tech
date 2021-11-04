@@ -27,6 +27,16 @@ $('mark').addEventListener('blur', () => {
         $('error-mark').innerHTML = null
     }
 }),
+$('description').addEventListener('blur', () => {
+    if(!$('description').value){
+        $('description').classList.add('is-invalid')
+            $('error-description').innerHTML = "Debes ingresar una descripcion válida"
+    }else{
+        $('description').classList.remove('is-invalid')
+        $('description').classList.add('is-valid')
+        $('error-description').innerHTML = null
+    }
+}),
 $('price').addEventListener('blur', () => {
     if(!$('price').value){
         $('price').classList.add('is-invalid')

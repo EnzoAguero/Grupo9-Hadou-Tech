@@ -21,10 +21,11 @@ router.post('/register', validaciones, processRegister);
 
 router.get('/logout',logout);
 
-router.get('/profile/:id', localUser, profile)
+router.get('/profile', localUser, profile)
 
-router.get('/editProfile/:id',localUser,upload.single('image'), profileEdit)
-router.put('/editProfile/:id',localUser,profileUpdate)
+
+router.get('/editProfile',localUser, profileEdit)
+router.put('/editProfile',localUser,upload.single('image'),profileUpdate)
 
 
 module.exports = router;

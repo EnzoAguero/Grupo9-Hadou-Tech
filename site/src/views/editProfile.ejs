@@ -17,11 +17,11 @@
            
         
          
-          <form class="row g-3" style="margin: 0px 10px" action="/users/editProfile/<%= user.id %>?_method=PUT" method="POST">
+          <form class="row g-3" style="margin: 0px 10px" action="/users/editProfile?_method=PUT" method="POST" enctype="multipart/form-data">
 
             <span style="color: white; font-size: 30px;" class="d-flex align-items:center justify-content-center">Foto de perfil</span>
             <a href="" class="d-flex align-items:center"><img class="img-fluid rounded-start"
-                src="/images/<%= user.image %> " alt="">
+                src="/images/users/<%= user.image %> " alt="">
                 <input type="file" class="" name="image" id="image" >
               </a>
             <div class="col-md-6">
