@@ -5,17 +5,6 @@ const {productos} = require('../data/products_db')
 const { Op  } = require('sequelize');
 
 module.exports = {
-
-    search2 : (req,res) => {
-      let result = productos.filter(producto => producto.nombre.toLowerCase().includes(req.query.search.toLowerCase()));
-      return res.render('resultSearch',{
-          result,
-          productos,
-          busqueda : req.query.search
-      })
-
-    },
-
    search : (req, res) => {
       db.Product.findAll( { 
          include : ['marks', 'images'],

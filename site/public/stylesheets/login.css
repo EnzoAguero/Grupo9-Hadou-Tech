@@ -1,43 +1,54 @@
 
 .login__principal {
-    margin-top: 8%;
+   margin-top: 8%;
 }
 
 
 .login h1{
-    text-align: center;
-    color:white;
-    font-size: 2rem;
-    
+   text-align: center;
+   color:white;
+   font-size: 2rem;
+
 }
 .login{
-    text-align: center;
+   text-align: center;
 }
 .login input{
-    margin:10px auto;
-    border-radius: 5px;
+   margin:10px auto;
+   border-radius: 5px;
 }
 .login .login__bienvenida{
-    margin: 30px auto;
+   margin: 30px auto;
 }
 .login .login__usuario{
-    margin:30px auto;
+   margin:30px auto;
 
 }
 .login .login__registrate{
-    color:white;
-    margin: 30px auto 60px;
+   color:white;
+   margin: 30px auto 60px;
 }
 
 @media (min-width:768px){
 
-    .login__principal {
-        margin-top: 7%;
-    }
+   .login__principal {
+      margin-top: 7%;
+   }
 
-    .login input{
-        width: 400px;
-        margin:10px auto;
-        border-radius: 5px;
-    }
+   .login input{
+      width: 400px;
+      margin:10px auto;
+      border-radius: 5px;
+   }
+}
+::placeholder {
+   color: black;
+   font-size: 19px;
+   font-weight: bold;
+
+}
+.control-form {
+   color : white;
+   font-size: 19px;
+   font-weight: bold;
 }
