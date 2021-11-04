@@ -16,11 +16,20 @@ footer{
 .logo-footer{
     width: 55px;
 }
+
+.titulo-footer{
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 100px;
+}
+
 .caja-footer h3{
     padding-left: 13px;
 }
 .caja-footer p{
+    display: flex;
+    justify-content: center;
     font-size: 15px;
+    margin-left: 50px;
 }
 
 .caja-footer{
@@ -135,7 +144,8 @@ footer{
 
 .red-social{
     
-    font-size: 3rem;
+    font-size: 3.5rem;
+    margin-left: 40px;
 
 } 
 
