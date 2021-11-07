@@ -23,12 +23,12 @@
             <% result.forEach(producto => { %>
             <tr>
               <td>
-                <a href="/products/detalle/<%= producto.id %> ">
+                <a style="font-size: 20px;" href="/products/detalle/<%= producto.id %> ">
                   <%= producto.name %>
                 </a>
               </td>
               <td>
-                <a href="/products/detalle/<%= producto.id %> ">
+                <a style="font-size: 20px;" href="/products/detalle/<%= producto.id %> ">
                   <%= producto.marks[0].name %>
                 </a>
               </td>
@@ -42,7 +42,7 @@
             <tr>
               <td>
                 <a href="/products/detalle/<%= producto.id %> ">
-                  <img src="/images/<%= producto.images[0].file %>" alt="producto">
+                  <img style="width: 170px;" src="/images/<%= producto.images[0].file %>" alt="producto">
                 </a>
               </td>
             </tr>

@@ -27,9 +27,8 @@
           <div style="margin-top: 10px;">
             <a href="/products/edit/<%= producto.id %>" class="action-button">EDITAR PRODUCTO</a>
             <form id="formDelete" action="/products/remove/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-              <button type="submit" class="action-button" onclick="">ELIMINAR</button>
+              <button type="submit" class="action-button" onclick="swal()">ELIMINAR</button>
             </form>
-            <button id="eliminar" type="submit" class="action-button" onclick="">ELIMINAR</button>
             <a href="/products/add/" class="action-button">CREAR PRODUCTO</a>
           </div>
           <% } %>
