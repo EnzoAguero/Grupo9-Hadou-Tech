@@ -8,54 +8,38 @@
     <%- include('./partials/header')%>
 
     <main>
-        <div class="contenedor">
-            <form id="formRegister" class="form-register" method="POST">
-                <h2 class="titulo">Formulario de Registro</h2>
-                <div class="sub-text-aline">
-                    <b">Completa los siguientes campos para registrarte en nuestro sitio</b>
-                </div>
-                <div>
-                    <input id="email" class="control-form" type="email" name="email" placeholder="Ingresá tu mail" value="<%= locals.old && locals.old.email ? old.email : null %> ">
-                    <span id="error-email" class="text-danger small"><%= locals.errores && locals.errores.email ? errores.email.msg : null %> </span>
-                     <!-- si existe un error poneme el mensaje de error de lo contrario no hagas nada -->
-                </div>
-                <div>
-                    <input id="password" class="control-form" type="password" name="password" placeholder="Ingresá tu contraseña">
-                    <span id="error-password" class="text-danger small"><%= locals.errores && locals.errores.password ? errores.password.msg : null %> </span>
-                </div>
-                <div>
-                    <input id="confirmar" class="control-form" type="password" name="confirmar" placeholder="Confirma tu contraseña">
-                    <span  class="text-danger small"><%= locals.errores && locals.errores.confirmar ? errores.confirmar.msg : null %> </span>           
-                </div>
-                <hr>
-                <div>
-                    <input id="name" class="control-form" type="text" name="name" placeholder="Nombre" value="<%= locals.old && locals.old.name ? old.name : null%>">
-                    <span id="error-name" class="text-danger small"><%= locals.errores && locals.errores.name ? errores.name.msg : null %> </span>
-                </div>
-                <div>
-                    <input id="last_name" class="control-form" type="text" name="last_name" placeholder="Apellido" value="<%= locals.old && locals.old.last_name ? old.last_name : null%>">
-                    <span id="error-last_name" class="text-danger small"><%= locals.errores && locals.errores.last_name ? errores.last_name.msg : null %> </span>
-                </div>
-                
-                
-                <div class="terminos">
-                    <p>Estoy de acuerdo con los<a href="#"> Terminos y Condiciones</a></p>
-                    <div class="chec">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="acepta">
-                        <span class="text-danger small"><%= locals.errores && locals.errores.acepta ? errores.acepta.msg : null %> </span>
-                    </div>      
-                </div>
-                <div>
-                    <input class="botons" type="submit" value="Registrar">
-                    <span id="error-empty" class="text-danger"></span>
-                </div>
-                <div>
-                    <p><a href="/users/login">Ya tengo cuenta</a></p>
-                </div>
+      <div class="contenedor">
+        <form id="formRegister" class="form-register" method="POST">
+          <h2 class="titulo">Formulario de Registro</h2>
+          <div class="sub-text-aline">
+            <b">Completa los siguientes campos para registrarte en nuestro sitio</b>
+          </div>
+          <div>
+            <input id="email" class="control-form" type="email" name="email" placeholder="Ingresá tu mail" value="<%= locals.old && locals.old.email ? old.email : null %> ">
+            <span id="error-email" class="text-danger small"><%= locals.errores && locals.errores.email ? errores.email.msg : null %> </span>
+            <!-- si existe un error poneme el mensaje de error de lo contrario no hagas nada -->
+          </div>
+          <div>
+            <input id="password" class="control-form" type="password" name="password" placeholder="Ingresá tu contraseña">
+            <span id="error-password" class="text-danger small"><%= locals.errores && locals.errores.password ? errores.password.msg : null %> </span>
+          </div>
+          <div>
+            <input id="confirmar" class="control-form" type="password" name="confirmar" placeholder="Confirma tu contraseña">
+            <span  class="text-danger small"><%= locals.errores && locals.errores.confirmar ? errores.confirmar.msg : null %> </span>           
+          </div>
+          <hr>
+          <div>
+            <input id="name" class="control-form" type="text" name="name" placeholder="Nombre" value="<%= locals.old && locals.old.name ? old.name : null%>">
+            <span id="error-name" class="text-danger small"><%= locals.errores && locals.errores.name ? errores.name.msg : null %> </span>
+          </div>
+          <div>
+            <input id="last_name" class="control-form" type="text" name="last_name" placeholder="Apellido" value="<%= locals.old && locals.old.last_name ? old.last_name : null%>">
+            <span id="error-last_name" class="text-danger small"><%= locals.errores && locals.errores.last_name ? errores.last_name.msg : null %> </span>
+          </div>
 
 
           <div class="terminos">
-            <p>Estoy de acuerdo con los<a href="#"> Términos y Condiciones</a></p>
+            <p>Estoy de acuerdo con los<a href="#"> Terminos y Condiciones</a></p>
             <div class="chec">
               <input type="checkbox" class="form-check-input" id="exampleCheck1" name="acepta">
               <span class="text-danger small"><%= locals.errores && locals.errores.acepta ? errores.acepta.msg : null %> </span>
@@ -63,10 +47,13 @@
           </div>
           <div>
             <input class="botons" type="submit" value="Registrar">
+            <span id="error-empty" class="text-danger"></span>
           </div>
           <div>
             <p><a href="/users/login">Ya tengo cuenta</a></p>
           </div>
+
+
 
         </form>
       </div>
