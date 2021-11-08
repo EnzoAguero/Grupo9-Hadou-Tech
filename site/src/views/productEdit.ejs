@@ -9,29 +9,30 @@
             <form action="/products/edit/<%= producto.id %>?_method=PUT" method="POST">
                <div class="mb-3">
                   <label for="nombre" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" name="nombre" value="<%= producto.nombre %>">
+                  <input type="text" class="form-control" id="nombre" name="nombre" value="<%= producto.name %>">
                </div>
                <div class="mb-3">
                   <label for="marca" class="form-label">Marca</label>
-                  <input type="text" class="form-control" id="marca" name="marca" value="<%= producto.marca %>">
+                  <input type="text" class="form-control" id="marca" name="marca" value="<%= producto.marks[0].name %>">
                </div>
                <div class="mb-3">
+                  <label for="description" class="form-label">Descripcion</label>
+                  <input type="text" class="form-control" id="description" name="description"
+                    value="<%= producto.description %> ">
+                  <span id="error-description" class="text-danger small">
+                  </span>
+                </div>
+               <div class="mb-3">
                   <label for="precio">Precio</label>
-                  <input type="number" class="form-control" id="precio" name="precio" value="<%= producto.precio %>">
+                  <input type="number" class="form-control" id="precio" name="precio" value="<%= producto.price %>">
                </div>
                <div class="mb-3">
                   <label for="imagen" class="form-label">Imagen</label>
-                  <input type="file" class="form-control" name="imagen" id="imagen" value="<%= producto.imagen%>" multiple>
-               </div>
-               <div class="mb-3">
-                  <select name="oferta" id="oferta" class="form-input">
-                     <option value="true" <%= producto.oferta  === "true" ? 'selected' : null %>>En Oferta</option>
-                     <option value="false" <%= producto.oferta  === "false" ? 'selected' : null %>>Sin Oferta</option>
-                  </select>
+                  <input type="file" class="form-control" name="imagen" id="imagen" value="">
                </div>
                <div class="mb-3">
                   <label for="cuotas" class="form-label">Cuotas</label>
-                  <input type="number" class="form-control" name="cuotas" id="cuotas" value="<%= producto.cuotas%>">
+                  <input type="number" class="form-control" name="cuotas" id="cuotas" value="<%= producto.cuotas %>">
                </div>
                <button class="btn btn-primary" type="submit">Guardar</button>
             </form>

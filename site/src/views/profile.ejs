@@ -50,11 +50,11 @@
                         </div>
                         <div class="col-md-2">
                           <label for="inputZip" class="form-label" style="color: white;">Codigo Postal</label>
-                          <div type="text" class="form-control" id="inputZip"><%= user.addresses.cp ? user.addresses.cp : '---' %></div>
+                          <div type="text" class="form-control" id="inputZip" disabled><%= user.addresses.cp ? user.addresses.cp : '---' %></div>
                         </div>
                         <div class="col-md-6">
                             <label for="inputPassword4" class="form-label" style="color: white;">Telefono</label>
-                            <div type="password" class="form-control" id="phone"><%= user.addresses.phone ? user.addresses.phone : '---' %> </div>
+                            <div type="number" class="form-control" id="phone" di><%= user.addresses.phone ? user.addresses.phone : '---' %> </div>
                           </div>
                         <div class="col-12">
                           

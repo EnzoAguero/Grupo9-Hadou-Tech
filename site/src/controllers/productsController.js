@@ -3,6 +3,7 @@ const {validationResult} = require('express-validator')
 const db = require('../../database/models')
 const {productos} = require('../data/products_db')
 const { Op  } = require('sequelize');
+const product = require('../../database/models/product');
 
 module.exports = {
    search : (req, res) => {
@@ -93,33 +94,52 @@ module.exports = {
 
   },
   edit : (req,res) => {
-    let producto = productos.find(producto => producto.id === +req.params.id);
+    let usuario = req.session.userLogin
 
-    return res.render('productEdit',{
-      title : "Hadou Tech",
-      productos,
-      producto
-    }) 
+    db.Product.findOne({
+      where : {
+          id : req.params.id
+      },
+      include : ['images','marks',
+      ]
+  }).then(producto =>{
+          return res.render('productEdit',{
+              producto,
+              usuario
+
+          })
+  }).catch(error => console.log(error))
 
   },
   update: (req, res) => {
-    const {nombre,marca,precio,oferta, cuotas} = req.body;
-    productos.forEach(producto => {
-      if(producto.id === +req.params.id){
-        producto.id = +req.params.id;
-        producto.nombre = nombre;
-        producto.marca = marca;
-        producto.precio = precio;
-        producto.imagen = req.file ? req.file.filename : producto.imagen;
-        producto.oferta = !!oferta;
-        producto.cuotas = parseInt(cuotas, 10);
-      }
-    });
 
-    guardar(productos);
-    return res.redirect('/products/detalle/' + req.params.id)
+    let {nombre,precio,imagen,cuotas,description,marca} = req.body
+
+    db.Product.update({
+     name : nombre,
+     price : precio,
+     cuotas : cuotas,
+     description,
+     image : req.file ? req.file.filename : product.images
+    },
+    {
+      where : {
+        id :  req.params.id
+      }
+    }).then(product => 
+      db.Mark.update({
+        name : marca,
+        productId :  req.params.id
+      },
+      { 
+        where : {
+        id :  req.params.id
+      }
+    })).then(() => res.redirect('/products/productos'))
+      .catch(error => console.log(error))
   },
 
+  
   remove : (req,res) => {
     db.Product.destroy({
       where: {
