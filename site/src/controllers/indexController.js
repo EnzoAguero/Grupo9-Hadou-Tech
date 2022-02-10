@@ -23,10 +23,14 @@ module.exports = {
             marks,
     
             })})
+
+            if (req.session.carrito == undefined) {
+                req.session.carrito = []
+            }
     
         
     },
-    carrito : (req,res)=>{
+    /* carrito : (req,res)=>{
         
 
 
@@ -34,7 +38,7 @@ module.exports = {
             title : "Carrito",
             Product,
         })
-    },
+    }, */
    
     
 }

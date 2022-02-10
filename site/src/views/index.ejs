@@ -73,7 +73,7 @@
               <h5>En $ <%= producto.cuotas %> cuotas de $<%=Math.round(producto.price
                  /producto.cuotas) %>
               </h5>
-              <p>VER PRODUCTO</p>
+              <a href="#" class="href" onclick="agregarItem(event,'<%=producto.id%>')"><p>Comprar</p></a>
           </a>
             </div>
 
@@ -114,6 +114,8 @@
 
 
     <%- include ('./partials/footer') %>
+    <script src="/javascripts/carrito.js"></script>
+    
 
   </body>
 

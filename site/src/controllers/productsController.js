@@ -13,7 +13,7 @@ module.exports = {
             [Op.or] : [
                {
                   name : {
-                     [Op.substring] : req.query.search
+                    [Op.substring] : req.query.search
                   }
                },
                {
@@ -31,10 +31,7 @@ module.exports = {
 
    },
 
-   
-
-
-  add : (req,res) => {
+   add : (req,res) => {
     let usuario = req.session.userLogin
     
     return res.render('productAdd',{
@@ -161,13 +158,8 @@ module.exports = {
         usuario,
         producto : productos
         }
-        
-
-        
-    )}) 
-
-    
-  },
+        )}) 
+},
   mouse : (req,res) => {
     let usuario = req.session.userLogin
 

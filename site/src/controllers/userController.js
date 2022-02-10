@@ -37,7 +37,7 @@ module.exports = {
          
     }
 
-    recordar && res.cookie('craftsyForEver',req.session.userLogin,{maxAge: 1000 * 60})
+    recordar && res.cookie('HadouTechForEver',req.session.userLogin,{maxAge: 10000 * 60})
     return res.redirect('/')
     })
   }else{

@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
   </head>
-  <body>
+  <body id="vista">
     <%- include ('./partials/head')%>
 
     <%- include ('./partials/header')%>
 
-    <main class="container">
+    <main class="container" >
       <div class="box-aside">
         <aside class="aside d-flex flex-column justify-content-center align-items-center">
           <div class="dropdown">
@@ -19,9 +19,8 @@
               Mouse
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="/products/productos/mouse">Logitech</a></li>
-              <li><a class="dropdown-item" href="#">Noga</a></li>
-              <li><a class="dropdown-item" href="#">Asus</a></li>
+              <li><a class="dropdown-item" type="button" id="boton">Mouse</a></li>
+              
             </ul>
           </div>
           <div class="dropdown">
@@ -29,9 +28,9 @@
               Teclados
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" id="teclado">Teclados</a></li>
+              <li><a class="dropdown-item" href="#"> </a></li>
+              <li><a class="dropdown-item" href="#"></a></li>
             </ul>
           </div>
           <div class="dropdown">
@@ -39,9 +38,9 @@
               Auriculares
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" id="auriculares">auriculares</a></li>
+              <li><a class="dropdown-item" href="#"> </a></li>
+              <li><a class="dropdown-item" href="#"></a></li>
             </ul>
           </div>
           <div class="dropdown">
@@ -49,9 +48,9 @@
               Monitores
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#"></a></li>
+              <li><a class="dropdown-item" href="#"> </a></li>
+              <li><a class="dropdown-item" href="#"></a></li>
             </ul>
           </div>
         </aside>
@@ -81,14 +80,14 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <section class="banner-productosProducto">
-        <% producto.forEach(producto => { %>
-        <article>
+      <section class="banner-productosProducto" id="banner-productosProducto">
+       <% producto.forEach(producto => { %>
+        <article class="products">
           <a href="/products/detalle/<%= producto.id %> ">
             <div class="d-flex justify-content-center">
               <img src="/images/<%= producto.images[0].file %>"  alt="mouse">
             </div>
-            <div class="descripcion-de-producto">
+            <div class="descripcion-de-producto" id="banner-productosProducto">
                 <h4>
                   <%= producto.name %>
                   <%= producto.marks[0].name %>
@@ -103,9 +102,10 @@
           </a>
             </div>
         </article>
-        <% }) %>
+        <% }) %> 
       </section>
     </main>
+    <script src="/javascripts/productos.js"></script>
     <%- include ('./partials/footer')%>
   </body>
 </html>

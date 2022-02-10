@@ -108,7 +108,14 @@
           <nav>
               <ul class="nav2-iconos">
                   <% if (locals.userLogin) { %>
-                      <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                    <div class="nav-item">
+                        <button type="button" class="nav-link btn-cart" data-bs-toggle="modal" data-bs-target="#modal-carrito">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge rounded-pill bg-warning"></span>
+                          </button>
+                    </div>
+                    
+                    
 
                       <div class="avatar">
                           <img src="/images/users/<%= locals.userLogin.image %> " alt="avatar">
@@ -201,7 +208,47 @@
     </div>
     <% } %>
 
-
+    <aside>
+        <!-- Modal -->
+        <div class="modal fade" id="modal-carrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" id="miCarrito">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Mi changuito</h5>
+              </div>
+              <div class="modal-body" id="lista-carrito">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead id="cart-head">
+                      <tr>
+                        <th colspan="3"style="color: black;">Producto</th>
+                        <th scope="col" style="color: black;">Precio</th>
+                        <th scope="col" style="color: black;">SubTotal</th>
+                      </tr>
+                    </thead>
+                      <tbody>
+                        <span id="cart-empty" class="text-danger" style="color: black;">El carrito no tiene productos agregados</span>
+                      </tbody>
+                      <tfoot id="cart-footer">
+                        <tr>
+                          <th colspan="4"  class="text-end" id="totaltitle" style="color: black;">TOTAL:</th>
+                          <th >
+                            <h5 id="total" style="color: black;"></h5>
+                          </th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-danger" id="btn-delete-cart" onclick="empty()">Vaciar carrito</button>
+                <button type="button" class="btn btn-sm btn-success" data-bs-dismiss="modal">Seguir comprando</button>
+                <a href="/compra" class="btn btn-sm btn-primary" id="btn-next-buy"> Finalizar compra</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
 
 
 </header>

@@ -3,7 +3,7 @@ var router = express.Router();
 
 const {products} = require('../../controllers/api/api');
 
-/* GET home page. */
+/* GET api page. */
 router.get('/products',products)
 
 

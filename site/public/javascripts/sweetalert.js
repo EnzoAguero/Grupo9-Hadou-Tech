@@ -1,4 +1,4 @@
- const form = document.getElementById('formDelete')
+const form = document.getElementById('formDelete')
 
  console.log('conected')
 
@@ -27,5 +27,3 @@
   })
  }
  )
-
-    
